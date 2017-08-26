@@ -4,9 +4,11 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -15,7 +17,7 @@ namespace EricDaniel_Assignment
     public partial class CarBreakdownAssistanceApp : Form
     {
         private List<Member> _memberslist = new List<Member>();
-        string storedPath = @"A:\EricDaniel_Assignment/members2.txt"; 
+        string storedPath = @"A:\EricDaniel_Assignment/membersT3.txt"; 
         public CarBreakdownAssistanceApp()
         {
             InitializeComponent();
@@ -26,8 +28,10 @@ namespace EricDaniel_Assignment
             dateTimePickerCarYear.CustomFormat = "yyyy";
             dateTimePickerMembershipRenewalDate.Format = DateTimePickerFormat.Custom;
             dateTimePickerMembershipRenewalDate.CustomFormat = "d/MM/yyyy";
-          //  grpDisplayMemberDetails.Visible = false;
-           // grpUpdateCarDetails.Visible = false;
+            grpDisplayMemberDetails.Visible = false;
+            btnAddMember.Enabled = true;
+            // grpUpdatePhoneNumber.Visible = false;
+            // grpUpdateCarDetails.Visible = false;
             // grpIcNumberValidation.Visible = true;
         }
 
@@ -112,29 +116,79 @@ namespace EricDaniel_Assignment
             string model = tbxCarModel.Text;
             int year = Convert.ToInt32(dateTimePickerCarYear.Text /* txtCarYear.Text*/);
 
-            //Can include validation here
-            Member m1 = null;
-            if (rbnOneYearMembershipRenewal.Checked)
+            // try
+            //  {
+            //if (!rbnOneYearMembershipRenewal.Checked && !rbnFiveYearMembershipRenewal.Checked)
+            //{
+            //    throw new InvalidOperationException("a message");
+            //}
+            //  }
+            // catch (NullReferenceException e1)
+            // {
+            //e1.HandleEvent(e1);
+            //MessageBox.Show("Choose member type!");
+            //  }
+            //if (!rbnOneYearMembershipRenewal.Checked && !rbnFiveYearMembershipRenewal.Checked)
+            //{
+            //    MessageBox.Show("Error");
+            //    //throw new InvalidOperationException("a message");
+            //}
+            if (!rbnOneYearMembershipRenewal.Checked && !rbnFiveYearMembershipRenewal.Checked)
             {
-                m1 = new OneYearMembershipRenewal(name, ic, dOB, phoneNum, newDate, registrationNumber, model, year);
+                MessageBox.Show("Choose type!");
+                //throw new InvalidOperationException("a message");
+            }
+            else
+            if (string.IsNullOrWhiteSpace(tbxName.Text) || tbxName.Text.Any(Char.IsDigit))
+            {
+                MessageBox.Show("Please enter member's Name without digits");
+                tbxName.Focus();
+            }
+            else
+            if (string.IsNullOrWhiteSpace(tbxIcNumber.Text) /*|| tbxIcNumber.Text.Any(!Char.IsDigit(e.Handled))*/)
+            {
+                //e.Handled = !char.IsLetter(e.KeyChar) && !char.IsDigit(e.KeyChar);
+                //MessageBox.Show("Please enter member's Name without digits");
+                //tbxName.Focus();
+            }
+            else
+            {
+                //if (!rbnOneYearMembershipRenewal.Checked && !rbnFiveYearMembershipRenewal.Checked)
+                //{
+                //    MessageBox.Show("Error");
+                //    btnAddMember.Enabled = true;
+                //}
+                //else
+                //{
+                //    btnAddMember.Enabled = true;
+                //}
+                //Can include validation here
+                Member m1 = null;
+                if (rbnOneYearMembershipRenewal.Checked)
+                {
+                    m1 = new OneYearMembershipRenewal(name, ic, dOB, phoneNum, newDate, registrationNumber, model, year);
 
+                    // StoreRegisteredMemberintoFile(m1);
+                }
+
+                else if (rbnFiveYearMembershipRenewal.Checked)
+                {
+                    m1 = new FiveYearsMembershipRenewal(name, ic, dOB, phoneNum, newDate, registrationNumber, model, year);
+                    //StoreRegisteredMemberintoFile(m1);
+                }
+                _memberslist.Add(m1);
+                // Member m1 = new OneYearMembershipRenewal(name, ic, dOB, phoneNum, newDate, registrationNumber, model, year);
+                // Member m2 = new FiveYearsMembershipRenewal(name, ic, dOB, phoneNum, newDate, registrationNumber, model, year);
+                //  Member m1 = new Member(name, ic, dOB, phoneNum, newDate, registrationNumber, model, year);
                 // StoreRegisteredMemberintoFile(m1);
-            }
-
-            else if (rbnFiveYearMembershipRenewal.Checked)
-            {
-                m1 = new FiveYearsMembershipRenewal(name, ic, dOB, phoneNum, newDate, registrationNumber, model, year);
+                // StoreRegisteredMemberintoFile(m2);
+                //  StoreRegisteredMemberintoFile(m1);
                 //StoreRegisteredMemberintoFile(m1);
+                tbxName.Text = string.Empty;
+                rbnOneYearMembershipRenewal.Checked = false;
+                rbnFiveYearMembershipRenewal.Checked = false;
             }
-            _memberslist.Add(m1);
-            // Member m1 = new OneYearMembershipRenewal(name, ic, dOB, phoneNum, newDate, registrationNumber, model, year);
-            // Member m2 = new FiveYearsMembershipRenewal(name, ic, dOB, phoneNum, newDate, registrationNumber, model, year);
-            //  Member m1 = new Member(name, ic, dOB, phoneNum, newDate, registrationNumber, model, year);
-            // StoreRegisteredMemberintoFile(m1);
-            // StoreRegisteredMemberintoFile(m2);
-            //  StoreRegisteredMemberintoFile(m1);
-            //StoreRegisteredMemberintoFile(m1);
-            tbxName.Text = string.Empty;
+           
         }
 
         private void btnClearEveryInputData_Click(object sender, EventArgs e)
@@ -282,10 +336,10 @@ namespace EricDaniel_Assignment
         {
 
 
-            foreach (Member m in membersArraylist)
+            foreach (var m in membersArraylist)
             {
                 // ReadRegisteredMemberFromFile();
-                Console.WriteLine(" ic in IcInput = {0}", m.IcNum);
+             //   Console.WriteLine(" ic in IcInput = {0}", m.IcNum);
                 // Member m = (Member)membersArraylist[i];
                 if (m.IcNum.Equals(pos))
                     return m;
@@ -300,10 +354,17 @@ namespace EricDaniel_Assignment
                             /*m.MembershipRenewalDate*/ + "\n" + m.MCar.RegistrationNumber + "\n" + m.MCar.Model +
                             "\n" +
                             m.MCar.Year);
+           
             //tbxDisplayName.AppendText(m.Name);
             //tbxDisplayIcNumber.AppendText(m.IcNum);
             tbxDisplayName.Text = m.Name;
             tbxDisplayIcNumber.Text = m.IcNum;
+            tbxDisplayDateOfBirth.Text = m.DateOfBirth;
+            tbxDisplayPhoneNumber.Text = m.PhoneNum;
+            tbxDisplayCarRegistrationNumber.Text = m.MCar.RegistrationNumber;
+            tbxDisplayCarModel.Text = m.MCar.Model;
+            tbxDisplayMembershipRenewalDate.Text = m.MembershipRenewalDate;
+            tbxDisplayCarYear.Text = dateTimePickerCarYear.Value.ToString("yyyy"); //DateTime.(m.MCar.Year);
 
             //foreach (Member member in membersArraylist)
             //{
@@ -315,6 +376,20 @@ namespace EricDaniel_Assignment
             //               m.MCar.Year);
             //    }
             //}
+            //m.MCar.Year = year;
+            //DateTime.TryParseExact(tbxDisplayCarYear.Text, Thread.CurrentThread.CurrentCulture,
+            //    System.Globalization.DateTimeStyles.None)
+
+            //string dateString, format;
+            //DateTime y;
+            //CultureInfo provider = CultureInfo.InvariantCulture;
+
+            //// Parse date-only value with invariant culture.
+            //dateString = "06/15/2008";
+            //format = "d";
+
+            //    result = DateTime.ParseExact(dateString, format, provider);
+            // //   Console.WriteLine("{0} converts to {1}.", dateString, result.ToString());
 
 
         }
@@ -373,6 +448,56 @@ namespace EricDaniel_Assignment
 
         }
 
+        private void tbxName_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter /*|| e.KeyCode == Keys.Up || e.KeyCode == Keys.Down*/)
+            {
+                // tbxName.Focus();
+                this.SelectNextControl((Control)sender, true, true, true, true);
+              //  tbxIcNumber.Focus();
+            }
+        }
+
        
+
+        private void tbxIcNumber_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter/* || e.KeyCode == Keys.Up || e.KeyCode == Keys.Down*/)
+            {
+                // tbxName.Focus();
+                {
+                    this.SelectNextControl((Control)sender, true, true, true, true);
+                    //tbxDisplayDateOfBirth.Focus();
+                   // dateTimePickerDateOfBirth.Focus();
+                }
+            }
+        }
+
+        private void dateTimePickerDateOfBirth_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter/* || e.KeyCode == Keys.Up || e.KeyCode == Keys.Down*/)
+            {
+                // tbxName.Focus();
+                {
+                    this.SelectNextControl((Control)sender, true, true, true, true);
+                  //  tbxPhoneNumber.Focus();
+                }
+               
+            }
+        }
+        private void tbxPhoneNumber_KeyDown(object sender, KeyEventArgs e)
+        {
+            {
+                this.SelectNextControl((Control)sender, true, true, true, true);
+                // tbxPhoneNumber.Focus();
+            }
+        }
+        private void tbxCarRegistrationNumber_KeyDown(object sender, KeyEventArgs e)
+        {
+            {
+                this.SelectNextControl((Control)sender, true, true, true, true);
+                //tbxPhoneNumber.Focus();
+            }
+        }
     }
 }
