@@ -83,19 +83,19 @@ namespace EricDaniel_Assignment.Classes
 
         public abstract void RenewMembership();
     }
-    [Serializable]
-    public class NullMember : Member
-    {
-        public NullMember() : base("no name", " no theIc", " no theDOB ", "no aPhoneNum ", "no aNewDate", "no registrationNumber", "no model", 0)
-        {
+    //[Serializable]
+    //public class NullMember : Member
+    //{
+    //    public NullMember() : base("no name", " no theIc", " no theDOB ", "no aPhoneNum ", "no aNewDate", "no registrationNumber", "no model", 0)
+    //    {
 
-        }
+    //    }
 
-        public override void RenewMembership()
-        {
-            MessageBox.Show("Null member cannot renew membership");
-        }
-    }
+    //    public override void RenewMembership()
+    //    {
+    //        MessageBox.Show("Null member cannot renew membership");
+    //    }
+    //}
 
     [Serializable]
     public class OneYearMembershipRenewal : Member

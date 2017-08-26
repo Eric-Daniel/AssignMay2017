@@ -35,7 +35,7 @@ namespace EricDaniel_Assignment
         {
             if (File.Exists(storedPath))
             {
-                ReadRegisteredMemberFromFile();
+                LoadMemberData();
             }
         }
 
@@ -52,17 +52,17 @@ namespace EricDaniel_Assignment
                     //  clr.WriteLine("");
                     //Member m1 = new NullMember();
                     // StoreRegisteredMemberintoFile(m1);
-                    Member m1 = new NullMember();
-                    StoreRegisteredMemberintoFile(m1);
+                 //   Member m1 = new NullMember();
+                    SaveMemberData();
                     Application.Exit();
                 }
                 else
                     e.Cancel = true;
             }
         }
-        private void StoreRegisteredMemberintoFile(Member m1)
+        private void SaveMemberData()
         {
-            _memberslist.Add(m1);
+        //    _memberslist.Add(m1);
         //    Console.WriteLine("name = {0}", m1.Name);
             if (!File.Exists(storedPath))
             {
@@ -85,7 +85,7 @@ namespace EricDaniel_Assignment
 
         }
 
-        private List<Member> ReadRegisteredMemberFromFile()
+        private List<Member> LoadMemberData()
         {
           //  int count = 0;
             // List<Member> members;
@@ -113,7 +113,7 @@ namespace EricDaniel_Assignment
             int year = Convert.ToInt32(dateTimePickerCarYear.Text /* txtCarYear.Text*/);
 
             //Can include validation here
-            Member m1 = new NullMember();
+            Member m1 = null;
             if (rbnOneYearMembershipRenewal.Checked)
             {
                 m1 = new OneYearMembershipRenewal(name, ic, dOB, phoneNum, newDate, registrationNumber, model, year);
