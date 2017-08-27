@@ -75,24 +75,32 @@ namespace EricDaniel_Assignment
         {
         //    _memberslist.Add(m1);
         //    Console.WriteLine("name = {0}", m1.Name);
-            if (!File.Exists(storedPath))
+            try
             {
-                using (Stream stream = File.Open(storedPath, FileMode.CreateNew))
+                if (!File.Exists(storedPath))
                 {
-                    var bformatter = new System.Runtime.Serialization.Formatters.Binary.BinaryFormatter();
-                    bformatter.Serialize(stream, _memberslist);
-                    stream.Close();
+                    using (Stream stream = File.Open(storedPath, FileMode.CreateNew))
+                    {
+                        var bformatter = new System.Runtime.Serialization.Formatters.Binary.BinaryFormatter();
+                        bformatter.Serialize(stream, _memberslist);
+                        stream.Close();
+                    }
+                }
+                else
+                {
+                    using (Stream stream = File.Open(storedPath, FileMode.Open))
+                    {
+                        var bformatter = new System.Runtime.Serialization.Formatters.Binary.BinaryFormatter();
+                        bformatter.Serialize(stream, _memberslist);
+                        stream.Close();
+                    }
                 }
             }
-            else
+            catch (IOException e)
             {
-                using (Stream stream = File.Open(storedPath, FileMode.Open))
-                {
-                    var bformatter = new System.Runtime.Serialization.Formatters.Binary.BinaryFormatter();
-                    bformatter.Serialize(stream, _memberslist);
-                    stream.Close();
-                }
+                MessageBox.Show(e.Message, "IOEXCEPTION");
             }
+           
 
         }
 
@@ -100,16 +108,33 @@ namespace EricDaniel_Assignment
         {
             //  int count = 0;
             // List<Member> members;
-            using (Stream stream = File.Open(storedPath, FileMode.Open))
+            try
             {
-                var bformatter = new System.Runtime.Serialization.Formatters.Binary.BinaryFormatter();
-                _memberslist = (List<Member>)bformatter.Deserialize(stream);
-                //foreach (var m in _memberslist)
-                //{
-                //    Console.WriteLine("{0}. name in ReadRegisteredMemberFromFile = {1}", count++, m.Name);
-                //}
-                stream.Close();
+                if (File.Exists(storedPath))
+                {
+                    using (Stream stream = File.Open(storedPath, FileMode.Open))
+                    {
+                        var bformatter = new System.Runtime.Serialization.Formatters.Binary.BinaryFormatter();
+                        _memberslist = (List<Member>)bformatter.Deserialize(stream);
+                        //foreach (var m in _memberslist)
+                        //{
+                        //    Console.WriteLine("{0}. name in ReadRegisteredMemberFromFile = {1}", count++, m.Name);
+                        //}
+                        stream.Close();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("File not found. \nFile Name: members.txt");
+                    Environment.Exit(0);
+                }
             }
+            catch (IOException e)
+            {
+                MessageBox.Show(e.Message, "IOEXCEPTION");
+            }
+            
+            
             //return;
         }
         private void btnAddMember_Click(object sender, EventArgs e)

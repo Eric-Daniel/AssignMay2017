@@ -10,10 +10,10 @@ namespace EricDaniel_Assignment.Classes
     [Serializable]
     public abstract class Member
     {
-        public Member()
-        {
+        //public Member()
+        //{
 
-        }
+        //}
 
         private string name;
 
