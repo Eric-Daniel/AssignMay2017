@@ -377,7 +377,7 @@ namespace EricDaniel_Assignment
                     MessageBox.Show("\"Oops, Agent E encountered an error over here!" +
                                     "\n\nMEMBER'S PHONE NUMBER NOT INSERTED!\"", " ",
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
-                   
+
                     tbxNewPhoneNumber.Focus();
                 }
                 else
@@ -386,12 +386,18 @@ namespace EricDaniel_Assignment
                     m1.PhoneNum = tbxNewPhoneNumber.Text;
                     UpdatePhoneNumber(_memberslist, m1);
                 }
-               
+
 
                 // StoreRegisteredMemberintoFile(m1);
             }
             else
+            {
+                tbxVerifyInputIcNumber.BackColor = Color.Red;
                 MessageBox.Show("Invalid IC! ");
+                grpUpdatePhoneNumber.Visible = false;
+            }
+            tbxVerifyInputIcNumber.Text = string.Empty;
+            tbxVerifyInputIcNumber.BackColor = Color.White;
 
         }
         private void btnUpdateExistingPhoneNumber_Click(object sender, EventArgs e)
@@ -441,7 +447,12 @@ namespace EricDaniel_Assignment
                 //StoreRegisteredMemberintoFile(m1);
             }
             else
+            {
+                tbxVerifyInputIcNumber2.BackColor = Color.Red;
                 MessageBox.Show("Invalid IC! ");
+            }
+            tbxVerifyInputIcNumber2.Text = string.Empty;
+            tbxVerifyInputIcNumber2.BackColor = Color.White;
         }
         private void btnUpdateExistingCarDetails_Click(object sender, EventArgs e)
         {
@@ -478,7 +489,7 @@ namespace EricDaniel_Assignment
 
         private void btnRenewMembershipDate_Click(object sender, EventArgs e)
         {
-            string pos = tbxVerifyIcInputNumber3.Text;
+            string pos = tbxVerifyInputIcNumber3.Text;
             Member m1 = IcInput(_memberslist, pos); //storing object returned by the function
 
             if (m1 != null)
@@ -487,7 +498,12 @@ namespace EricDaniel_Assignment
                 //  StoreRegisteredMemberintoFile(m1);
             }
             else
+            {
+                tbxVerifyInputIcNumber3.BackColor = Color.Red;
                 MessageBox.Show("Invalid IC! ");
+            }
+            tbxVerifyInputIcNumber3.Text = string.Empty;
+            tbxVerifyInputIcNumber3.BackColor = Color.White;
         }
         private void btnRenewCurrentMembershipDate_Click(object sender, EventArgs e)
         {
@@ -506,7 +522,7 @@ namespace EricDaniel_Assignment
             DialogResult dialogResult = MessageBox.Show("Click YES if want to EXIT OUT OF RENEW MEMBER'S MEMBERSHIP SECTION", " ", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
             if (dialogResult == DialogResult.Yes)
             {
-                tbxVerifyIcInputNumber3.Text = string.Empty;
+                tbxVerifyInputIcNumber3.Text = string.Empty;
                 tbxNewMembershipRenewalDate.Text = string.Empty;
 
                 grpMembershipRenewal.Enabled = false;

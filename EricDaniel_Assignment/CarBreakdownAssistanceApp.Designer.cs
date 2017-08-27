@@ -30,7 +30,7 @@
         {
             this.grpMembershipRenewal = new System.Windows.Forms.GroupBox();
             this.btnDoneMembershipRenewal = new System.Windows.Forms.Button();
-            this.tbxVerifyIcInputNumber3 = new System.Windows.Forms.TextBox();
+            this.tbxVerifyInputIcNumber3 = new System.Windows.Forms.TextBox();
             this.lblVerifyIcInput3 = new System.Windows.Forms.Label();
             this.btnRenewMembershipDate = new System.Windows.Forms.Button();
             this.tbxNewMembershipRenewalDate = new System.Windows.Forms.TextBox();
@@ -117,7 +117,7 @@
             // grpMembershipRenewal
             // 
             this.grpMembershipRenewal.Controls.Add(this.btnDoneMembershipRenewal);
-            this.grpMembershipRenewal.Controls.Add(this.tbxVerifyIcInputNumber3);
+            this.grpMembershipRenewal.Controls.Add(this.tbxVerifyInputIcNumber3);
             this.grpMembershipRenewal.Controls.Add(this.lblVerifyIcInput3);
             this.grpMembershipRenewal.Controls.Add(this.btnRenewMembershipDate);
             this.grpMembershipRenewal.Controls.Add(this.tbxNewMembershipRenewalDate);
@@ -138,12 +138,12 @@
             this.btnDoneMembershipRenewal.UseVisualStyleBackColor = true;
             this.btnDoneMembershipRenewal.Click += new System.EventHandler(this.btnDoneMembershipRenewal_Click);
             // 
-            // tbxVerifyIcInputNumber3
+            // tbxVerifyInputIcNumber3
             // 
-            this.tbxVerifyIcInputNumber3.Location = new System.Drawing.Point(181, 15);
-            this.tbxVerifyIcInputNumber3.Name = "tbxVerifyIcInputNumber3";
-            this.tbxVerifyIcInputNumber3.Size = new System.Drawing.Size(258, 22);
-            this.tbxVerifyIcInputNumber3.TabIndex = 38;
+            this.tbxVerifyInputIcNumber3.Location = new System.Drawing.Point(181, 15);
+            this.tbxVerifyInputIcNumber3.Name = "tbxVerifyInputIcNumber3";
+            this.tbxVerifyInputIcNumber3.Size = new System.Drawing.Size(258, 22);
+            this.tbxVerifyInputIcNumber3.TabIndex = 38;
             // 
             // lblVerifyIcInput3
             // 
@@ -900,7 +900,7 @@
         private System.Windows.Forms.TextBox tbxNewMembershipRenewalDate;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label lblVerifyIcInput3;
-        private System.Windows.Forms.TextBox tbxVerifyIcInputNumber3;
+        private System.Windows.Forms.TextBox tbxVerifyInputIcNumber3;
         private System.Windows.Forms.GroupBox grpUpdateCarDetails;
         private System.Windows.Forms.Button btnDoneUpdateCarDetails;
         private System.Windows.Forms.TextBox tbxNewCarYear;
