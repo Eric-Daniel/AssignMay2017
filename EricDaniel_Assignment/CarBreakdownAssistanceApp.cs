@@ -261,55 +261,32 @@ namespace EricDaniel_Assignment
            
         }
 
-        
+        private void btnAddNewMember_Click(object sender, EventArgs e)
+        {
+            grpAddMember.Enabled = true;
+            btnSearchExistingMember.Enabled = false;
+            btnUpdateExistingPhoneNumber.Enabled = false;
+            btnUpdateExistingCarDetails.Enabled = false;
+            btnRenewCurrentMembershipDate.Enabled = false;
+        }
+        private void btnDoneAddMember_Click(object sender, EventArgs e)
+        {
+            grpAddMember.Enabled = false;
+            btnSearchExistingMember.Enabled = true;
+            btnUpdateExistingPhoneNumber.Enabled = true;
+            btnUpdateExistingCarDetails.Enabled = true;
+            btnRenewCurrentMembershipDate.Enabled = true;
+        }
         private void btnSearch_Click(object sender, EventArgs e)
         {
             string pos = tbxIcNumberSearchMember.Text;
             Member m1 = IcInput(_memberslist, pos); //storing object returned by the function
 
-            // btnSearch.Enabled = false;
-            //grpDisplayMemberDetails.Enabled = false;
-            //anAccount = new Account(tbxName.Text, tbxNumber.Text);
-            //btnAccount.Enabled = false;
-            //tbxName.Enabled = false;
-            //tbxNumber.Enabled = false;
-
-            //lblBalance.Visible = true;
-            //tbxBalance.Visible = true;
-            //grbTransactionType.Visible = true;
-            //rbnDeposit.Visible = true;
-            //rbnWithdraw.Visible = true;
-            //lblAmount.Visible = true;
-            //tbxAmount.Visible = true;
-            //btnUpdateBalance.Visible = true;
-            // btnSearch.Enabled = false;
-            // grpIcNumberValidation.Enabled = false;
-            //tbxBalance.Text = "" + anAccount.Balance;
-            //  grpDisplayMemberDetails.Visible = false;
-
-            //if (grpDisplayMemberDetails.Visible == true)
-            //{
-            //    btnSearch.Enabled = true;
-            //}
-            // btnSearch.Enabled = false;
-            // txtIcNumber1.Text.Enabled = false;
-
-            //  string pos,icNum;
-            //  Member m = IcInput(list);
-            // pos = txtIcNumber1.ToString();
-            // icNum = Convert.ToString(pos);
-            //  SearchMember(list);
-            //  IcInput() = new Member(txtIcNumber1.Text);
-            // txtName.Text = ArrayList[1].ToString();
-            //  Member m1 = new Member(aName, theIc, theDOB, aPhoneNum, aNewDate, theCarRegNum);
-            //  SearchMember(m1) = btnSearch.ToString();
-            // Member m = new Member(IcInput);
-
-            // tbxDisplayName.Text = m1.Name;
+            
             //Since m1 can have null values, m1 value must be checked first
             if (m1 != null)
             {
-                tbxIcNumberSearchMember.BackColor = Color.GreenYellow;
+               // tbxIcNumberSearchMember.BackColor = Color.GreenYellow;
                 grpDisplayMemberDetails.Visible = true;
                 SearchMember(m1);
             }
@@ -322,10 +299,22 @@ namespace EricDaniel_Assignment
             tbxIcNumberSearchMember.Text = string.Empty;
             tbxIcNumberSearchMember.BackColor = Color.White;
         }
-
+        private void btnSearchExistingMember_Click(object sender, EventArgs e)
+        {
+            grpIcNumberValidation.Visible = true;
+            btnAddNewMember.Enabled = false;
+            btnUpdateExistingPhoneNumber.Enabled = false;
+            btnUpdateExistingCarDetails.Enabled = false;
+            btnRenewCurrentMembershipDate.Enabled = false;
+        }
         private void btnDoneSearchAMember_Click(object sender, EventArgs e)
         {
-
+            grpDisplayMemberDetails.Enabled = false;
+            btnAddNewMember.Enabled = true;
+            btnUpdateExistingPhoneNumber.Enabled = true;
+            btnUpdateExistingCarDetails.Enabled = true;
+            btnRenewCurrentMembershipDate.Enabled = true;
+            grpIcNumberValidation.Visible = false;
         }
         private void btnUpdatePhoneNumber_Click(object sender, EventArgs e)
         {
@@ -634,27 +623,10 @@ namespace EricDaniel_Assignment
                 e.Handled = true;
         }
 
-        private void btnAddNewMember_Click(object sender, EventArgs e)
-        {
-            grpAddMember.Enabled = true;
-            btnSearchExistingMember.Enabled = false;
-            btnUpdateExistingPhoneNumber.Enabled = false;
-            btnUpdateExistingCarDetails.Enabled = false;
-            btnRenewCurrentMembershipDate.Enabled = false;
-        }
+       
 
-        private void btnSearchExistingMember_Click(object sender, EventArgs e)
-        {
+        
 
-        }
-
-        private void btnDoneAddMember_Click(object sender, EventArgs e)
-        {
-            grpAddMember.Enabled = false;
-            btnSearchExistingMember.Enabled = true;
-            btnUpdateExistingPhoneNumber.Enabled = true;
-            btnUpdateExistingCarDetails.Enabled = true;
-            btnRenewCurrentMembershipDate.Enabled = true;
-        }
+      
     }
 }
