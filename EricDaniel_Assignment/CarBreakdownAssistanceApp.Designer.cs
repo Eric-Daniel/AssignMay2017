@@ -30,13 +30,15 @@
         {
             this.grpMembershipRenewal = new System.Windows.Forms.GroupBox();
             this.btnDoneMembershipRenewal = new System.Windows.Forms.Button();
+            this.tbxVerifyIcInputNumber3 = new System.Windows.Forms.TextBox();
+            this.label24 = new System.Windows.Forms.Label();
             this.btnRenewMembershipDate = new System.Windows.Forms.Button();
             this.tbxCurrentRenewalDate = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.tbxVerifyIcInputNumber3 = new System.Windows.Forms.TextBox();
             this.grpUpdateCarDetails = new System.Windows.Forms.GroupBox();
+            this.tbxVerifyInputIcNumber2 = new System.Windows.Forms.TextBox();
             this.btnDoneUpdateCarDetails = new System.Windows.Forms.Button();
+            this.label16 = new System.Windows.Forms.Label();
             this.tbxNewCarYear = new System.Windows.Forms.TextBox();
             this.tbxNewCarModel = new System.Windows.Forms.TextBox();
             this.tbxNewCarRegistrationNumber = new System.Windows.Forms.TextBox();
@@ -46,12 +48,13 @@
             this.label27 = new System.Windows.Forms.Label();
             this.grpUpdatePhoneNumber = new System.Windows.Forms.GroupBox();
             this.btnDoneUpdatePhoneNumber = new System.Windows.Forms.Button();
+            this.tbxVerifyInputIcNumber = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.btnUpdatePhoneNumber = new System.Windows.Forms.Button();
             this.tbxNewPhoneNumber = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.tbxVerifyInputIcNumber = new System.Windows.Forms.TextBox();
             this.grpAddMember = new System.Windows.Forms.GroupBox();
+            this.btnDoneAddMember = new System.Windows.Forms.Button();
             this.dateTimePickerMembershipRenewalDate = new System.Windows.Forms.DateTimePicker();
             this.rbnFiveYearMembershipRenewal = new System.Windows.Forms.RadioButton();
             this.rbnOneYearMembershipRenewal = new System.Windows.Forms.RadioButton();
@@ -73,8 +76,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
             this.lblPersonalDetails = new System.Windows.Forms.Label();
-            this.tbxVerifyInputIcNumber2 = new System.Windows.Forms.TextBox();
-            this.label16 = new System.Windows.Forms.Label();
             this.grpDisplayMemberDetails = new System.Windows.Forms.GroupBox();
             this.btnDoneSearchAMember = new System.Windows.Forms.Button();
             this.lblDisplayName = new System.Windows.Forms.Label();
@@ -105,7 +106,6 @@
             this.btnUpdateExistingPhoneNumber = new System.Windows.Forms.Button();
             this.btnUpdateExistingCarDetails = new System.Windows.Forms.Button();
             this.btnRenewCurrentMembershipDate = new System.Windows.Forms.Button();
-            this.btnDoneAddMember = new System.Windows.Forms.Button();
             this.grpMembershipRenewal.SuspendLayout();
             this.grpUpdateCarDetails.SuspendLayout();
             this.grpUpdatePhoneNumber.SuspendLayout();
@@ -138,6 +138,22 @@
             this.btnDoneMembershipRenewal.UseVisualStyleBackColor = true;
             this.btnDoneMembershipRenewal.Click += new System.EventHandler(this.btnDoneMembershipRenewal_Click);
             // 
+            // tbxVerifyIcInputNumber3
+            // 
+            this.tbxVerifyIcInputNumber3.Location = new System.Drawing.Point(181, 15);
+            this.tbxVerifyIcInputNumber3.Name = "tbxVerifyIcInputNumber3";
+            this.tbxVerifyIcInputNumber3.Size = new System.Drawing.Size(258, 22);
+            this.tbxVerifyIcInputNumber3.TabIndex = 38;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(7, 18);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(82, 17);
+            this.label24.TabIndex = 27;
+            this.label24.Text = "IC Number :";
+            // 
             // btnRenewMembershipDate
             // 
             this.btnRenewMembershipDate.Location = new System.Drawing.Point(238, 116);
@@ -164,22 +180,6 @@
             this.label14.TabIndex = 90;
             this.label14.Text = "Current Renewal Date";
             // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(7, 18);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(82, 17);
-            this.label24.TabIndex = 27;
-            this.label24.Text = "IC Number :";
-            // 
-            // tbxVerifyIcInputNumber3
-            // 
-            this.tbxVerifyIcInputNumber3.Location = new System.Drawing.Point(181, 15);
-            this.tbxVerifyIcInputNumber3.Name = "tbxVerifyIcInputNumber3";
-            this.tbxVerifyIcInputNumber3.Size = new System.Drawing.Size(258, 22);
-            this.tbxVerifyIcInputNumber3.TabIndex = 38;
-            // 
             // grpUpdateCarDetails
             // 
             this.grpUpdateCarDetails.Controls.Add(this.tbxVerifyInputIcNumber2);
@@ -198,6 +198,13 @@
             this.grpUpdateCarDetails.TabIndex = 98;
             this.grpUpdateCarDetails.TabStop = false;
             // 
+            // tbxVerifyInputIcNumber2
+            // 
+            this.tbxVerifyInputIcNumber2.Location = new System.Drawing.Point(181, 15);
+            this.tbxVerifyInputIcNumber2.Name = "tbxVerifyInputIcNumber2";
+            this.tbxVerifyInputIcNumber2.Size = new System.Drawing.Size(258, 22);
+            this.tbxVerifyInputIcNumber2.TabIndex = 28;
+            // 
             // btnDoneUpdateCarDetails
             // 
             this.btnDoneUpdateCarDetails.Location = new System.Drawing.Point(331, 188);
@@ -207,6 +214,15 @@
             this.btnDoneUpdateCarDetails.Text = "DONE";
             this.btnDoneUpdateCarDetails.UseVisualStyleBackColor = true;
             this.btnDoneUpdateCarDetails.Click += new System.EventHandler(this.btnDoneUpdateCarDetails_Click);
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(11, 18);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(78, 17);
+            this.label16.TabIndex = 27;
+            this.label16.Text = "IC Number:";
             // 
             // tbxNewCarYear
             // 
@@ -290,6 +306,22 @@
             this.btnDoneUpdatePhoneNumber.UseVisualStyleBackColor = true;
             this.btnDoneUpdatePhoneNumber.Click += new System.EventHandler(this.btnDoneUpdatePhoneNumber_Click);
             // 
+            // tbxVerifyInputIcNumber
+            // 
+            this.tbxVerifyInputIcNumber.Location = new System.Drawing.Point(166, 16);
+            this.tbxVerifyInputIcNumber.Name = "tbxVerifyInputIcNumber";
+            this.tbxVerifyInputIcNumber.Size = new System.Drawing.Size(258, 22);
+            this.tbxVerifyInputIcNumber.TabIndex = 38;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(7, 19);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(82, 17);
+            this.label10.TabIndex = 27;
+            this.label10.Text = "IC Number :";
+            // 
             // btnUpdatePhoneNumber
             // 
             this.btnUpdatePhoneNumber.Location = new System.Drawing.Point(238, 98);
@@ -315,22 +347,6 @@
             this.label5.Size = new System.Drawing.Size(134, 17);
             this.label5.TabIndex = 83;
             this.label5.Text = "New Phone Number";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(7, 19);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(82, 17);
-            this.label10.TabIndex = 27;
-            this.label10.Text = "IC Number :";
-            // 
-            // tbxVerifyInputIcNumber
-            // 
-            this.tbxVerifyInputIcNumber.Location = new System.Drawing.Point(166, 16);
-            this.tbxVerifyInputIcNumber.Name = "tbxVerifyInputIcNumber";
-            this.tbxVerifyInputIcNumber.Size = new System.Drawing.Size(258, 22);
-            this.tbxVerifyInputIcNumber.TabIndex = 38;
             // 
             // grpAddMember
             // 
@@ -361,6 +377,16 @@
             this.grpAddMember.Size = new System.Drawing.Size(452, 598);
             this.grpAddMember.TabIndex = 96;
             this.grpAddMember.TabStop = false;
+            // 
+            // btnDoneAddMember
+            // 
+            this.btnDoneAddMember.Location = new System.Drawing.Point(307, 513);
+            this.btnDoneAddMember.Name = "btnDoneAddMember";
+            this.btnDoneAddMember.Size = new System.Drawing.Size(75, 23);
+            this.btnDoneAddMember.TabIndex = 120;
+            this.btnDoneAddMember.Text = "DONE";
+            this.btnDoneAddMember.UseVisualStyleBackColor = true;
+            this.btnDoneAddMember.Click += new System.EventHandler(this.btnDoneAddMember_Click);
             // 
             // dateTimePickerMembershipRenewalDate
             // 
@@ -547,22 +573,6 @@
             this.lblPersonalDetails.Size = new System.Drawing.Size(111, 17);
             this.lblPersonalDetails.TabIndex = 88;
             this.lblPersonalDetails.Text = "Personal Details";
-            // 
-            // tbxVerifyInputIcNumber2
-            // 
-            this.tbxVerifyInputIcNumber2.Location = new System.Drawing.Point(181, 15);
-            this.tbxVerifyInputIcNumber2.Name = "tbxVerifyInputIcNumber2";
-            this.tbxVerifyInputIcNumber2.Size = new System.Drawing.Size(258, 22);
-            this.tbxVerifyInputIcNumber2.TabIndex = 28;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(11, 18);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(78, 17);
-            this.label16.TabIndex = 27;
-            this.label16.Text = "IC Number:";
             // 
             // grpDisplayMemberDetails
             // 
@@ -815,6 +825,7 @@
             this.btnUpdateExistingPhoneNumber.TabIndex = 136;
             this.btnUpdateExistingPhoneNumber.Text = "UPDATE PHONE NUMBER";
             this.btnUpdateExistingPhoneNumber.UseVisualStyleBackColor = true;
+            this.btnUpdateExistingPhoneNumber.Click += new System.EventHandler(this.btnUpdateExistingPhoneNumber_Click);
             // 
             // btnUpdateExistingCarDetails
             // 
@@ -824,6 +835,7 @@
             this.btnUpdateExistingCarDetails.TabIndex = 137;
             this.btnUpdateExistingCarDetails.Text = "UPDATE CAR DETAILS";
             this.btnUpdateExistingCarDetails.UseVisualStyleBackColor = true;
+            this.btnUpdateExistingCarDetails.Click += new System.EventHandler(this.btnUpdateExistingCarDetails_Click);
             // 
             // btnRenewCurrentMembershipDate
             // 
@@ -833,16 +845,7 @@
             this.btnRenewCurrentMembershipDate.TabIndex = 138;
             this.btnRenewCurrentMembershipDate.Text = "RENEW MEMBER\'S MEMBERSHIP";
             this.btnRenewCurrentMembershipDate.UseVisualStyleBackColor = true;
-            // 
-            // btnDoneAddMember
-            // 
-            this.btnDoneAddMember.Location = new System.Drawing.Point(307, 513);
-            this.btnDoneAddMember.Name = "btnDoneAddMember";
-            this.btnDoneAddMember.Size = new System.Drawing.Size(75, 23);
-            this.btnDoneAddMember.TabIndex = 120;
-            this.btnDoneAddMember.Text = "DONE";
-            this.btnDoneAddMember.UseVisualStyleBackColor = true;
-            this.btnDoneAddMember.Click += new System.EventHandler(this.btnDoneAddMember_Click);
+            this.btnRenewCurrentMembershipDate.Click += new System.EventHandler(this.btnRenewCurrentMembershipDate_Click);
             // 
             // CarBreakdownAssistanceApp
             // 

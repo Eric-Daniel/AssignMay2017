@@ -294,6 +294,10 @@ namespace EricDaniel_Assignment
             {
                 tbxIcNumberSearchMember.BackColor = Color.Red;
                 MessageBox.Show("Invalid IC! ");
+                btnAddNewMember.Enabled = true;
+                btnUpdateExistingPhoneNumber.Enabled = true;
+                btnUpdateExistingCarDetails.Enabled = true;
+                btnRenewCurrentMembershipDate.Enabled = true;
             }
             //txtIcNumber1.RedColor = Color.Black;
             tbxIcNumberSearchMember.Text = string.Empty;
@@ -330,10 +334,26 @@ namespace EricDaniel_Assignment
             else
                 MessageBox.Show("Invalid IC! ");
         }
-
+        private void btnUpdateExistingPhoneNumber_Click(object sender, EventArgs e)
+        {
+            grpUpdatePhoneNumber.Enabled = true;
+            //grpIcNumberValidation.Visible = true;
+            btnAddNewMember.Enabled = false;
+            btnSearchExistingMember.Enabled = false;
+            //btnUpdateExistingPhoneNumber.Enabled = false;
+            btnUpdateExistingCarDetails.Enabled = false;
+            btnRenewCurrentMembershipDate.Enabled = false;
+        }
         private void btnDoneUpdatePhoneNumber_Click(object sender, EventArgs e)
         {
-
+            grpUpdatePhoneNumber.Enabled = false;
+            //grpDisplayMemberDetails.Enabled = false;
+            btnAddNewMember.Enabled = true;
+            btnSearchExistingMember.Enabled = true;
+            //btnUpdateExistingPhoneNumber.Enabled = true;
+            btnUpdateExistingCarDetails.Enabled = true;
+            btnRenewCurrentMembershipDate.Enabled = true;
+           // grpIcNumberValidation.Visible = false;
         }
 
        
@@ -354,10 +374,26 @@ namespace EricDaniel_Assignment
             else
                 MessageBox.Show("Invalid IC! ");
         }
-
+        private void btnUpdateExistingCarDetails_Click(object sender, EventArgs e)
+        {
+            grpUpdateCarDetails.Enabled = true;
+            //grpIcNumberValidation.Visible = true;
+            btnAddNewMember.Enabled = false;
+            btnSearchExistingMember.Enabled = false;
+            btnUpdateExistingPhoneNumber.Enabled = false;
+           // btnUpdateExistingCarDetails.Enabled = false;
+            btnRenewCurrentMembershipDate.Enabled = false;
+        }
         private void btnDoneUpdateCarDetails_Click(object sender, EventArgs e)
         {
-
+            grpUpdateCarDetails.Enabled = false;
+            //grpDisplayMemberDetails.Enabled = false;
+            btnAddNewMember.Enabled = true;
+            btnSearchExistingMember.Enabled = true;
+            btnUpdateExistingPhoneNumber.Enabled = true;
+           // btnUpdateExistingCarDetails.Enabled = true;
+            btnRenewCurrentMembershipDate.Enabled = true;
+            // grpIcNumberValidation.Visible = false;
         }
 
 
@@ -374,10 +410,26 @@ namespace EricDaniel_Assignment
             else
                 MessageBox.Show("Invalid IC! ");
         }
-
+        private void btnRenewCurrentMembershipDate_Click(object sender, EventArgs e)
+        {
+            grpMembershipRenewal.Enabled = true;
+            //grpIcNumberValidation.Visible = true;
+            btnAddNewMember.Enabled = false;
+            btnSearchExistingMember.Enabled = false;
+            btnUpdateExistingPhoneNumber.Enabled = false;
+            btnUpdateExistingCarDetails.Enabled = false;
+           // btnRenewCurrentMembershipDate.Enabled = false;
+        }
         private void btnDoneMembershipRenewal_Click(object sender, EventArgs e)
         {
-
+            grpMembershipRenewal.Enabled = false;
+            //grpDisplayMemberDetails.Enabled = false;
+            btnAddNewMember.Enabled = true;
+            btnSearchExistingMember.Enabled = true;
+            btnUpdateExistingPhoneNumber.Enabled = true;
+            btnUpdateExistingCarDetails.Enabled = true;
+            //btnRenewCurrentMembershipDate.Enabled = true;
+            // grpIcNumberValidation.Visible = false;
         }
 
         //This method returns the object or null, after the ic number is passed
@@ -624,9 +676,5 @@ namespace EricDaniel_Assignment
         }
 
        
-
-        
-
-      
     }
 }
