@@ -33,11 +33,8 @@
             this.btnRenewMembershipDate = new System.Windows.Forms.Button();
             this.tbxCurrentRenewalDate = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.grpIcNumberValidation3 = new System.Windows.Forms.GroupBox();
-            this.label17 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.tbxVerifyIcInputNumber3 = new System.Windows.Forms.TextBox();
-            this.btnVerifyInputIcNumber3 = new System.Windows.Forms.Button();
             this.grpUpdateCarDetails = new System.Windows.Forms.GroupBox();
             this.btnDoneUpdateCarDetails = new System.Windows.Forms.Button();
             this.tbxNewCarYear = new System.Windows.Forms.TextBox();
@@ -52,12 +49,10 @@
             this.btnUpdatePhoneNumber = new System.Windows.Forms.Button();
             this.tbxNewPhoneNumber = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.grpIcNumberValidation1 = new System.Windows.Forms.GroupBox();
-            this.btnVerifyInputIcNumber = new System.Windows.Forms.Button();
-            this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.tbxVerifyInputIcNumber = new System.Windows.Forms.TextBox();
             this.grpAddMember = new System.Windows.Forms.GroupBox();
+            this.dateTimePickerMembershipRenewalDate = new System.Windows.Forms.DateTimePicker();
             this.btnClearEveryInputData = new System.Windows.Forms.Button();
             this.rbnFiveYearMembershipRenewal = new System.Windows.Forms.RadioButton();
             this.rbnOneYearMembershipRenewal = new System.Windows.Forms.RadioButton();
@@ -79,12 +74,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
             this.lblPersonalDetails = new System.Windows.Forms.Label();
-            this.lblAddMember = new System.Windows.Forms.Label();
-            this.grpIcNumberValidation2 = new System.Windows.Forms.GroupBox();
-            this.btnVerifyInputIcNumber2 = new System.Windows.Forms.Button();
             this.tbxVerifyInputIcNumber2 = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
             this.grpDisplayMemberDetails = new System.Windows.Forms.GroupBox();
             this.btnDoneSearchAMember = new System.Windows.Forms.Button();
             this.lblDisplayName = new System.Windows.Forms.Label();
@@ -107,18 +98,18 @@
             this.tbxDisplayCarModel = new System.Windows.Forms.TextBox();
             this.tbxDisplayCarYear = new System.Windows.Forms.TextBox();
             this.grpIcNumberValidation = new System.Windows.Forms.GroupBox();
-            this.lblSearchMember = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.tbxIcNumberSearchMember = new System.Windows.Forms.TextBox();
             this.btnSearch = new System.Windows.Forms.Button();
-            this.dateTimePickerMembershipRenewalDate = new System.Windows.Forms.DateTimePicker();
+            this.btnAddNewMember = new System.Windows.Forms.Button();
+            this.btnSearchExistingMember = new System.Windows.Forms.Button();
+            this.btnUpdateExistingPhoneNumber = new System.Windows.Forms.Button();
+            this.btnUpdateExistingCarDetails = new System.Windows.Forms.Button();
+            this.btnRenewCurrentMembershipDate = new System.Windows.Forms.Button();
             this.grpMembershipRenewal.SuspendLayout();
-            this.grpIcNumberValidation3.SuspendLayout();
             this.grpUpdateCarDetails.SuspendLayout();
             this.grpUpdatePhoneNumber.SuspendLayout();
-            this.grpIcNumberValidation1.SuspendLayout();
             this.grpAddMember.SuspendLayout();
-            this.grpIcNumberValidation2.SuspendLayout();
             this.grpDisplayMemberDetails.SuspendLayout();
             this.grpIcNumberValidation.SuspendLayout();
             this.SuspendLayout();
@@ -126,20 +117,20 @@
             // grpMembershipRenewal
             // 
             this.grpMembershipRenewal.Controls.Add(this.btnDoneMembershipRenewal);
+            this.grpMembershipRenewal.Controls.Add(this.tbxVerifyIcInputNumber3);
+            this.grpMembershipRenewal.Controls.Add(this.label24);
             this.grpMembershipRenewal.Controls.Add(this.btnRenewMembershipDate);
             this.grpMembershipRenewal.Controls.Add(this.tbxCurrentRenewalDate);
             this.grpMembershipRenewal.Controls.Add(this.label14);
-            this.grpMembershipRenewal.Controls.Add(this.grpIcNumberValidation3);
-            this.grpMembershipRenewal.Location = new System.Drawing.Point(951, 527);
+            this.grpMembershipRenewal.Location = new System.Drawing.Point(951, 570);
             this.grpMembershipRenewal.Name = "grpMembershipRenewal";
-            this.grpMembershipRenewal.Size = new System.Drawing.Size(445, 196);
+            this.grpMembershipRenewal.Size = new System.Drawing.Size(445, 158);
             this.grpMembershipRenewal.TabIndex = 99;
             this.grpMembershipRenewal.TabStop = false;
-            this.grpMembershipRenewal.Text = "groupBox6";
             // 
             // btnDoneMembershipRenewal
             // 
-            this.btnDoneMembershipRenewal.Location = new System.Drawing.Point(349, 162);
+            this.btnDoneMembershipRenewal.Location = new System.Drawing.Point(331, 116);
             this.btnDoneMembershipRenewal.Name = "btnDoneMembershipRenewal";
             this.btnDoneMembershipRenewal.Size = new System.Drawing.Size(75, 23);
             this.btnDoneMembershipRenewal.TabIndex = 110;
@@ -149,7 +140,7 @@
             // 
             // btnRenewMembershipDate
             // 
-            this.btnRenewMembershipDate.Location = new System.Drawing.Point(238, 162);
+            this.btnRenewMembershipDate.Location = new System.Drawing.Point(238, 116);
             this.btnRenewMembershipDate.Name = "btnRenewMembershipDate";
             this.btnRenewMembershipDate.Size = new System.Drawing.Size(75, 23);
             this.btnRenewMembershipDate.TabIndex = 92;
@@ -159,7 +150,7 @@
             // 
             // tbxCurrentRenewalDate
             // 
-            this.tbxCurrentRenewalDate.Location = new System.Drawing.Point(166, 121);
+            this.tbxCurrentRenewalDate.Location = new System.Drawing.Point(181, 70);
             this.tbxCurrentRenewalDate.Name = "tbxCurrentRenewalDate";
             this.tbxCurrentRenewalDate.Size = new System.Drawing.Size(258, 22);
             this.tbxCurrentRenewalDate.TabIndex = 91;
@@ -167,37 +158,16 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(6, 121);
+            this.label14.Location = new System.Drawing.Point(6, 70);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(147, 17);
             this.label14.TabIndex = 90;
             this.label14.Text = "Current Renewal Date";
             // 
-            // grpIcNumberValidation3
-            // 
-            this.grpIcNumberValidation3.Controls.Add(this.label17);
-            this.grpIcNumberValidation3.Controls.Add(this.label24);
-            this.grpIcNumberValidation3.Controls.Add(this.tbxVerifyIcInputNumber3);
-            this.grpIcNumberValidation3.Controls.Add(this.btnVerifyInputIcNumber3);
-            this.grpIcNumberValidation3.Location = new System.Drawing.Point(0, -7);
-            this.grpIcNumberValidation3.Name = "grpIcNumberValidation3";
-            this.grpIcNumberValidation3.Size = new System.Drawing.Size(445, 120);
-            this.grpIcNumberValidation3.TabIndex = 89;
-            this.grpIcNumberValidation3.TabStop = false;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(6, 18);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(208, 17);
-            this.label17.TabIndex = 25;
-            this.label17.Text = "Update Member Phone Number";
-            // 
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(6, 51);
+            this.label24.Location = new System.Drawing.Point(7, 18);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(82, 17);
             this.label24.TabIndex = 27;
@@ -205,24 +175,16 @@
             // 
             // tbxVerifyIcInputNumber3
             // 
-            this.tbxVerifyIcInputNumber3.Location = new System.Drawing.Point(166, 46);
+            this.tbxVerifyIcInputNumber3.Location = new System.Drawing.Point(181, 15);
             this.tbxVerifyIcInputNumber3.Name = "tbxVerifyIcInputNumber3";
             this.tbxVerifyIcInputNumber3.Size = new System.Drawing.Size(258, 22);
             this.tbxVerifyIcInputNumber3.TabIndex = 38;
             // 
-            // btnVerifyInputIcNumber3
-            // 
-            this.btnVerifyInputIcNumber3.Location = new System.Drawing.Point(205, 76);
-            this.btnVerifyInputIcNumber3.Name = "btnVerifyInputIcNumber3";
-            this.btnVerifyInputIcNumber3.Size = new System.Drawing.Size(142, 23);
-            this.btnVerifyInputIcNumber3.TabIndex = 81;
-            this.btnVerifyInputIcNumber3.Text = "VERIFY";
-            this.btnVerifyInputIcNumber3.UseVisualStyleBackColor = true;
-            this.btnVerifyInputIcNumber3.Click += new System.EventHandler(this.btnVerifyInputIcNumber3_Click);
-            // 
             // grpUpdateCarDetails
             // 
+            this.grpUpdateCarDetails.Controls.Add(this.tbxVerifyInputIcNumber2);
             this.grpUpdateCarDetails.Controls.Add(this.btnDoneUpdateCarDetails);
+            this.grpUpdateCarDetails.Controls.Add(this.label16);
             this.grpUpdateCarDetails.Controls.Add(this.tbxNewCarYear);
             this.grpUpdateCarDetails.Controls.Add(this.tbxNewCarModel);
             this.grpUpdateCarDetails.Controls.Add(this.tbxNewCarRegistrationNumber);
@@ -230,15 +192,15 @@
             this.grpUpdateCarDetails.Controls.Add(this.label29);
             this.grpUpdateCarDetails.Controls.Add(this.label28);
             this.grpUpdateCarDetails.Controls.Add(this.label27);
-            this.grpUpdateCarDetails.Location = new System.Drawing.Point(951, 271);
+            this.grpUpdateCarDetails.Location = new System.Drawing.Point(951, 294);
             this.grpUpdateCarDetails.Name = "grpUpdateCarDetails";
-            this.grpUpdateCarDetails.Size = new System.Drawing.Size(445, 253);
+            this.grpUpdateCarDetails.Size = new System.Drawing.Size(445, 230);
             this.grpUpdateCarDetails.TabIndex = 98;
             this.grpUpdateCarDetails.TabStop = false;
             // 
             // btnDoneUpdateCarDetails
             // 
-            this.btnDoneUpdateCarDetails.Location = new System.Drawing.Point(349, 224);
+            this.btnDoneUpdateCarDetails.Location = new System.Drawing.Point(331, 188);
             this.btnDoneUpdateCarDetails.Name = "btnDoneUpdateCarDetails";
             this.btnDoneUpdateCarDetails.Size = new System.Drawing.Size(75, 23);
             this.btnDoneUpdateCarDetails.TabIndex = 110;
@@ -248,28 +210,28 @@
             // 
             // tbxNewCarYear
             // 
-            this.tbxNewCarYear.Location = new System.Drawing.Point(181, 190);
+            this.tbxNewCarYear.Location = new System.Drawing.Point(181, 150);
             this.tbxNewCarYear.Name = "tbxNewCarYear";
             this.tbxNewCarYear.Size = new System.Drawing.Size(258, 22);
             this.tbxNewCarYear.TabIndex = 97;
             // 
             // tbxNewCarModel
             // 
-            this.tbxNewCarModel.Location = new System.Drawing.Point(181, 150);
+            this.tbxNewCarModel.Location = new System.Drawing.Point(181, 105);
             this.tbxNewCarModel.Name = "tbxNewCarModel";
             this.tbxNewCarModel.Size = new System.Drawing.Size(258, 22);
             this.tbxNewCarModel.TabIndex = 96;
             // 
             // tbxNewCarRegistrationNumber
             // 
-            this.tbxNewCarRegistrationNumber.Location = new System.Drawing.Point(181, 108);
+            this.tbxNewCarRegistrationNumber.Location = new System.Drawing.Point(181, 63);
             this.tbxNewCarRegistrationNumber.Name = "tbxNewCarRegistrationNumber";
             this.tbxNewCarRegistrationNumber.Size = new System.Drawing.Size(258, 22);
             this.tbxNewCarRegistrationNumber.TabIndex = 95;
             // 
             // btnUpdateCarDetails
             // 
-            this.btnUpdateCarDetails.Location = new System.Drawing.Point(238, 222);
+            this.btnUpdateCarDetails.Location = new System.Drawing.Point(238, 188);
             this.btnUpdateCarDetails.Name = "btnUpdateCarDetails";
             this.btnUpdateCarDetails.Size = new System.Drawing.Size(75, 23);
             this.btnUpdateCarDetails.TabIndex = 93;
@@ -280,7 +242,7 @@
             // label29
             // 
             this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(6, 190);
+            this.label29.Location = new System.Drawing.Point(7, 150);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(69, 17);
             this.label29.TabIndex = 92;
@@ -289,7 +251,7 @@
             // label28
             // 
             this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(6, 150);
+            this.label28.Location = new System.Drawing.Point(7, 108);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(77, 17);
             this.label28.TabIndex = 91;
@@ -298,7 +260,7 @@
             // label27
             // 
             this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(6, 108);
+            this.label27.Location = new System.Drawing.Point(6, 63);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(177, 17);
             this.label27.TabIndex = 90;
@@ -307,19 +269,20 @@
             // grpUpdatePhoneNumber
             // 
             this.grpUpdatePhoneNumber.Controls.Add(this.btnDoneUpdatePhoneNumber);
+            this.grpUpdatePhoneNumber.Controls.Add(this.tbxVerifyInputIcNumber);
+            this.grpUpdatePhoneNumber.Controls.Add(this.label10);
             this.grpUpdatePhoneNumber.Controls.Add(this.btnUpdatePhoneNumber);
             this.grpUpdatePhoneNumber.Controls.Add(this.tbxNewPhoneNumber);
             this.grpUpdatePhoneNumber.Controls.Add(this.label5);
-            this.grpUpdatePhoneNumber.Location = new System.Drawing.Point(951, 44);
+            this.grpUpdatePhoneNumber.Location = new System.Drawing.Point(951, 97);
             this.grpUpdatePhoneNumber.Name = "grpUpdatePhoneNumber";
-            this.grpUpdatePhoneNumber.Size = new System.Drawing.Size(445, 191);
+            this.grpUpdatePhoneNumber.Size = new System.Drawing.Size(445, 138);
             this.grpUpdatePhoneNumber.TabIndex = 94;
             this.grpUpdatePhoneNumber.TabStop = false;
-            this.grpUpdatePhoneNumber.Text = "groupBox3";
             // 
             // btnDoneUpdatePhoneNumber
             // 
-            this.btnDoneUpdatePhoneNumber.Location = new System.Drawing.Point(335, 164);
+            this.btnDoneUpdatePhoneNumber.Location = new System.Drawing.Point(331, 98);
             this.btnDoneUpdatePhoneNumber.Name = "btnDoneUpdatePhoneNumber";
             this.btnDoneUpdatePhoneNumber.Size = new System.Drawing.Size(75, 23);
             this.btnDoneUpdatePhoneNumber.TabIndex = 109;
@@ -329,7 +292,7 @@
             // 
             // btnUpdatePhoneNumber
             // 
-            this.btnUpdatePhoneNumber.Location = new System.Drawing.Point(238, 164);
+            this.btnUpdatePhoneNumber.Location = new System.Drawing.Point(238, 98);
             this.btnUpdatePhoneNumber.Name = "btnUpdatePhoneNumber";
             this.btnUpdatePhoneNumber.Size = new System.Drawing.Size(75, 23);
             this.btnUpdatePhoneNumber.TabIndex = 85;
@@ -339,7 +302,7 @@
             // 
             // tbxNewPhoneNumber
             // 
-            this.tbxNewPhoneNumber.Location = new System.Drawing.Point(166, 127);
+            this.tbxNewPhoneNumber.Location = new System.Drawing.Point(166, 66);
             this.tbxNewPhoneNumber.Name = "tbxNewPhoneNumber";
             this.tbxNewPhoneNumber.Size = new System.Drawing.Size(258, 22);
             this.tbxNewPhoneNumber.TabIndex = 88;
@@ -347,47 +310,16 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 127);
+            this.label5.Location = new System.Drawing.Point(6, 66);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(134, 17);
             this.label5.TabIndex = 83;
             this.label5.Text = "New Phone Number";
             // 
-            // grpIcNumberValidation1
-            // 
-            this.grpIcNumberValidation1.Controls.Add(this.btnVerifyInputIcNumber);
-            this.grpIcNumberValidation1.Controls.Add(this.label9);
-            this.grpIcNumberValidation1.Controls.Add(this.label10);
-            this.grpIcNumberValidation1.Controls.Add(this.tbxVerifyInputIcNumber);
-            this.grpIcNumberValidation1.Location = new System.Drawing.Point(951, 26);
-            this.grpIcNumberValidation1.Name = "grpIcNumberValidation1";
-            this.grpIcNumberValidation1.Size = new System.Drawing.Size(445, 110);
-            this.grpIcNumberValidation1.TabIndex = 89;
-            this.grpIcNumberValidation1.TabStop = false;
-            // 
-            // btnVerifyInputIcNumber
-            // 
-            this.btnVerifyInputIcNumber.Location = new System.Drawing.Point(205, 76);
-            this.btnVerifyInputIcNumber.Name = "btnVerifyInputIcNumber";
-            this.btnVerifyInputIcNumber.Size = new System.Drawing.Size(142, 23);
-            this.btnVerifyInputIcNumber.TabIndex = 94;
-            this.btnVerifyInputIcNumber.Text = "VERIFY";
-            this.btnVerifyInputIcNumber.UseVisualStyleBackColor = true;
-            this.btnVerifyInputIcNumber.Click += new System.EventHandler(this.btnVerifyInputIcNumber_Click);
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(6, 18);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(208, 17);
-            this.label9.TabIndex = 25;
-            this.label9.Text = "Update Member Phone Number";
-            // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(6, 51);
+            this.label10.Location = new System.Drawing.Point(7, 19);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(82, 17);
             this.label10.TabIndex = 27;
@@ -395,7 +327,7 @@
             // 
             // tbxVerifyInputIcNumber
             // 
-            this.tbxVerifyInputIcNumber.Location = new System.Drawing.Point(166, 46);
+            this.tbxVerifyInputIcNumber.Location = new System.Drawing.Point(166, 16);
             this.tbxVerifyInputIcNumber.Name = "tbxVerifyInputIcNumber";
             this.tbxVerifyInputIcNumber.Size = new System.Drawing.Size(258, 22);
             this.tbxVerifyInputIcNumber.TabIndex = 38;
@@ -429,6 +361,13 @@
             this.grpAddMember.Size = new System.Drawing.Size(452, 598);
             this.grpAddMember.TabIndex = 96;
             this.grpAddMember.TabStop = false;
+            // 
+            // dateTimePickerMembershipRenewalDate
+            // 
+            this.dateTimePickerMembershipRenewalDate.Location = new System.Drawing.Point(86, 467);
+            this.dateTimePickerMembershipRenewalDate.Name = "dateTimePickerMembershipRenewalDate";
+            this.dateTimePickerMembershipRenewalDate.Size = new System.Drawing.Size(258, 22);
+            this.dateTimePickerMembershipRenewalDate.TabIndex = 118;
             // 
             // btnClearEveryInputData
             // 
@@ -619,40 +558,9 @@
             this.lblPersonalDetails.TabIndex = 88;
             this.lblPersonalDetails.Text = "Personal Details";
             // 
-            // lblAddMember
-            // 
-            this.lblAddMember.AutoSize = true;
-            this.lblAddMember.Location = new System.Drawing.Point(50, 44);
-            this.lblAddMember.Name = "lblAddMember";
-            this.lblAddMember.Size = new System.Drawing.Size(88, 17);
-            this.lblAddMember.TabIndex = 95;
-            this.lblAddMember.Text = "Add Member";
-            // 
-            // grpIcNumberValidation2
-            // 
-            this.grpIcNumberValidation2.Controls.Add(this.btnVerifyInputIcNumber2);
-            this.grpIcNumberValidation2.Controls.Add(this.tbxVerifyInputIcNumber2);
-            this.grpIcNumberValidation2.Controls.Add(this.label16);
-            this.grpIcNumberValidation2.Controls.Add(this.label15);
-            this.grpIcNumberValidation2.Location = new System.Drawing.Point(951, 249);
-            this.grpIcNumberValidation2.Name = "grpIcNumberValidation2";
-            this.grpIcNumberValidation2.Size = new System.Drawing.Size(445, 108);
-            this.grpIcNumberValidation2.TabIndex = 116;
-            this.grpIcNumberValidation2.TabStop = false;
-            // 
-            // btnVerifyInputIcNumber2
-            // 
-            this.btnVerifyInputIcNumber2.Location = new System.Drawing.Point(205, 72);
-            this.btnVerifyInputIcNumber2.Name = "btnVerifyInputIcNumber2";
-            this.btnVerifyInputIcNumber2.Size = new System.Drawing.Size(142, 23);
-            this.btnVerifyInputIcNumber2.TabIndex = 95;
-            this.btnVerifyInputIcNumber2.Text = "VERIFY";
-            this.btnVerifyInputIcNumber2.UseVisualStyleBackColor = true;
-            this.btnVerifyInputIcNumber2.Click += new System.EventHandler(this.btnVerifyInputIcNumber2_Click);
-            // 
             // tbxVerifyInputIcNumber2
             // 
-            this.tbxVerifyInputIcNumber2.Location = new System.Drawing.Point(166, 44);
+            this.tbxVerifyInputIcNumber2.Location = new System.Drawing.Point(181, 15);
             this.tbxVerifyInputIcNumber2.Name = "tbxVerifyInputIcNumber2";
             this.tbxVerifyInputIcNumber2.Size = new System.Drawing.Size(258, 22);
             this.tbxVerifyInputIcNumber2.TabIndex = 28;
@@ -660,20 +568,11 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(7, 47);
+            this.label16.Location = new System.Drawing.Point(11, 18);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(78, 17);
             this.label16.TabIndex = 27;
             this.label16.Text = "IC Number:";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(6, 18);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(208, 17);
-            this.label15.TabIndex = 26;
-            this.label15.Text = "Update Member Phone Number";
             // 
             // grpDisplayMemberDetails
             // 
@@ -697,15 +596,15 @@
             this.grpDisplayMemberDetails.Controls.Add(this.tbxDisplayCarRegistrationNumber);
             this.grpDisplayMemberDetails.Controls.Add(this.tbxDisplayCarModel);
             this.grpDisplayMemberDetails.Controls.Add(this.tbxDisplayCarYear);
-            this.grpDisplayMemberDetails.Location = new System.Drawing.Point(497, 77);
+            this.grpDisplayMemberDetails.Location = new System.Drawing.Point(497, 130);
             this.grpDisplayMemberDetails.Name = "grpDisplayMemberDetails";
-            this.grpDisplayMemberDetails.Size = new System.Drawing.Size(454, 651);
+            this.grpDisplayMemberDetails.Size = new System.Drawing.Size(454, 598);
             this.grpDisplayMemberDetails.TabIndex = 117;
             this.grpDisplayMemberDetails.TabStop = false;
             // 
             // btnDoneSearchAMember
             // 
-            this.btnDoneSearchAMember.Location = new System.Drawing.Point(191, 565);
+            this.btnDoneSearchAMember.Location = new System.Drawing.Point(189, 547);
             this.btnDoneSearchAMember.Name = "btnDoneSearchAMember";
             this.btnDoneSearchAMember.Size = new System.Drawing.Size(75, 23);
             this.btnDoneSearchAMember.TabIndex = 110;
@@ -863,29 +762,19 @@
             // 
             // grpIcNumberValidation
             // 
-            this.grpIcNumberValidation.Controls.Add(this.lblSearchMember);
             this.grpIcNumberValidation.Controls.Add(this.label20);
             this.grpIcNumberValidation.Controls.Add(this.tbxIcNumberSearchMember);
             this.grpIcNumberValidation.Controls.Add(this.btnSearch);
-            this.grpIcNumberValidation.Location = new System.Drawing.Point(497, 26);
+            this.grpIcNumberValidation.Location = new System.Drawing.Point(497, 97);
             this.grpIcNumberValidation.Name = "grpIcNumberValidation";
-            this.grpIcNumberValidation.Size = new System.Drawing.Size(454, 110);
+            this.grpIcNumberValidation.Size = new System.Drawing.Size(454, 83);
             this.grpIcNumberValidation.TabIndex = 86;
             this.grpIcNumberValidation.TabStop = false;
-            // 
-            // lblSearchMember
-            // 
-            this.lblSearchMember.AutoSize = true;
-            this.lblSearchMember.Location = new System.Drawing.Point(6, 18);
-            this.lblSearchMember.Name = "lblSearchMember";
-            this.lblSearchMember.Size = new System.Drawing.Size(108, 17);
-            this.lblSearchMember.TabIndex = 25;
-            this.lblSearchMember.Text = "Search Member";
             // 
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(6, 51);
+            this.label20.Location = new System.Drawing.Point(6, 18);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(82, 17);
             this.label20.TabIndex = 27;
@@ -893,14 +782,14 @@
             // 
             // tbxIcNumberSearchMember
             // 
-            this.tbxIcNumberSearchMember.Location = new System.Drawing.Point(173, 51);
+            this.tbxIcNumberSearchMember.Location = new System.Drawing.Point(169, 18);
             this.tbxIcNumberSearchMember.Name = "tbxIcNumberSearchMember";
             this.tbxIcNumberSearchMember.Size = new System.Drawing.Size(258, 22);
             this.tbxIcNumberSearchMember.TabIndex = 38;
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(210, 79);
+            this.btnSearch.Location = new System.Drawing.Point(208, 49);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(142, 23);
             this.btnSearch.TabIndex = 81;
@@ -908,51 +797,84 @@
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
-            // dateTimePickerMembershipRenewalDate
+            // btnAddNewMember
             // 
-            this.dateTimePickerMembershipRenewalDate.Location = new System.Drawing.Point(86, 467);
-            this.dateTimePickerMembershipRenewalDate.Name = "dateTimePickerMembershipRenewalDate";
-            this.dateTimePickerMembershipRenewalDate.Size = new System.Drawing.Size(258, 22);
-            this.dateTimePickerMembershipRenewalDate.TabIndex = 118;
+            this.btnAddNewMember.Location = new System.Drawing.Point(131, 55);
+            this.btnAddNewMember.Name = "btnAddNewMember";
+            this.btnAddNewMember.Size = new System.Drawing.Size(226, 45);
+            this.btnAddNewMember.TabIndex = 134;
+            this.btnAddNewMember.Text = "ADD MEMBER";
+            this.btnAddNewMember.UseVisualStyleBackColor = true;
+            // 
+            // btnSearchExistingMember
+            // 
+            this.btnSearchExistingMember.Location = new System.Drawing.Point(603, 55);
+            this.btnSearchExistingMember.Name = "btnSearchExistingMember";
+            this.btnSearchExistingMember.Size = new System.Drawing.Size(226, 45);
+            this.btnSearchExistingMember.TabIndex = 135;
+            this.btnSearchExistingMember.Text = "SEARCH MEMBER";
+            this.btnSearchExistingMember.UseVisualStyleBackColor = true;
+            // 
+            // btnUpdateExistingPhoneNumber
+            // 
+            this.btnUpdateExistingPhoneNumber.Location = new System.Drawing.Point(1102, 55);
+            this.btnUpdateExistingPhoneNumber.Name = "btnUpdateExistingPhoneNumber";
+            this.btnUpdateExistingPhoneNumber.Size = new System.Drawing.Size(226, 45);
+            this.btnUpdateExistingPhoneNumber.TabIndex = 136;
+            this.btnUpdateExistingPhoneNumber.Text = "UPDATE PHONE NUMBER";
+            this.btnUpdateExistingPhoneNumber.UseVisualStyleBackColor = true;
+            // 
+            // btnUpdateExistingCarDetails
+            // 
+            this.btnUpdateExistingCarDetails.Location = new System.Drawing.Point(1102, 248);
+            this.btnUpdateExistingCarDetails.Name = "btnUpdateExistingCarDetails";
+            this.btnUpdateExistingCarDetails.Size = new System.Drawing.Size(226, 45);
+            this.btnUpdateExistingCarDetails.TabIndex = 137;
+            this.btnUpdateExistingCarDetails.Text = "UPDATE CAR DETAILS";
+            this.btnUpdateExistingCarDetails.UseVisualStyleBackColor = true;
+            // 
+            // btnRenewCurrentMembershipDate
+            // 
+            this.btnRenewCurrentMembershipDate.Location = new System.Drawing.Point(1102, 526);
+            this.btnRenewCurrentMembershipDate.Name = "btnRenewCurrentMembershipDate";
+            this.btnRenewCurrentMembershipDate.Size = new System.Drawing.Size(226, 45);
+            this.btnRenewCurrentMembershipDate.TabIndex = 138;
+            this.btnRenewCurrentMembershipDate.Text = "RENEW MEMBER\'S MEMBERSHIP";
+            this.btnRenewCurrentMembershipDate.UseVisualStyleBackColor = true;
             // 
             // CarBreakdownAssistanceApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1441, 755);
+            this.Controls.Add(this.btnRenewCurrentMembershipDate);
+            this.Controls.Add(this.btnUpdateExistingCarDetails);
+            this.Controls.Add(this.btnUpdateExistingPhoneNumber);
+            this.Controls.Add(this.btnSearchExistingMember);
+            this.Controls.Add(this.btnAddNewMember);
             this.Controls.Add(this.grpIcNumberValidation);
             this.Controls.Add(this.grpDisplayMemberDetails);
-            this.Controls.Add(this.grpIcNumberValidation2);
-            this.Controls.Add(this.grpIcNumberValidation1);
             this.Controls.Add(this.grpMembershipRenewal);
             this.Controls.Add(this.grpUpdateCarDetails);
             this.Controls.Add(this.grpUpdatePhoneNumber);
             this.Controls.Add(this.grpAddMember);
-            this.Controls.Add(this.lblAddMember);
             this.Name = "CarBreakdownAssistanceApp";
             this.Text = "CarBreakdownAssistanceApp";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.CarBreakdownAssistanceApp_FormClosing);
             this.Load += new System.EventHandler(this.CarBreakdownAssistanceApp_Load);
             this.grpMembershipRenewal.ResumeLayout(false);
             this.grpMembershipRenewal.PerformLayout();
-            this.grpIcNumberValidation3.ResumeLayout(false);
-            this.grpIcNumberValidation3.PerformLayout();
             this.grpUpdateCarDetails.ResumeLayout(false);
             this.grpUpdateCarDetails.PerformLayout();
             this.grpUpdatePhoneNumber.ResumeLayout(false);
             this.grpUpdatePhoneNumber.PerformLayout();
-            this.grpIcNumberValidation1.ResumeLayout(false);
-            this.grpIcNumberValidation1.PerformLayout();
             this.grpAddMember.ResumeLayout(false);
             this.grpAddMember.PerformLayout();
-            this.grpIcNumberValidation2.ResumeLayout(false);
-            this.grpIcNumberValidation2.PerformLayout();
             this.grpDisplayMemberDetails.ResumeLayout(false);
             this.grpDisplayMemberDetails.PerformLayout();
             this.grpIcNumberValidation.ResumeLayout(false);
             this.grpIcNumberValidation.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -962,11 +884,8 @@
         private System.Windows.Forms.Button btnRenewMembershipDate;
         private System.Windows.Forms.TextBox tbxCurrentRenewalDate;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.GroupBox grpIcNumberValidation3;
-        private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.TextBox tbxVerifyIcInputNumber3;
-        private System.Windows.Forms.Button btnVerifyInputIcNumber3;
         private System.Windows.Forms.GroupBox grpUpdateCarDetails;
         private System.Windows.Forms.Button btnDoneUpdateCarDetails;
         private System.Windows.Forms.TextBox tbxNewCarYear;
@@ -980,9 +899,6 @@
         private System.Windows.Forms.Button btnDoneUpdatePhoneNumber;
         private System.Windows.Forms.Button btnUpdatePhoneNumber;
         private System.Windows.Forms.TextBox tbxNewPhoneNumber;
-        private System.Windows.Forms.GroupBox grpIcNumberValidation1;
-        private System.Windows.Forms.Button btnVerifyInputIcNumber;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox tbxVerifyInputIcNumber;
         private System.Windows.Forms.Label label5;
@@ -1008,12 +924,8 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Label lblPersonalDetails;
-        private System.Windows.Forms.Label lblAddMember;
-        private System.Windows.Forms.GroupBox grpIcNumberValidation2;
-        private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TextBox tbxVerifyInputIcNumber2;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Button btnVerifyInputIcNumber2;
         private System.Windows.Forms.GroupBox grpDisplayMemberDetails;
         private System.Windows.Forms.Label lblDisplayName;
         private System.Windows.Forms.Label label1;
@@ -1036,11 +948,15 @@
         private System.Windows.Forms.TextBox tbxDisplayCarYear;
         private System.Windows.Forms.Button btnDoneSearchAMember;
         private System.Windows.Forms.GroupBox grpIcNumberValidation;
-        private System.Windows.Forms.Label lblSearchMember;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.TextBox tbxIcNumberSearchMember;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.DateTimePicker dateTimePickerMembershipRenewalDate;
+        private System.Windows.Forms.Button btnAddNewMember;
+        private System.Windows.Forms.Button btnSearchExistingMember;
+        private System.Windows.Forms.Button btnUpdateExistingPhoneNumber;
+        private System.Windows.Forms.Button btnUpdateExistingCarDetails;
+        private System.Windows.Forms.Button btnRenewCurrentMembershipDate;
     }
 }
 

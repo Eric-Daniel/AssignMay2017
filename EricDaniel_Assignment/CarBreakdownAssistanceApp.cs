@@ -352,10 +352,7 @@ namespace EricDaniel_Assignment
 
         }
 
-        private void btnVerifyInputIcNumber_Click(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void btnUpdateCarDetails_Click(object sender, EventArgs e)
         {
@@ -379,10 +376,6 @@ namespace EricDaniel_Assignment
 
         }
 
-        private void btnVerifyInputIcNumber2_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void btnRenewMembershipDate_Click(object sender, EventArgs e)
         {
@@ -555,11 +548,6 @@ namespace EricDaniel_Assignment
             //  }
             /* the first issue is with the  public static void MembershipRenewalDate(ArrayList list),
              *  I need to remove the for loop that so it will not  renew all members in list AND i not sure how to specify which member to renew..*/
-        }
-
-        private void btnVerifyInputIcNumber3_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void tbxName_KeyDown(object sender, KeyEventArgs e)
