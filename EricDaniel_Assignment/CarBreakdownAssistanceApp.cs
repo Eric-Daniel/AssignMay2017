@@ -30,7 +30,7 @@ namespace EricDaniel_Assignment
             dateTimePickerMembershipRenewalDate.CustomFormat = "d/MM/yyyy";
             grpDisplayMemberDetails.Visible = false;
             btnAddMember.Enabled = true;
-            tbxDisplayName.ReadOnly = true;
+           // tbxDisplayName.ReadOnly = true;
             // grpUpdatePhoneNumber.Visible = false;
             // grpUpdateCarDetails.Visible = false;
             // grpIcNumberValidation.Visible = true;
@@ -158,11 +158,9 @@ namespace EricDaniel_Assignment
 
                 else if (string.IsNullOrWhiteSpace(tbxName.Text))
                 {
-                    MessageBox.Show("\"Opps, Agent E encountered an error over here!" +
-                                    "\nPlease check whether you have yet to\n" +
-                                    "ENTER MEMBER'S NAME\n" +
-                                    "before CLICKING the ADD button once again.\"", " ",
-                        MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("\"Oops, Agent E encountered an error over here!" +
+                                    "\n\nMEMBER'S NAME NOT INSERTED!\"", " ",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
                 //MessageBox.Show("\"Opps, Agent E encountered an error over here!" +
                 //                    "\nPlease check whether you have yet to\n" +
                 //                    "ENTER MEMBER'S NAME\n" +
@@ -172,23 +170,31 @@ namespace EricDaniel_Assignment
                 else if (string.IsNullOrWhiteSpace(tbxIcNumber.Text) /*|| tbxIcNumber.Text.Any(!Char.IsDigit(e.Handled))*/)
                 {
                 //e.Handled = !char.IsLetter(e.KeyChar) && !char.IsDigit(e.KeyChar);
-                    MessageBox.Show("Please enter member's Name without digits");
-                    tbxIcNumber.Focus();
+                MessageBox.Show("\"Oops, Agent E encountered an error over here!" +
+                                "\n\nMEMBER'S IC NUMBER NOT INSERTED!\"", " ",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                tbxIcNumber.Focus();
                 }
                 else if (string.IsNullOrWhiteSpace(tbxPhoneNumber.Text))
                 {
-                    MessageBox.Show("Please enter member's Name without digits");
-                    tbxPhoneNumber.Focus();
+                MessageBox.Show("\"Oops, Agent E encountered an error over here!" +
+                                "\n\nMEMBER'S PHONE NUMBER NOT INSERTED!\"", " ",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                tbxPhoneNumber.Focus();
                 }
                 else if (string.IsNullOrWhiteSpace(tbxCarRegistrationNumber.Text))
                 {
-                    MessageBox.Show("Please enter member's Name without digits");
-                    tbxCarRegistrationNumber.Focus();
+                MessageBox.Show("\"Oops, Agent E encountered an error over here!" +
+                                "\n\nMEMBER'S CAR REGISTRATION NUMBER NOT INSERTED!\"", " ",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                tbxCarRegistrationNumber.Focus();
                 }
                 else if (string.IsNullOrWhiteSpace(tbxCarModel.Text))
                 {
-                    MessageBox.Show("Please enter member's Name without digits");
-                    tbxCarModel.Focus();
+                MessageBox.Show("\"Oops, Agent E encountered an error over here!" +
+                                "\n\nMEMBER'S CAR MODEL NOT INSERTED!\"", " ",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                tbxCarModel.Focus();
                 }
 
             else //if (m1 != null)
@@ -235,11 +241,13 @@ namespace EricDaniel_Assignment
 
                     dateTimePickerMembershipRenewalDate.ResetText();
                     rbnOneYearMembershipRenewal.Checked = false;
-                rbnFiveYearMembershipRenewal.Checked = false;
+                    rbnFiveYearMembershipRenewal.Checked = false;
                 }
                 else
                 {
-                    MessageBox.Show("Ic exist already");
+                    MessageBox.Show("\"Oops, Agent E encountered an error over here!" +
+                                    "\n\nIC NUMBER ALREADY EXISTED!\"", " ",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
         }
             
@@ -256,11 +264,33 @@ namespace EricDaniel_Assignment
         }
         private void btnDoneAddMember_Click(object sender, EventArgs e)
         {
-            grpAddMember.Enabled = false;
-            btnSearchExistingMember.Enabled = true;
-            btnUpdateExistingPhoneNumber.Enabled = true;
-            btnUpdateExistingCarDetails.Enabled = true;
-            btnRenewCurrentMembershipDate.Enabled = true;
+            DialogResult dialogResult = MessageBox.Show("Click YES if want to EXIT OUT OF ADD MEMBER SECTION", " ", MessageBoxButtons.YesNo,MessageBoxIcon.Exclamation);
+            if (dialogResult == DialogResult.Yes)
+            {
+                grpAddMember.Enabled = false;
+                btnSearchExistingMember.Enabled = true;
+                btnUpdateExistingPhoneNumber.Enabled = true;
+                btnUpdateExistingCarDetails.Enabled = true;
+                btnRenewCurrentMembershipDate.Enabled = true;
+
+                tbxName.Text = string.Empty;
+                tbxIcNumber.Text = string.Empty;
+                dateTimePickerDateOfBirth.ResetText();
+                tbxPhoneNumber.Text = string.Empty;
+                tbxCarRegistrationNumber.Text = string.Empty;
+                tbxCarModel.Text = string.Empty;
+                dateTimePickerCarYear.ResetText();
+
+                dateTimePickerMembershipRenewalDate.ResetText();
+                rbnOneYearMembershipRenewal.Checked = false;
+                rbnFiveYearMembershipRenewal.Checked = false;
+                //do something
+            }
+            //else if (dialogResult == DialogResult.No)
+            //{
+            //   // DialogResult.No = true; //do something else
+            //}
+            
         }
         private void btnSearch_Click(object sender, EventArgs e)
         {
@@ -274,11 +304,35 @@ namespace EricDaniel_Assignment
                // tbxIcNumberSearchMember.BackColor = Color.GreenYellow;
                 grpDisplayMemberDetails.Visible = true;
                 SearchMember(m1);
+
+                grpIcNumberValidation.Enabled = false;
+
+                tbxDisplayName.ReadOnly = true;
+                tbxDisplayIcNumber.ReadOnly = true;
+                tbxDisplayDateOfBirth.ReadOnly = true;
+                tbxDisplayPhoneNumber.ReadOnly = true;
+                tbxDisplayCarRegistrationNumber.ReadOnly = true;
+                tbxDisplayCarModel.ReadOnly = true;
+                tbxDisplayCarYear.ReadOnly = true;
+                tbxDisplayMembershipRenewalDate.ReadOnly = true;
+                
+
+                tbxDisplayName.Font = new Font(tbxDisplayName.Font, FontStyle.Bold);
+                tbxDisplayIcNumber.Font = new Font(tbxDisplayIcNumber.Font, FontStyle.Bold);
+                tbxDisplayDateOfBirth.Font = new Font(tbxDisplayDateOfBirth.Font, FontStyle.Bold);
+                tbxDisplayPhoneNumber.Font = new Font(tbxDisplayPhoneNumber.Font, FontStyle.Bold);
+                tbxDisplayCarRegistrationNumber.Font = new Font(tbxDisplayCarRegistrationNumber.Font, FontStyle.Bold);
+                tbxDisplayCarModel.Font = new Font(tbxDisplayCarModel.Font, FontStyle.Bold);
+                tbxDisplayCarYear.Font = new Font(tbxDisplayCarYear.Font, FontStyle.Bold);
+                tbxDisplayMembershipRenewalDate.Font = new Font(tbxDisplayMembershipRenewalDate.Font, FontStyle.Bold);
+
+                btnDoneSearchAMember.Focus();
             }
             else
             {
                 tbxIcNumberSearchMember.BackColor = Color.Red;
-                MessageBox.Show("Invalid IC! ");
+                MessageBox.Show("Invalid IC! "); // error warning message
+                grpIcNumberValidation.Visible = false;
                 btnAddNewMember.Enabled = true;
                 btnUpdateExistingPhoneNumber.Enabled = true;
                 btnUpdateExistingCarDetails.Enabled = true;
@@ -298,6 +352,12 @@ namespace EricDaniel_Assignment
         }
         private void btnDoneSearchAMember_Click(object sender, EventArgs e)
         {
+            tbxDisplayName.BackColor = Color.White;
+
+
+            tbxDisplayName.Text = string.Empty;
+
+            grpIcNumberValidation.Enabled = true;
             grpDisplayMemberDetails.Enabled = false;
             btnAddNewMember.Enabled = true;
             btnUpdateExistingPhoneNumber.Enabled = true;

@@ -31,28 +31,28 @@
             this.grpMembershipRenewal = new System.Windows.Forms.GroupBox();
             this.btnDoneMembershipRenewal = new System.Windows.Forms.Button();
             this.tbxVerifyIcInputNumber3 = new System.Windows.Forms.TextBox();
-            this.label24 = new System.Windows.Forms.Label();
+            this.lblVerifyIcInput3 = new System.Windows.Forms.Label();
             this.btnRenewMembershipDate = new System.Windows.Forms.Button();
             this.tbxCurrentRenewalDate = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.grpUpdateCarDetails = new System.Windows.Forms.GroupBox();
             this.tbxVerifyInputIcNumber2 = new System.Windows.Forms.TextBox();
             this.btnDoneUpdateCarDetails = new System.Windows.Forms.Button();
-            this.label16 = new System.Windows.Forms.Label();
+            this.lblVerifyIcInput2 = new System.Windows.Forms.Label();
             this.tbxNewCarYear = new System.Windows.Forms.TextBox();
             this.tbxNewCarModel = new System.Windows.Forms.TextBox();
             this.tbxNewCarRegistrationNumber = new System.Windows.Forms.TextBox();
             this.btnUpdateCarDetails = new System.Windows.Forms.Button();
-            this.label29 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
+            this.lblDisplayNewCarYear = new System.Windows.Forms.Label();
+            this.lblDisplayNewCarModel = new System.Windows.Forms.Label();
+            this.lblDisplayNewCarRegistrationNumber = new System.Windows.Forms.Label();
             this.grpUpdatePhoneNumber = new System.Windows.Forms.GroupBox();
             this.btnDoneUpdatePhoneNumber = new System.Windows.Forms.Button();
             this.tbxVerifyInputIcNumber = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
+            this.lblVerifyIcInput = new System.Windows.Forms.Label();
             this.btnUpdatePhoneNumber = new System.Windows.Forms.Button();
             this.tbxNewPhoneNumber = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblDisplayNewPhoneNumber = new System.Windows.Forms.Label();
             this.grpAddMember = new System.Windows.Forms.GroupBox();
             this.btnDoneAddMember = new System.Windows.Forms.Button();
             this.dateTimePickerMembershipRenewalDate = new System.Windows.Forms.DateTimePicker();
@@ -66,7 +66,7 @@
             this.tbxPhoneNumber = new System.Windows.Forms.TextBox();
             this.tbxIcNumber = new System.Windows.Forms.TextBox();
             this.tbxName = new System.Windows.Forms.TextBox();
-            this.lblMembershipRenewalDetail = new System.Windows.Forms.Label();
+            this.lblMembershipRenewalType = new System.Windows.Forms.Label();
             this.lblYear = new System.Windows.Forms.Label();
             this.lblModel = new System.Windows.Forms.Label();
             this.lblRegistrationNumber = new System.Windows.Forms.Label();
@@ -81,14 +81,14 @@
             this.lblDisplayName = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lblDisplayIcNumber = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
+            this.lblDisplayDateOfBirth = new System.Windows.Forms.Label();
+            this.lblDisplayPhoneNumber = new System.Windows.Forms.Label();
+            this.lblDisplayMembershipRenewalDate = new System.Windows.Forms.Label();
+            this.lblMemberCarDetails = new System.Windows.Forms.Label();
+            this.lblDisplayMembershipRenewalDetail = new System.Windows.Forms.Label();
+            this.lblDisplayCarRegistrationNumber = new System.Windows.Forms.Label();
+            this.lblDisplayCarModel = new System.Windows.Forms.Label();
+            this.lblDisplayCarYear = new System.Windows.Forms.Label();
             this.tbxDisplayMembershipRenewalDate = new System.Windows.Forms.TextBox();
             this.tbxDisplayName = new System.Windows.Forms.TextBox();
             this.tbxDisplayIcNumber = new System.Windows.Forms.TextBox();
@@ -118,7 +118,7 @@
             // 
             this.grpMembershipRenewal.Controls.Add(this.btnDoneMembershipRenewal);
             this.grpMembershipRenewal.Controls.Add(this.tbxVerifyIcInputNumber3);
-            this.grpMembershipRenewal.Controls.Add(this.label24);
+            this.grpMembershipRenewal.Controls.Add(this.lblVerifyIcInput3);
             this.grpMembershipRenewal.Controls.Add(this.btnRenewMembershipDate);
             this.grpMembershipRenewal.Controls.Add(this.tbxCurrentRenewalDate);
             this.grpMembershipRenewal.Controls.Add(this.label14);
@@ -145,14 +145,14 @@
             this.tbxVerifyIcInputNumber3.Size = new System.Drawing.Size(258, 22);
             this.tbxVerifyIcInputNumber3.TabIndex = 38;
             // 
-            // label24
+            // lblVerifyIcInput3
             // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(7, 18);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(82, 17);
-            this.label24.TabIndex = 27;
-            this.label24.Text = "IC Number :";
+            this.lblVerifyIcInput3.AutoSize = true;
+            this.lblVerifyIcInput3.Location = new System.Drawing.Point(7, 18);
+            this.lblVerifyIcInput3.Name = "lblVerifyIcInput3";
+            this.lblVerifyIcInput3.Size = new System.Drawing.Size(82, 17);
+            this.lblVerifyIcInput3.TabIndex = 27;
+            this.lblVerifyIcInput3.Text = "IC Number :";
             // 
             // btnRenewMembershipDate
             // 
@@ -176,22 +176,22 @@
             this.label14.AutoSize = true;
             this.label14.Location = new System.Drawing.Point(6, 70);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(147, 17);
+            this.label14.Size = new System.Drawing.Size(155, 17);
             this.label14.TabIndex = 90;
-            this.label14.Text = "Current Renewal Date";
+            this.label14.Text = "Current Renewal Date :";
             // 
             // grpUpdateCarDetails
             // 
             this.grpUpdateCarDetails.Controls.Add(this.tbxVerifyInputIcNumber2);
             this.grpUpdateCarDetails.Controls.Add(this.btnDoneUpdateCarDetails);
-            this.grpUpdateCarDetails.Controls.Add(this.label16);
+            this.grpUpdateCarDetails.Controls.Add(this.lblVerifyIcInput2);
             this.grpUpdateCarDetails.Controls.Add(this.tbxNewCarYear);
             this.grpUpdateCarDetails.Controls.Add(this.tbxNewCarModel);
             this.grpUpdateCarDetails.Controls.Add(this.tbxNewCarRegistrationNumber);
             this.grpUpdateCarDetails.Controls.Add(this.btnUpdateCarDetails);
-            this.grpUpdateCarDetails.Controls.Add(this.label29);
-            this.grpUpdateCarDetails.Controls.Add(this.label28);
-            this.grpUpdateCarDetails.Controls.Add(this.label27);
+            this.grpUpdateCarDetails.Controls.Add(this.lblDisplayNewCarYear);
+            this.grpUpdateCarDetails.Controls.Add(this.lblDisplayNewCarModel);
+            this.grpUpdateCarDetails.Controls.Add(this.lblDisplayNewCarRegistrationNumber);
             this.grpUpdateCarDetails.Location = new System.Drawing.Point(951, 294);
             this.grpUpdateCarDetails.Name = "grpUpdateCarDetails";
             this.grpUpdateCarDetails.Size = new System.Drawing.Size(445, 230);
@@ -215,14 +215,14 @@
             this.btnDoneUpdateCarDetails.UseVisualStyleBackColor = true;
             this.btnDoneUpdateCarDetails.Click += new System.EventHandler(this.btnDoneUpdateCarDetails_Click);
             // 
-            // label16
+            // lblVerifyIcInput2
             // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(11, 18);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(78, 17);
-            this.label16.TabIndex = 27;
-            this.label16.Text = "IC Number:";
+            this.lblVerifyIcInput2.AutoSize = true;
+            this.lblVerifyIcInput2.Location = new System.Drawing.Point(11, 18);
+            this.lblVerifyIcInput2.Name = "lblVerifyIcInput2";
+            this.lblVerifyIcInput2.Size = new System.Drawing.Size(82, 17);
+            this.lblVerifyIcInput2.TabIndex = 27;
+            this.lblVerifyIcInput2.Text = "IC Number :";
             // 
             // tbxNewCarYear
             // 
@@ -255,41 +255,41 @@
             this.btnUpdateCarDetails.UseVisualStyleBackColor = true;
             this.btnUpdateCarDetails.Click += new System.EventHandler(this.btnUpdateCarDetails_Click);
             // 
-            // label29
+            // lblDisplayNewCarYear
             // 
-            this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(7, 150);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(69, 17);
-            this.label29.TabIndex = 92;
-            this.label29.Text = "New Year";
+            this.lblDisplayNewCarYear.AutoSize = true;
+            this.lblDisplayNewCarYear.Location = new System.Drawing.Point(7, 150);
+            this.lblDisplayNewCarYear.Name = "lblDisplayNewCarYear";
+            this.lblDisplayNewCarYear.Size = new System.Drawing.Size(77, 17);
+            this.lblDisplayNewCarYear.TabIndex = 92;
+            this.lblDisplayNewCarYear.Text = "New Year :";
             // 
-            // label28
+            // lblDisplayNewCarModel
             // 
-            this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(7, 108);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(77, 17);
-            this.label28.TabIndex = 91;
-            this.label28.Text = "New Model";
+            this.lblDisplayNewCarModel.AutoSize = true;
+            this.lblDisplayNewCarModel.Location = new System.Drawing.Point(7, 108);
+            this.lblDisplayNewCarModel.Name = "lblDisplayNewCarModel";
+            this.lblDisplayNewCarModel.Size = new System.Drawing.Size(85, 17);
+            this.lblDisplayNewCarModel.TabIndex = 91;
+            this.lblDisplayNewCarModel.Text = "New Model :";
             // 
-            // label27
+            // lblDisplayNewCarRegistrationNumber
             // 
-            this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(6, 63);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(177, 17);
-            this.label27.TabIndex = 90;
-            this.label27.Text = "New Registration Number :";
+            this.lblDisplayNewCarRegistrationNumber.AutoSize = true;
+            this.lblDisplayNewCarRegistrationNumber.Location = new System.Drawing.Point(6, 63);
+            this.lblDisplayNewCarRegistrationNumber.Name = "lblDisplayNewCarRegistrationNumber";
+            this.lblDisplayNewCarRegistrationNumber.Size = new System.Drawing.Size(177, 17);
+            this.lblDisplayNewCarRegistrationNumber.TabIndex = 90;
+            this.lblDisplayNewCarRegistrationNumber.Text = "New Registration Number :";
             // 
             // grpUpdatePhoneNumber
             // 
             this.grpUpdatePhoneNumber.Controls.Add(this.btnDoneUpdatePhoneNumber);
             this.grpUpdatePhoneNumber.Controls.Add(this.tbxVerifyInputIcNumber);
-            this.grpUpdatePhoneNumber.Controls.Add(this.label10);
+            this.grpUpdatePhoneNumber.Controls.Add(this.lblVerifyIcInput);
             this.grpUpdatePhoneNumber.Controls.Add(this.btnUpdatePhoneNumber);
             this.grpUpdatePhoneNumber.Controls.Add(this.tbxNewPhoneNumber);
-            this.grpUpdatePhoneNumber.Controls.Add(this.label5);
+            this.grpUpdatePhoneNumber.Controls.Add(this.lblDisplayNewPhoneNumber);
             this.grpUpdatePhoneNumber.Location = new System.Drawing.Point(951, 97);
             this.grpUpdatePhoneNumber.Name = "grpUpdatePhoneNumber";
             this.grpUpdatePhoneNumber.Size = new System.Drawing.Size(445, 138);
@@ -313,14 +313,14 @@
             this.tbxVerifyInputIcNumber.Size = new System.Drawing.Size(258, 22);
             this.tbxVerifyInputIcNumber.TabIndex = 38;
             // 
-            // label10
+            // lblVerifyIcInput
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(7, 19);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(82, 17);
-            this.label10.TabIndex = 27;
-            this.label10.Text = "IC Number :";
+            this.lblVerifyIcInput.AutoSize = true;
+            this.lblVerifyIcInput.Location = new System.Drawing.Point(7, 19);
+            this.lblVerifyIcInput.Name = "lblVerifyIcInput";
+            this.lblVerifyIcInput.Size = new System.Drawing.Size(82, 17);
+            this.lblVerifyIcInput.TabIndex = 27;
+            this.lblVerifyIcInput.Text = "IC Number :";
             // 
             // btnUpdatePhoneNumber
             // 
@@ -339,14 +339,14 @@
             this.tbxNewPhoneNumber.Size = new System.Drawing.Size(258, 22);
             this.tbxNewPhoneNumber.TabIndex = 88;
             // 
-            // label5
+            // lblDisplayNewPhoneNumber
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 66);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(134, 17);
-            this.label5.TabIndex = 83;
-            this.label5.Text = "New Phone Number";
+            this.lblDisplayNewPhoneNumber.AutoSize = true;
+            this.lblDisplayNewPhoneNumber.Location = new System.Drawing.Point(6, 66);
+            this.lblDisplayNewPhoneNumber.Name = "lblDisplayNewPhoneNumber";
+            this.lblDisplayNewPhoneNumber.Size = new System.Drawing.Size(142, 17);
+            this.lblDisplayNewPhoneNumber.TabIndex = 83;
+            this.lblDisplayNewPhoneNumber.Text = "New Phone Number :";
             // 
             // grpAddMember
             // 
@@ -362,7 +362,7 @@
             this.grpAddMember.Controls.Add(this.tbxPhoneNumber);
             this.grpAddMember.Controls.Add(this.tbxIcNumber);
             this.grpAddMember.Controls.Add(this.tbxName);
-            this.grpAddMember.Controls.Add(this.lblMembershipRenewalDetail);
+            this.grpAddMember.Controls.Add(this.lblMembershipRenewalType);
             this.grpAddMember.Controls.Add(this.lblYear);
             this.grpAddMember.Controls.Add(this.lblModel);
             this.grpAddMember.Controls.Add(this.lblRegistrationNumber);
@@ -382,9 +382,9 @@
             // 
             this.btnDoneAddMember.Location = new System.Drawing.Point(307, 513);
             this.btnDoneAddMember.Name = "btnDoneAddMember";
-            this.btnDoneAddMember.Size = new System.Drawing.Size(75, 23);
+            this.btnDoneAddMember.Size = new System.Drawing.Size(106, 23);
             this.btnDoneAddMember.TabIndex = 120;
-            this.btnDoneAddMember.Text = "DONE";
+            this.btnDoneAddMember.Text = "DONE / EXIT";
             this.btnDoneAddMember.UseVisualStyleBackColor = true;
             this.btnDoneAddMember.Click += new System.EventHandler(this.btnDoneAddMember_Click);
             // 
@@ -486,14 +486,14 @@
             this.tbxName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbxName_KeyDown);
             this.tbxName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbxName_KeyPress);
             // 
-            // lblMembershipRenewalDetail
+            // lblMembershipRenewalType
             // 
-            this.lblMembershipRenewalDetail.AutoSize = true;
-            this.lblMembershipRenewalDetail.Location = new System.Drawing.Point(6, 393);
-            this.lblMembershipRenewalDetail.Name = "lblMembershipRenewalDetail";
-            this.lblMembershipRenewalDetail.Size = new System.Drawing.Size(179, 17);
-            this.lblMembershipRenewalDetail.TabIndex = 97;
-            this.lblMembershipRenewalDetail.Text = "Membership Renewal Type";
+            this.lblMembershipRenewalType.AutoSize = true;
+            this.lblMembershipRenewalType.Location = new System.Drawing.Point(6, 393);
+            this.lblMembershipRenewalType.Name = "lblMembershipRenewalType";
+            this.lblMembershipRenewalType.Size = new System.Drawing.Size(179, 17);
+            this.lblMembershipRenewalType.TabIndex = 97;
+            this.lblMembershipRenewalType.Text = "Membership Renewal Type";
             // 
             // lblYear
             // 
@@ -582,14 +582,14 @@
             this.grpDisplayMemberDetails.Controls.Add(this.lblDisplayName);
             this.grpDisplayMemberDetails.Controls.Add(this.label1);
             this.grpDisplayMemberDetails.Controls.Add(this.lblDisplayIcNumber);
-            this.grpDisplayMemberDetails.Controls.Add(this.label2);
-            this.grpDisplayMemberDetails.Controls.Add(this.label3);
-            this.grpDisplayMemberDetails.Controls.Add(this.label6);
-            this.grpDisplayMemberDetails.Controls.Add(this.label11);
-            this.grpDisplayMemberDetails.Controls.Add(this.label8);
-            this.grpDisplayMemberDetails.Controls.Add(this.label13);
-            this.grpDisplayMemberDetails.Controls.Add(this.label12);
-            this.grpDisplayMemberDetails.Controls.Add(this.label18);
+            this.grpDisplayMemberDetails.Controls.Add(this.lblDisplayDateOfBirth);
+            this.grpDisplayMemberDetails.Controls.Add(this.lblDisplayPhoneNumber);
+            this.grpDisplayMemberDetails.Controls.Add(this.lblDisplayMembershipRenewalDate);
+            this.grpDisplayMemberDetails.Controls.Add(this.lblMemberCarDetails);
+            this.grpDisplayMemberDetails.Controls.Add(this.lblDisplayMembershipRenewalDetail);
+            this.grpDisplayMemberDetails.Controls.Add(this.lblDisplayCarRegistrationNumber);
+            this.grpDisplayMemberDetails.Controls.Add(this.lblDisplayCarModel);
+            this.grpDisplayMemberDetails.Controls.Add(this.lblDisplayCarYear);
             this.grpDisplayMemberDetails.Controls.Add(this.tbxDisplayMembershipRenewalDate);
             this.grpDisplayMemberDetails.Controls.Add(this.tbxDisplayName);
             this.grpDisplayMemberDetails.Controls.Add(this.tbxDisplayIcNumber);
@@ -606,7 +606,7 @@
             // 
             // btnDoneSearchAMember
             // 
-            this.btnDoneSearchAMember.Location = new System.Drawing.Point(189, 547);
+            this.btnDoneSearchAMember.Location = new System.Drawing.Point(257, 544);
             this.btnDoneSearchAMember.Name = "btnDoneSearchAMember";
             this.btnDoneSearchAMember.Size = new System.Drawing.Size(75, 23);
             this.btnDoneSearchAMember.TabIndex = 110;
@@ -618,9 +618,9 @@
             // 
             this.lblDisplayName.Location = new System.Drawing.Point(10, 100);
             this.lblDisplayName.Name = "lblDisplayName";
-            this.lblDisplayName.Size = new System.Drawing.Size(46, 17);
+            this.lblDisplayName.Size = new System.Drawing.Size(55, 17);
             this.lblDisplayName.TabIndex = 0;
-            this.lblDisplayName.Text = "Name";
+            this.lblDisplayName.Text = "Name :";
             // 
             // label1
             // 
@@ -635,76 +635,76 @@
             // 
             this.lblDisplayIcNumber.Location = new System.Drawing.Point(10, 141);
             this.lblDisplayIcNumber.Name = "lblDisplayIcNumber";
-            this.lblDisplayIcNumber.Size = new System.Drawing.Size(46, 17);
+            this.lblDisplayIcNumber.Size = new System.Drawing.Size(87, 17);
             this.lblDisplayIcNumber.TabIndex = 0;
-            this.lblDisplayIcNumber.Text = "label8";
+            this.lblDisplayIcNumber.Text = "IC Number :";
             // 
-            // label2
+            // lblDisplayDateOfBirth
             // 
-            this.label2.Location = new System.Drawing.Point(10, 183);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 17);
-            this.label2.TabIndex = 30;
-            this.label2.Text = "label2";
+            this.lblDisplayDateOfBirth.Location = new System.Drawing.Point(10, 183);
+            this.lblDisplayDateOfBirth.Name = "lblDisplayDateOfBirth";
+            this.lblDisplayDateOfBirth.Size = new System.Drawing.Size(118, 17);
+            this.lblDisplayDateOfBirth.TabIndex = 30;
+            this.lblDisplayDateOfBirth.Text = "Date Of Birth :";
             // 
-            // label3
+            // lblDisplayPhoneNumber
             // 
-            this.label3.Location = new System.Drawing.Point(10, 226);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(46, 17);
-            this.label3.TabIndex = 31;
-            this.label3.Text = "label3";
+            this.lblDisplayPhoneNumber.Location = new System.Drawing.Point(10, 226);
+            this.lblDisplayPhoneNumber.Name = "lblDisplayPhoneNumber";
+            this.lblDisplayPhoneNumber.Size = new System.Drawing.Size(118, 17);
+            this.lblDisplayPhoneNumber.TabIndex = 31;
+            this.lblDisplayPhoneNumber.Text = "Phone Number :";
             // 
-            // label6
+            // lblDisplayMembershipRenewalDate
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(10, 494);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(185, 17);
-            this.label6.TabIndex = 79;
-            this.label6.Text = "Membership Renewal Date :";
+            this.lblDisplayMembershipRenewalDate.AutoSize = true;
+            this.lblDisplayMembershipRenewalDate.Location = new System.Drawing.Point(10, 494);
+            this.lblDisplayMembershipRenewalDate.Name = "lblDisplayMembershipRenewalDate";
+            this.lblDisplayMembershipRenewalDate.Size = new System.Drawing.Size(185, 17);
+            this.lblDisplayMembershipRenewalDate.TabIndex = 79;
+            this.lblDisplayMembershipRenewalDate.Text = "Membership Renewal Date :";
             // 
-            // label11
+            // lblMemberCarDetails
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(10, 280);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(142, 17);
-            this.label11.TabIndex = 77;
-            this.label11.Text = "Member\'s Car Details";
+            this.lblMemberCarDetails.AutoSize = true;
+            this.lblMemberCarDetails.Location = new System.Drawing.Point(10, 280);
+            this.lblMemberCarDetails.Name = "lblMemberCarDetails";
+            this.lblMemberCarDetails.Size = new System.Drawing.Size(142, 17);
+            this.lblMemberCarDetails.TabIndex = 77;
+            this.lblMemberCarDetails.Text = "Member\'s Car Details";
             // 
-            // label8
+            // lblDisplayMembershipRenewalDetail
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(10, 455);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(187, 17);
-            this.label8.TabIndex = 78;
-            this.label8.Text = "Membership Renewal Detail ";
+            this.lblDisplayMembershipRenewalDetail.AutoSize = true;
+            this.lblDisplayMembershipRenewalDetail.Location = new System.Drawing.Point(10, 455);
+            this.lblDisplayMembershipRenewalDetail.Name = "lblDisplayMembershipRenewalDetail";
+            this.lblDisplayMembershipRenewalDetail.Size = new System.Drawing.Size(187, 17);
+            this.lblDisplayMembershipRenewalDetail.TabIndex = 78;
+            this.lblDisplayMembershipRenewalDetail.Text = "Membership Renewal Detail ";
             // 
-            // label13
+            // lblDisplayCarRegistrationNumber
             // 
-            this.label13.Location = new System.Drawing.Point(10, 317);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(46, 17);
-            this.label13.TabIndex = 33;
-            this.label13.Text = "label13";
+            this.lblDisplayCarRegistrationNumber.Location = new System.Drawing.Point(10, 317);
+            this.lblDisplayCarRegistrationNumber.Name = "lblDisplayCarRegistrationNumber";
+            this.lblDisplayCarRegistrationNumber.Size = new System.Drawing.Size(159, 17);
+            this.lblDisplayCarRegistrationNumber.TabIndex = 33;
+            this.lblDisplayCarRegistrationNumber.Text = "Registration Number :";
             // 
-            // label12
+            // lblDisplayCarModel
             // 
-            this.label12.Location = new System.Drawing.Point(10, 357);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(46, 17);
-            this.label12.TabIndex = 34;
-            this.label12.Text = "label12";
+            this.lblDisplayCarModel.Location = new System.Drawing.Point(10, 357);
+            this.lblDisplayCarModel.Name = "lblDisplayCarModel";
+            this.lblDisplayCarModel.Size = new System.Drawing.Size(87, 17);
+            this.lblDisplayCarModel.TabIndex = 34;
+            this.lblDisplayCarModel.Text = "Model :";
             // 
-            // label18
+            // lblDisplayCarYear
             // 
-            this.label18.Location = new System.Drawing.Point(10, 407);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(46, 17);
-            this.label18.TabIndex = 35;
-            this.label18.Text = "label18";
+            this.lblDisplayCarYear.Location = new System.Drawing.Point(10, 407);
+            this.lblDisplayCarYear.Name = "lblDisplayCarYear";
+            this.lblDisplayCarYear.Size = new System.Drawing.Size(46, 17);
+            this.lblDisplayCarYear.TabIndex = 35;
+            this.lblDisplayCarYear.Text = "Year :";
             // 
             // tbxDisplayMembershipRenewalDate
             // 
@@ -811,7 +811,7 @@
             // 
             // btnSearchExistingMember
             // 
-            this.btnSearchExistingMember.Location = new System.Drawing.Point(603, 55);
+            this.btnSearchExistingMember.Location = new System.Drawing.Point(666, 55);
             this.btnSearchExistingMember.Name = "btnSearchExistingMember";
             this.btnSearchExistingMember.Size = new System.Drawing.Size(226, 45);
             this.btnSearchExistingMember.TabIndex = 135;
@@ -821,7 +821,7 @@
             // 
             // btnUpdateExistingPhoneNumber
             // 
-            this.btnUpdateExistingPhoneNumber.Location = new System.Drawing.Point(1102, 55);
+            this.btnUpdateExistingPhoneNumber.Location = new System.Drawing.Point(1117, 55);
             this.btnUpdateExistingPhoneNumber.Name = "btnUpdateExistingPhoneNumber";
             this.btnUpdateExistingPhoneNumber.Size = new System.Drawing.Size(226, 45);
             this.btnUpdateExistingPhoneNumber.TabIndex = 136;
@@ -831,7 +831,7 @@
             // 
             // btnUpdateExistingCarDetails
             // 
-            this.btnUpdateExistingCarDetails.Location = new System.Drawing.Point(1102, 248);
+            this.btnUpdateExistingCarDetails.Location = new System.Drawing.Point(1117, 248);
             this.btnUpdateExistingCarDetails.Name = "btnUpdateExistingCarDetails";
             this.btnUpdateExistingCarDetails.Size = new System.Drawing.Size(226, 45);
             this.btnUpdateExistingCarDetails.TabIndex = 137;
@@ -841,7 +841,7 @@
             // 
             // btnRenewCurrentMembershipDate
             // 
-            this.btnRenewCurrentMembershipDate.Location = new System.Drawing.Point(1102, 526);
+            this.btnRenewCurrentMembershipDate.Location = new System.Drawing.Point(1117, 530);
             this.btnRenewCurrentMembershipDate.Name = "btnRenewCurrentMembershipDate";
             this.btnRenewCurrentMembershipDate.Size = new System.Drawing.Size(226, 45);
             this.btnRenewCurrentMembershipDate.TabIndex = 138;
@@ -891,7 +891,7 @@
         private System.Windows.Forms.Button btnRenewMembershipDate;
         private System.Windows.Forms.TextBox tbxCurrentRenewalDate;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label lblVerifyIcInput3;
         private System.Windows.Forms.TextBox tbxVerifyIcInputNumber3;
         private System.Windows.Forms.GroupBox grpUpdateCarDetails;
         private System.Windows.Forms.Button btnDoneUpdateCarDetails;
@@ -899,16 +899,16 @@
         private System.Windows.Forms.TextBox tbxNewCarModel;
         private System.Windows.Forms.TextBox tbxNewCarRegistrationNumber;
         private System.Windows.Forms.Button btnUpdateCarDetails;
-        private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label lblDisplayNewCarYear;
+        private System.Windows.Forms.Label lblDisplayNewCarModel;
+        private System.Windows.Forms.Label lblDisplayNewCarRegistrationNumber;
         private System.Windows.Forms.GroupBox grpUpdatePhoneNumber;
         private System.Windows.Forms.Button btnDoneUpdatePhoneNumber;
         private System.Windows.Forms.Button btnUpdatePhoneNumber;
         private System.Windows.Forms.TextBox tbxNewPhoneNumber;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label lblVerifyIcInput;
         private System.Windows.Forms.TextBox tbxVerifyInputIcNumber;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblDisplayNewPhoneNumber;
         private System.Windows.Forms.GroupBox grpAddMember;
         private System.Windows.Forms.RadioButton rbnFiveYearMembershipRenewal;
         private System.Windows.Forms.RadioButton rbnOneYearMembershipRenewal;
@@ -920,7 +920,7 @@
         private System.Windows.Forms.TextBox tbxPhoneNumber;
         private System.Windows.Forms.TextBox tbxIcNumber;
         private System.Windows.Forms.TextBox tbxName;
-        private System.Windows.Forms.Label lblMembershipRenewalDetail;
+        private System.Windows.Forms.Label lblMembershipRenewalType;
         private System.Windows.Forms.Label lblYear;
         private System.Windows.Forms.Label lblModel;
         private System.Windows.Forms.Label lblRegistrationNumber;
@@ -931,19 +931,19 @@
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Label lblPersonalDetails;
         private System.Windows.Forms.TextBox tbxVerifyInputIcNumber2;
-        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label lblVerifyIcInput2;
         private System.Windows.Forms.GroupBox grpDisplayMemberDetails;
         private System.Windows.Forms.Label lblDisplayName;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblDisplayIcNumber;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label lblDisplayDateOfBirth;
+        private System.Windows.Forms.Label lblDisplayPhoneNumber;
+        private System.Windows.Forms.Label lblDisplayMembershipRenewalDate;
+        private System.Windows.Forms.Label lblMemberCarDetails;
+        private System.Windows.Forms.Label lblDisplayMembershipRenewalDetail;
+        private System.Windows.Forms.Label lblDisplayCarRegistrationNumber;
+        private System.Windows.Forms.Label lblDisplayCarModel;
+        private System.Windows.Forms.Label lblDisplayCarYear;
         private System.Windows.Forms.TextBox tbxDisplayMembershipRenewalDate;
         private System.Windows.Forms.TextBox tbxDisplayName;
         private System.Windows.Forms.TextBox tbxDisplayIcNumber;
