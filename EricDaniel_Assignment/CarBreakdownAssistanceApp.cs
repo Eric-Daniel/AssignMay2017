@@ -396,8 +396,8 @@ namespace EricDaniel_Assignment
                 MessageBox.Show("Invalid IC! ");
                 grpUpdatePhoneNumber.Visible = false;
             }
-            tbxVerifyInputIcNumber.Text = string.Empty;
-            tbxVerifyInputIcNumber.BackColor = Color.White;
+           // tbxVerifyInputIcNumber.Text = string.Empty;
+           // tbxVerifyInputIcNumber.BackColor = Color.White;
 
         }
         private void btnUpdateExistingPhoneNumber_Click(object sender, EventArgs e)
