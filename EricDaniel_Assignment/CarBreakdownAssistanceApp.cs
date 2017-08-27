@@ -17,7 +17,7 @@ namespace EricDaniel_Assignment
     public partial class CarBreakdownAssistanceApp : Form
     {
         private List<Member> _memberslist = new List<Member>();
-        string storedPath = @"A:\EricDaniel_Assignment/membersT3.txt"; 
+        string storedPath = @"A:\EricDaniel_Assignment/membersT5.txt"; 
         public CarBreakdownAssistanceApp()
         {
             InitializeComponent();
@@ -30,6 +30,7 @@ namespace EricDaniel_Assignment
             dateTimePickerMembershipRenewalDate.CustomFormat = "d/MM/yyyy";
             grpDisplayMemberDetails.Visible = false;
             btnAddMember.Enabled = true;
+            tbxDisplayName.ReadOnly = true;
             // grpUpdatePhoneNumber.Visible = false;
             // grpUpdateCarDetails.Visible = false;
             // grpIcNumberValidation.Visible = true;
@@ -332,11 +333,11 @@ namespace EricDaniel_Assignment
         }
 
         //This method returns the object or null, after the ic number is passed
-        public Member IcInput(List<Member> membersArraylist, string pos)
+        public Member IcInput(List<Member> membersList, string pos)
         {
 
 
-            foreach (var m in membersArraylist)
+            foreach (var m in membersList)
             {
                 // ReadRegisteredMemberFromFile();
              //   Console.WriteLine(" ic in IcInput = {0}", m.IcNum);
@@ -350,21 +351,31 @@ namespace EricDaniel_Assignment
         //This Method only displays the member details.
         public void SearchMember(Member m) //, Car mCar)//, Member car)
         {
-            MessageBox.Show(m.Name + "\n" + m.DateOfBirth + "\n" + m.PhoneNum + "\n" + m.MembershipRenewalDate
-                            /*m.MembershipRenewalDate*/ + "\n" + m.MCar.RegistrationNumber + "\n" + m.MCar.Model +
-                            "\n" +
-                            m.MCar.Year);
-           
+            //MessageBox.Show(m.Name + "\n" + m.DateOfBirth + "\n" + m.PhoneNum + "\n" + m.MembershipRenewalDate
+            //                /*m.MembershipRenewalDate*/ + "\n" + m.MCar.RegistrationNumber + "\n" + m.MCar.Model +
+            //                "\n" +
+            //                m.MCar.Year);
+            //MessageBox.Show("");
             //tbxDisplayName.AppendText(m.Name);
             //tbxDisplayIcNumber.AppendText(m.IcNum);
-            tbxDisplayName.Text = m.Name;
-            tbxDisplayIcNumber.Text = m.IcNum;
-            tbxDisplayDateOfBirth.Text = m.DateOfBirth;
-            tbxDisplayPhoneNumber.Text = m.PhoneNum;
-            tbxDisplayCarRegistrationNumber.Text = m.MCar.RegistrationNumber;
-            tbxDisplayCarModel.Text = m.MCar.Model;
-            tbxDisplayMembershipRenewalDate.Text = m.MembershipRenewalDate;
-            tbxDisplayCarYear.Text = dateTimePickerCarYear.Value.ToString("yyyy"); //DateTime.(m.MCar.Year);
+
+            //tbxDisplayName.Text = m.Name;
+            //tbxDisplayIcNumber.Text = m.IcNum;
+            //tbxDisplayDateOfBirth.Text = m.DateOfBirth;
+            //tbxDisplayPhoneNumber.Text = m.PhoneNum;
+            //tbxDisplayCarRegistrationNumber.Text = m.MCar.RegistrationNumber;
+            //tbxDisplayCarModel.Text = m.MCar.Model;
+            //tbxDisplayMembershipRenewalDate.Text = m.MembershipRenewalDate;
+
+            //  tbxDisplayCarYear.Text = dateTimePickerCarYear.Value.ToString("yyyy"); //DateTime.(m.MCar.Year);
+            tbxDisplayName.AppendText(m.Name);
+            tbxDisplayIcNumber.AppendText(m.IcNum);
+            tbxDisplayDateOfBirth.AppendText(m.DateOfBirth);
+            tbxDisplayPhoneNumber.AppendText(m.PhoneNum);
+            tbxDisplayCarRegistrationNumber.AppendText(m.MCar.RegistrationNumber);
+            tbxDisplayCarModel.AppendText(m.MCar.Model);
+            tbxDisplayMembershipRenewalDate.AppendText(m.MembershipRenewalDate);
+            tbxDisplayCarYear.AppendText(m.MCar.Year.ToString());
 
             //foreach (Member member in membersArraylist)
             //{
@@ -397,7 +408,11 @@ namespace EricDaniel_Assignment
         public void UpdatePhoneNumber(List<Member> member, Member m)
         {
 
-            MessageBox.Show(m.PhoneNum);
+            MessageBox.Show("Phone Number Sucessfully updated");
+            tbxNewPhoneNumber.Text = string.Empty;
+            tbxNewPhoneNumber.ReadOnly = true;
+            tbxNewPhoneNumber.AppendText(m.PhoneNum);
+            tbxNewPhoneNumber.BackColor = Color.GreenYellow;
             // ReadRegisteredMemberFromFile();
             //string input, NewPhoneNum;
 
@@ -420,14 +435,40 @@ namespace EricDaniel_Assignment
         public void UpdateCarDetails(List<Member> member, Car mCar)
         {
             //ReadRegisteredMemberFromFile();
-            MessageBox.Show("\n" + mCar.RegistrationNumber + "\n" + mCar.Model + "\n" + mCar.Year);
+            //MessageBox.Show("\n" + mCar.RegistrationNumber + "\n" + mCar.Model + "\n" + mCar.Year);
+            MessageBox.Show("Car Details Updated Successfully");
+            
+            tbxNewCarRegistrationNumber.Text = string.Empty;
+            tbxNewCarModel.Text = string.Empty;
+            tbxNewCarYear.Text = string.Empty;
+
+            tbxNewCarRegistrationNumber.ReadOnly = true;
+            tbxNewCarModel.ReadOnly = true;
+            tbxNewCarYear.ReadOnly = true;
+
+            tbxNewCarRegistrationNumber.AppendText(mCar.RegistrationNumber);
+            tbxNewCarModel.AppendText(mCar.Model);
+           // tbxNewCarYear.AppendText((mCar.Year));
+           // tbxNewCarYear.Text = dateTimePickerCarYear.Value.ToString("yyyy");
+            tbxNewCarYear.AppendText(mCar.Year.ToString());
         }
 
         public void MembershipRenewalDate(List<Member> list, Member m)
         {
             // ReadRegisteredMemberFromFile();
             m.RenewMembership();
-            MessageBox.Show(m.MembershipRenewalDate);
+          //  m.MembershipRenewalDate;
+            //tbxCurrentRenewalDate.ReadOnly = true;
+            //tbxCurrentRenewalDate.Text = string.Empty;
+            // dateTimePickerMembershipRenewalDate.Value.ToString("MM/dd/yyyy");// = m.MembershipRenewalDate;
+             MessageBox.Show(m.MembershipRenewalDate);
+          //  MessageBox.Show(dateTimePickerMembershipRenewalDate.Value.ToString("MM/dd/yyyy"));
+      //    tbxCurrentRenewalDate.Text = dateTimePickerMembershipRenewalDate.Value.ToString("MM/dd/yyyy");
+
+           tbxCurrentRenewalDate.AppendText(m.MembershipRenewalDate);
+           /**/
+
+
             //  string renewMembership1;
             //    List<Member> renewMembership = null;
             //Member.RenewMembership();

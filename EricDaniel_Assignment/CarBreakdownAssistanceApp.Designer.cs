@@ -51,12 +51,12 @@
             this.btnDoneUpdatePhoneNumber = new System.Windows.Forms.Button();
             this.btnUpdatePhoneNumber = new System.Windows.Forms.Button();
             this.tbxNewPhoneNumber = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.grpIcNumberValidation1 = new System.Windows.Forms.GroupBox();
             this.btnVerifyInputIcNumber = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.tbxVerifyInputIcNumber = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.grpAddMember = new System.Windows.Forms.GroupBox();
             this.btnClearEveryInputData = new System.Windows.Forms.Button();
             this.rbnFiveYearMembershipRenewal = new System.Windows.Forms.RadioButton();
@@ -344,6 +344,15 @@
             this.tbxNewPhoneNumber.Size = new System.Drawing.Size(258, 22);
             this.tbxNewPhoneNumber.TabIndex = 88;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(6, 127);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(134, 17);
+            this.label5.TabIndex = 83;
+            this.label5.Text = "New Phone Number";
+            // 
             // grpIcNumberValidation1
             // 
             this.grpIcNumberValidation1.Controls.Add(this.btnVerifyInputIcNumber);
@@ -390,15 +399,6 @@
             this.tbxVerifyInputIcNumber.Name = "tbxVerifyInputIcNumber";
             this.tbxVerifyInputIcNumber.Size = new System.Drawing.Size(258, 22);
             this.tbxVerifyInputIcNumber.TabIndex = 38;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 127);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(134, 17);
-            this.label5.TabIndex = 83;
-            this.label5.Text = "New Phone Number";
             // 
             // grpAddMember
             // 
@@ -481,12 +481,12 @@
             // 
             // dateTimePickerMembershipRenewalDate
             // 
-            this.dateTimePickerMembershipRenewalDate.CustomFormat = "yyyy";
+            this.dateTimePickerMembershipRenewalDate.CustomFormat = "MM/dd/yyyy";
             this.dateTimePickerMembershipRenewalDate.Location = new System.Drawing.Point(76, 464);
             this.dateTimePickerMembershipRenewalDate.Name = "dateTimePickerMembershipRenewalDate";
             this.dateTimePickerMembershipRenewalDate.Size = new System.Drawing.Size(254, 22);
             this.dateTimePickerMembershipRenewalDate.TabIndex = 107;
-            this.dateTimePickerMembershipRenewalDate.Value = new System.DateTime(2017, 8, 12, 0, 0, 0, 0);
+            this.dateTimePickerMembershipRenewalDate.Value = new System.DateTime(2017, 8, 27, 0, 0, 0, 0);
             // 
             // dateTimePickerDateOfBirth
             // 
