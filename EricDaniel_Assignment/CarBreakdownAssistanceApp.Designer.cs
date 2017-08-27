@@ -388,7 +388,7 @@
             // 
             // btnDoneAddMember
             // 
-            this.btnDoneAddMember.Location = new System.Drawing.Point(307, 513);
+            this.btnDoneAddMember.Location = new System.Drawing.Point(238, 544);
             this.btnDoneAddMember.Name = "btnDoneAddMember";
             this.btnDoneAddMember.Size = new System.Drawing.Size(106, 23);
             this.btnDoneAddMember.TabIndex = 120;
@@ -435,7 +435,7 @@
             // 
             // btnAddMember
             // 
-            this.btnAddMember.Location = new System.Drawing.Point(176, 513);
+            this.btnAddMember.Location = new System.Drawing.Point(99, 544);
             this.btnAddMember.Name = "btnAddMember";
             this.btnAddMember.Size = new System.Drawing.Size(75, 23);
             this.btnAddMember.TabIndex = 108;

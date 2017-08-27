@@ -352,23 +352,27 @@ namespace EricDaniel_Assignment
         }
         private void btnDoneSearchAMember_Click(object sender, EventArgs e)
         {
-            
-            tbxDisplayName.Text = string.Empty;
-            tbxDisplayIcNumber.Text = string.Empty;
-            tbxDisplayDateOfBirth.Text = string.Empty;
-            tbxDisplayPhoneNumber.Text = string.Empty;
-            tbxDisplayCarRegistrationNumber.Text = string.Empty;
-            tbxDisplayCarModel.Text = string.Empty;
-            tbxDisplayCarYear.Text = string.Empty;
-            tbxDisplayMembershipRenewalDate.Text = string.Empty;
+            DialogResult dialogResult = MessageBox.Show("Click YES if want to EXIT OUT OF SEARCH MEMBER SECTION", " ", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+            if (dialogResult == DialogResult.Yes)
+            {
+                tbxDisplayName.Text = string.Empty;
+                tbxDisplayIcNumber.Text = string.Empty;
+                tbxDisplayDateOfBirth.Text = string.Empty;
+                tbxDisplayPhoneNumber.Text = string.Empty;
+                tbxDisplayCarRegistrationNumber.Text = string.Empty;
+                tbxDisplayCarModel.Text = string.Empty;
+                tbxDisplayCarYear.Text = string.Empty;
+                tbxDisplayMembershipRenewalDate.Text = string.Empty;
 
-            grpIcNumberValidation.Enabled = true;
-            grpDisplayMemberDetails.Visible = false;
-            btnAddNewMember.Enabled = true;
-            btnUpdateExistingPhoneNumber.Enabled = true;
-            btnUpdateExistingCarDetails.Enabled = true;
-            btnRenewCurrentMembershipDate.Enabled = true;
-            grpIcNumberValidation.Visible = false;
+                grpIcNumberValidation.Enabled = true;
+                grpDisplayMemberDetails.Visible = false;
+                btnAddNewMember.Enabled = true;
+                btnUpdateExistingPhoneNumber.Enabled = true;
+                btnUpdateExistingCarDetails.Enabled = true;
+                btnRenewCurrentMembershipDate.Enabled = true;
+                grpIcNumberValidation.Visible = false;
+            }
+            
         }
         private void btnUpdatePhoneNumber_Click(object sender, EventArgs e)
         {
@@ -450,17 +454,22 @@ namespace EricDaniel_Assignment
         }
         private void btnDoneUpdatePhoneNumber_Click(object sender, EventArgs e)
         {
-            tbxVerifyInputIcNumber.Text = string.Empty;
-            tbxNewPhoneNumber.Text = string.Empty;
+            DialogResult dialogResult = MessageBox.Show("Click YES if want to EXIT OUT OF UPDATE MEMBER's PHONE NUMBER SECTION", " ", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+            if (dialogResult == DialogResult.Yes)
+            {
+                tbxVerifyInputIcNumber.Text = string.Empty;
+                tbxNewPhoneNumber.Text = string.Empty;
 
-            grpUpdatePhoneNumber.Enabled = false;
-            //grpDisplayMemberDetails.Enabled = false;
-            btnAddNewMember.Enabled = true;
-            btnSearchExistingMember.Enabled = true;
-            //btnUpdateExistingPhoneNumber.Enabled = true;
-            btnUpdateExistingCarDetails.Enabled = true;
-            btnRenewCurrentMembershipDate.Enabled = true;
-           // grpIcNumberValidation.Visible = false;
+                grpUpdatePhoneNumber.Enabled = false;
+                //grpDisplayMemberDetails.Enabled = false;
+                btnAddNewMember.Enabled = true;
+                btnSearchExistingMember.Enabled = true;
+                //btnUpdateExistingPhoneNumber.Enabled = true;
+                btnUpdateExistingCarDetails.Enabled = true;
+                btnRenewCurrentMembershipDate.Enabled = true;
+                // grpIcNumberValidation.Visible = false;
+            }
+
         }
 
        
@@ -494,6 +503,23 @@ namespace EricDaniel_Assignment
         }
         private void btnDoneUpdateCarDetails_Click(object sender, EventArgs e)
         {
+            DialogResult dialogResult = MessageBox.Show("Click YES if want to EXIT OUT OF UPDATE MEMBER's CAR DETAILS SECTION", " ", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+            if (dialogResult == DialogResult.Yes)
+            {
+                tbxVerifyInputIcNumber2.Text = string.Empty;
+                tbxNewCarRegistrationNumber.Text = string.Empty;
+                tbxNewCarModel.Text = string.Empty;
+                tbxNewCarYear.Text = string.Empty;
+
+                grpUpdateCarDetails.Enabled = false;
+                //grpDisplayMemberDetails.Enabled = false;
+                btnAddNewMember.Enabled = true;
+                btnSearchExistingMember.Enabled = true;
+                btnUpdateExistingPhoneNumber.Enabled = true;
+                // btnUpdateExistingCarDetails.Enabled = true;
+                btnRenewCurrentMembershipDate.Enabled = true;
+                // grpIcNumberValidation.Visible = false;
+            }
             tbxVerifyInputIcNumber2.Text = string.Empty;
             tbxNewCarRegistrationNumber.Text = string.Empty;
             tbxNewCarModel.Text = string.Empty;
@@ -537,17 +563,22 @@ namespace EricDaniel_Assignment
         }
         private void btnDoneMembershipRenewal_Click(object sender, EventArgs e)
         {
-            tbxVerifyIcInputNumber3.Text = string.Empty;
-            tbxNewMembershipRenewalDate.Text = string.Empty;
+            DialogResult dialogResult = MessageBox.Show("Click YES if want to EXIT OUT OF RENEW MEMBER'S MEMBERSHIP SECTION", " ", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+            if (dialogResult == DialogResult.Yes)
+            {
+                tbxVerifyIcInputNumber3.Text = string.Empty;
+                tbxNewMembershipRenewalDate.Text = string.Empty;
 
-            grpMembershipRenewal.Enabled = false;
-            //grpDisplayMemberDetails.Enabled = false;
-            btnAddNewMember.Enabled = true;
-            btnSearchExistingMember.Enabled = true;
-            btnUpdateExistingPhoneNumber.Enabled = true;
-            btnUpdateExistingCarDetails.Enabled = true;
-            //btnRenewCurrentMembershipDate.Enabled = true;
-            // grpIcNumberValidation.Visible = false;
+                grpMembershipRenewal.Enabled = false;
+                //grpDisplayMemberDetails.Enabled = false;
+                btnAddNewMember.Enabled = true;
+                btnSearchExistingMember.Enabled = true;
+                btnUpdateExistingPhoneNumber.Enabled = true;
+                btnUpdateExistingCarDetails.Enabled = true;
+                //btnRenewCurrentMembershipDate.Enabled = true;
+                // grpIcNumberValidation.Visible = false;
+            }
+
         }
 
         //This method returns the object or null, after the ic number is passed
@@ -567,17 +598,8 @@ namespace EricDaniel_Assignment
         }
 
         //This Method only displays the member details.
-        public void SearchMember(Member m) //, Car mCar)//, Member car)
+        public void SearchMember(Member m) 
         {
-            //MessageBox.Show(m.Name + "\n" + m.DateOfBirth + "\n" + m.PhoneNum + "\n" + m.MembershipRenewalDate
-            //                /*m.MembershipRenewalDate*/ + "\n" + m.MCar.RegistrationNumber + "\n" + m.MCar.Model +
-            //                "\n" +
-            //                m.MCar.Year);
-            //MessageBox.Show("");
-            //tbxDisplayName.AppendText(m.Name);
-            //tbxDisplayIcNumber.AppendText(m.IcNum);
-
-           
             tbxDisplayName.AppendText(m.Name);
             tbxDisplayIcNumber.AppendText(m.IcNum);
             tbxDisplayDateOfBirth.AppendText(m.DateOfBirth);
@@ -586,21 +608,22 @@ namespace EricDaniel_Assignment
             tbxDisplayCarModel.AppendText(m.MCar.Model);
             tbxDisplayMembershipRenewalDate.AppendText(m.MembershipRenewalDate);
             tbxDisplayCarYear.AppendText(m.MCar.Year.ToString());
-
-            
-
         }
 
         public void UpdatePhoneNumber(List<Member> member, Member m)
         {
+            DialogResult dialogResult = MessageBox.Show("Are you sure you want to UPDATE MEMBER'S PHONE NUMBER", " ", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+            if (dialogResult == DialogResult.Yes)
+            {
+                MessageBox.Show("Phone Number Sucessfully updated");
+                tbxNewPhoneNumber.Text = string.Empty;
 
-            MessageBox.Show("Phone Number Sucessfully updated");
-            tbxNewPhoneNumber.Text = string.Empty;
+                tbxNewPhoneNumber.AppendText(m.PhoneNum);
+                tbxNewPhoneNumber.ReadOnly = true;
+
+                btnDoneUpdatePhoneNumber.Focus();
+            }
             
-            tbxNewPhoneNumber.AppendText(m.PhoneNum);
-            tbxNewPhoneNumber.ReadOnly = true;
-
-            btnDoneUpdatePhoneNumber.Focus();
             // tbxNewPhoneNumber.BackColor = Color.GreenYellow;
 
         }
@@ -609,39 +632,38 @@ namespace EricDaniel_Assignment
         {
             //ReadRegisteredMemberFromFile();
             //MessageBox.Show("\n" + mCar.RegistrationNumber + "\n" + mCar.Model + "\n" + mCar.Year);
-            MessageBox.Show("Car Details Updated Successfully");
+            DialogResult dialogResult = MessageBox.Show("Are you sure you want to UPDATE MEMBER'S CAR DETAILS", " ", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+            if (dialogResult == DialogResult.Yes)
+            {
+                MessageBox.Show("Car Details Updated Successfully");
+
+                tbxNewCarRegistrationNumber.Text = string.Empty;
+                tbxNewCarModel.Text = string.Empty;
+                tbxNewCarYear.Text = string.Empty;
+
+                tbxNewCarRegistrationNumber.ReadOnly = true;
+                tbxNewCarModel.ReadOnly = true;
+                tbxNewCarYear.ReadOnly = true;
+
+                tbxNewCarRegistrationNumber.AppendText(mCar.RegistrationNumber);
+                tbxNewCarModel.AppendText(mCar.Model);
+                // tbxNewCarYear.AppendText((mCar.Year));
+                // tbxNewCarYear.Text = dateTimePickerCarYear.Value.ToString("yyyy");
+                tbxNewCarYear.AppendText(mCar.Year.ToString());
+            }
             
-            tbxNewCarRegistrationNumber.Text = string.Empty;
-            tbxNewCarModel.Text = string.Empty;
-            tbxNewCarYear.Text = string.Empty;
-
-            tbxNewCarRegistrationNumber.ReadOnly = true;
-            tbxNewCarModel.ReadOnly = true;
-            tbxNewCarYear.ReadOnly = true;
-
-            tbxNewCarRegistrationNumber.AppendText(mCar.RegistrationNumber);
-            tbxNewCarModel.AppendText(mCar.Model);
-           // tbxNewCarYear.AppendText((mCar.Year));
-           // tbxNewCarYear.Text = dateTimePickerCarYear.Value.ToString("yyyy");
-            tbxNewCarYear.AppendText(mCar.Year.ToString());
         }
 
         public void MembershipRenewalDate(List<Member> list, Member m)
         {
-            //dateTimePickerMembershipRenewalDate.Value.ToString("MM/dd/yyyy");
-            // ReadRegisteredMemberFromFile();
-            m.RenewMembership();
-          //  m.MembershipRenewalDate;
-            //tbxCurrentRenewalDate.ReadOnly = true;
-            //tbxCurrentRenewalDate.Text = string.Empty;
-            // dateTimePickerMembershipRenewalDate.Value.ToString("MM/dd/yyyy");// = m.MembershipRenewalDate;
-             //MessageBox.Show(m.MembershipRenewalDate);
-            MessageBox.Show("Membership Successfully Renewed");
-          //  MessageBox.Show(dateTimePickerMembershipRenewalDate.Value.ToString("MM/dd/yyyy"));
-      //    tbxCurrentRenewalDate.Text = dateTimePickerMembershipRenewalDate.Value.ToString("MM/dd/yyyy");
-
-           tbxNewMembershipRenewalDate.AppendText(m.MembershipRenewalDate);
-           
+            DialogResult dialogResult = MessageBox.Show("Are you sure you want to RENEW MEMBER'S MEMBERSHIP DATE", " ", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+            if (dialogResult == DialogResult.Yes)
+            {
+                m.RenewMembership();
+                MessageBox.Show("Membership Successfully Renewed");
+                tbxNewMembershipRenewalDate.AppendText(m.MembershipRenewalDate);
+            }
+      
         }
 
         private void tbxName_KeyDown(object sender, KeyEventArgs e)
