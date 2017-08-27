@@ -33,7 +33,7 @@
             this.tbxVerifyIcInputNumber3 = new System.Windows.Forms.TextBox();
             this.lblVerifyIcInput3 = new System.Windows.Forms.Label();
             this.btnRenewMembershipDate = new System.Windows.Forms.Button();
-            this.tbxCurrentRenewalDate = new System.Windows.Forms.TextBox();
+            this.tbxNewMembershipRenewalDate = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.grpUpdateCarDetails = new System.Windows.Forms.GroupBox();
             this.tbxVerifyInputIcNumber2 = new System.Windows.Forms.TextBox();
@@ -120,7 +120,7 @@
             this.grpMembershipRenewal.Controls.Add(this.tbxVerifyIcInputNumber3);
             this.grpMembershipRenewal.Controls.Add(this.lblVerifyIcInput3);
             this.grpMembershipRenewal.Controls.Add(this.btnRenewMembershipDate);
-            this.grpMembershipRenewal.Controls.Add(this.tbxCurrentRenewalDate);
+            this.grpMembershipRenewal.Controls.Add(this.tbxNewMembershipRenewalDate);
             this.grpMembershipRenewal.Controls.Add(this.label14);
             this.grpMembershipRenewal.Location = new System.Drawing.Point(951, 570);
             this.grpMembershipRenewal.Name = "grpMembershipRenewal";
@@ -164,12 +164,12 @@
             this.btnRenewMembershipDate.UseVisualStyleBackColor = true;
             this.btnRenewMembershipDate.Click += new System.EventHandler(this.btnRenewMembershipDate_Click);
             // 
-            // tbxCurrentRenewalDate
+            // tbxNewMembershipRenewalDate
             // 
-            this.tbxCurrentRenewalDate.Location = new System.Drawing.Point(181, 70);
-            this.tbxCurrentRenewalDate.Name = "tbxCurrentRenewalDate";
-            this.tbxCurrentRenewalDate.Size = new System.Drawing.Size(258, 22);
-            this.tbxCurrentRenewalDate.TabIndex = 91;
+            this.tbxNewMembershipRenewalDate.Location = new System.Drawing.Point(181, 70);
+            this.tbxNewMembershipRenewalDate.Name = "tbxNewMembershipRenewalDate";
+            this.tbxNewMembershipRenewalDate.Size = new System.Drawing.Size(258, 22);
+            this.tbxNewMembershipRenewalDate.TabIndex = 91;
             // 
             // label14
             // 
@@ -204,6 +204,8 @@
             this.tbxVerifyInputIcNumber2.Name = "tbxVerifyInputIcNumber2";
             this.tbxVerifyInputIcNumber2.Size = new System.Drawing.Size(258, 22);
             this.tbxVerifyInputIcNumber2.TabIndex = 28;
+            this.tbxVerifyInputIcNumber2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbxVerifyInputIcNumber2_KeyDown);
+            this.tbxVerifyInputIcNumber2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbxVerifyInputIcNumber2_KeyPress);
             // 
             // btnDoneUpdateCarDetails
             // 
@@ -230,6 +232,7 @@
             this.tbxNewCarYear.Name = "tbxNewCarYear";
             this.tbxNewCarYear.Size = new System.Drawing.Size(258, 22);
             this.tbxNewCarYear.TabIndex = 97;
+            this.tbxNewCarYear.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbxNewCarYear_KeyPress);
             // 
             // tbxNewCarModel
             // 
@@ -237,6 +240,7 @@
             this.tbxNewCarModel.Name = "tbxNewCarModel";
             this.tbxNewCarModel.Size = new System.Drawing.Size(258, 22);
             this.tbxNewCarModel.TabIndex = 96;
+            this.tbxNewCarModel.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbxNewCarModel_KeyDown);
             // 
             // tbxNewCarRegistrationNumber
             // 
@@ -244,6 +248,7 @@
             this.tbxNewCarRegistrationNumber.Name = "tbxNewCarRegistrationNumber";
             this.tbxNewCarRegistrationNumber.Size = new System.Drawing.Size(258, 22);
             this.tbxNewCarRegistrationNumber.TabIndex = 95;
+            this.tbxNewCarRegistrationNumber.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbxNewCarRegistrationNumber_KeyDown);
             // 
             // btnUpdateCarDetails
             // 
@@ -312,6 +317,8 @@
             this.tbxVerifyInputIcNumber.Name = "tbxVerifyInputIcNumber";
             this.tbxVerifyInputIcNumber.Size = new System.Drawing.Size(258, 22);
             this.tbxVerifyInputIcNumber.TabIndex = 38;
+            this.tbxVerifyInputIcNumber.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbxVerifyInputIcNumber_KeyDown);
+            this.tbxVerifyInputIcNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbxVerifyInputIcNumber_KeyPress);
             // 
             // lblVerifyIcInput
             // 
@@ -338,6 +345,7 @@
             this.tbxNewPhoneNumber.Name = "tbxNewPhoneNumber";
             this.tbxNewPhoneNumber.Size = new System.Drawing.Size(258, 22);
             this.tbxNewPhoneNumber.TabIndex = 88;
+            this.tbxNewPhoneNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbxNewPhoneNumber_KeyPress);
             // 
             // lblDisplayNewPhoneNumber
             // 
@@ -889,7 +897,7 @@
         private System.Windows.Forms.GroupBox grpMembershipRenewal;
         private System.Windows.Forms.Button btnDoneMembershipRenewal;
         private System.Windows.Forms.Button btnRenewMembershipDate;
-        private System.Windows.Forms.TextBox tbxCurrentRenewalDate;
+        private System.Windows.Forms.TextBox tbxNewMembershipRenewalDate;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label lblVerifyIcInput3;
         private System.Windows.Forms.TextBox tbxVerifyIcInputNumber3;

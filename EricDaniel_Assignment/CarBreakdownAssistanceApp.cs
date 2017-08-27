@@ -17,7 +17,7 @@ namespace EricDaniel_Assignment
     public partial class CarBreakdownAssistanceApp : Form
     {
         private List<Member> _memberslist = new List<Member>();
-        string storedPath = @"A:\EricDaniel_Assignment/membersT5.txt"; 
+        string storedPath = @"A:\EricDaniel_Assignment/membersT7.txt"; 
         public CarBreakdownAssistanceApp()
         {
             InitializeComponent();
@@ -352,13 +352,18 @@ namespace EricDaniel_Assignment
         }
         private void btnDoneSearchAMember_Click(object sender, EventArgs e)
         {
-            tbxDisplayName.BackColor = Color.White;
-
-
+            
             tbxDisplayName.Text = string.Empty;
+            tbxDisplayIcNumber.Text = string.Empty;
+            tbxDisplayDateOfBirth.Text = string.Empty;
+            tbxDisplayPhoneNumber.Text = string.Empty;
+            tbxDisplayCarRegistrationNumber.Text = string.Empty;
+            tbxDisplayCarModel.Text = string.Empty;
+            tbxDisplayCarYear.Text = string.Empty;
+            tbxDisplayMembershipRenewalDate.Text = string.Empty;
 
             grpIcNumberValidation.Enabled = true;
-            grpDisplayMemberDetails.Enabled = false;
+            grpDisplayMemberDetails.Visible = false;
             btnAddNewMember.Enabled = true;
             btnUpdateExistingPhoneNumber.Enabled = true;
             btnUpdateExistingCarDetails.Enabled = true;
@@ -367,17 +372,71 @@ namespace EricDaniel_Assignment
         }
         private void btnUpdatePhoneNumber_Click(object sender, EventArgs e)
         {
+            //if (string.IsNullOrWhiteSpace(tbxNewPhoneNumber.Text))
+            //{
+            //    MessageBox.Show("\"Oops, Agent E encountered an error over here!" +
+            //                    "\n\nMEMBER'S NAME NOT INSERTED!\"", " ",
+            //        MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //    //MessageBox.Show("\"Opps, Agent E encountered an error over here!" +
+            //    //                    "\nPlease check whether you have yet to\n" +
+            //    //                    "ENTER MEMBER'S NAME\n" +
+            //    //                    "before CLICKING the ADD button once again.\"");
+            //    tbxNewPhoneNumber.Focus();
+            //}
+
+           
+
             string pos = tbxVerifyInputIcNumber.Text;
             Member m1 = IcInput(_memberslist, pos); //storing object returned by the function
 
-            if (m1 != null)
+            //if (string.IsNullOrWhiteSpace(tbxNewPhoneNumber.Text))
+            //{
+            //    MessageBox.Show("\"Oops, Agent E encountered an error over here!" +
+            //                    "\n\nMEMBER'S NAME NOT INSERTED!\"", " ",
+            //        MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //    //MessageBox.Show("\"Opps, Agent E encountered an error over here!" +
+            //    //                    "\nPlease check whether you have yet to\n" +
+            //    //                    "ENTER MEMBER'S NAME\n" +
+            //    //                    "before CLICKING the ADD button once again.\"");
+            //    tbxNewPhoneNumber.Focus();
+            //}
+            if (string.IsNullOrWhiteSpace(tbxVerifyInputIcNumber.Text))
             {
-                m1.PhoneNum = tbxNewPhoneNumber.Text;
-                UpdatePhoneNumber(_memberslist, m1);
+                MessageBox.Show("\"Oops, Agent E encountered an error over here!" +
+                                "\n\nMEMBER'S IC NUMBER NOT INSERTED!\"", " ",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //MessageBox.Show("\"Opps, Agent E encountered an error over here!" +
+                //                    "\nPlease check whether you have yet to\n" +
+                //                    "ENTER MEMBER'S NAME\n" +
+                //                    "before CLICKING the ADD button once again.\"");
+                tbxVerifyInputIcNumber.Focus();
+            }
+            else if (m1 != null)
+            {
+                if (string.IsNullOrWhiteSpace(tbxNewPhoneNumber.Text))
+                {
+                    MessageBox.Show("\"Oops, Agent E encountered an error over here!" +
+                                    "\n\nMEMBER'S PHONE NUMBER NOT INSERTED!\"", " ",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    //MessageBox.Show("\"Opps, Agent E encountered an error over here!" +
+                    //                    "\nPlease check whether you have yet to\n" +
+                    //                    "ENTER MEMBER'S NAME\n" +
+                    //                    "before CLICKING the ADD button once again.\"");
+                    tbxNewPhoneNumber.Focus();
+                }
+                else
+                {
+                    tbxVerifyInputIcNumber.ReadOnly = true;
+                    m1.PhoneNum = tbxNewPhoneNumber.Text;
+                    UpdatePhoneNumber(_memberslist, m1);
+                }
+               
+
                 // StoreRegisteredMemberintoFile(m1);
             }
             else
                 MessageBox.Show("Invalid IC! ");
+
         }
         private void btnUpdateExistingPhoneNumber_Click(object sender, EventArgs e)
         {
@@ -391,6 +450,9 @@ namespace EricDaniel_Assignment
         }
         private void btnDoneUpdatePhoneNumber_Click(object sender, EventArgs e)
         {
+            tbxVerifyInputIcNumber.Text = string.Empty;
+            tbxNewPhoneNumber.Text = string.Empty;
+
             grpUpdatePhoneNumber.Enabled = false;
             //grpDisplayMemberDetails.Enabled = false;
             btnAddNewMember.Enabled = true;
@@ -410,6 +472,7 @@ namespace EricDaniel_Assignment
 
             if (m1 != null)
             {
+                tbxVerifyInputIcNumber2.ReadOnly = true;
                 m1.MCar.RegistrationNumber = tbxNewCarRegistrationNumber.Text;
                 m1.MCar.Model = tbxNewCarModel.Text;
                 m1.MCar.Year = Convert.ToInt32(tbxNewCarYear.Text);
@@ -431,6 +494,11 @@ namespace EricDaniel_Assignment
         }
         private void btnDoneUpdateCarDetails_Click(object sender, EventArgs e)
         {
+            tbxVerifyInputIcNumber2.Text = string.Empty;
+            tbxNewCarRegistrationNumber.Text = string.Empty;
+            tbxNewCarModel.Text = string.Empty;
+            tbxNewCarYear.Text = string.Empty;
+
             grpUpdateCarDetails.Enabled = false;
             //grpDisplayMemberDetails.Enabled = false;
             btnAddNewMember.Enabled = true;
@@ -457,6 +525,8 @@ namespace EricDaniel_Assignment
         }
         private void btnRenewCurrentMembershipDate_Click(object sender, EventArgs e)
         {
+            tbxNewMembershipRenewalDate.ReadOnly = true;
+
             grpMembershipRenewal.Enabled = true;
             //grpIcNumberValidation.Visible = true;
             btnAddNewMember.Enabled = false;
@@ -467,6 +537,9 @@ namespace EricDaniel_Assignment
         }
         private void btnDoneMembershipRenewal_Click(object sender, EventArgs e)
         {
+            tbxVerifyIcInputNumber3.Text = string.Empty;
+            tbxNewMembershipRenewalDate.Text = string.Empty;
+
             grpMembershipRenewal.Enabled = false;
             //grpDisplayMemberDetails.Enabled = false;
             btnAddNewMember.Enabled = true;
@@ -523,10 +596,13 @@ namespace EricDaniel_Assignment
 
             MessageBox.Show("Phone Number Sucessfully updated");
             tbxNewPhoneNumber.Text = string.Empty;
-            tbxNewPhoneNumber.ReadOnly = true;
-            tbxNewPhoneNumber.AppendText(m.PhoneNum);
-            tbxNewPhoneNumber.BackColor = Color.GreenYellow;
             
+            tbxNewPhoneNumber.AppendText(m.PhoneNum);
+            tbxNewPhoneNumber.ReadOnly = true;
+
+            btnDoneUpdatePhoneNumber.Focus();
+            // tbxNewPhoneNumber.BackColor = Color.GreenYellow;
+
         }
 
         public void UpdateCarDetails(List<Member> member, Car mCar)
@@ -564,7 +640,7 @@ namespace EricDaniel_Assignment
           //  MessageBox.Show(dateTimePickerMembershipRenewalDate.Value.ToString("MM/dd/yyyy"));
       //    tbxCurrentRenewalDate.Text = dateTimePickerMembershipRenewalDate.Value.ToString("MM/dd/yyyy");
 
-           tbxCurrentRenewalDate.AppendText(m.MembershipRenewalDate);
+           tbxNewMembershipRenewalDate.AppendText(m.MembershipRenewalDate);
            
         }
 
@@ -642,6 +718,39 @@ namespace EricDaniel_Assignment
                 dateTimePickerMembershipRenewalDate.Focus();
             }
         }
+
+        private void tbxVerifyInputIcNumber_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                tbxNewPhoneNumber.Focus();
+            }
+        }
+
+
+        private void tbxVerifyInputIcNumber2_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                tbxNewCarRegistrationNumber.Focus();
+            }
+        }
+
+        private void tbxNewCarRegistrationNumber_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                tbxNewCarModel.Focus();
+            }
+        }
+
+        private void tbxNewCarModel_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                tbxNewCarYear.Focus();
+            }
+        }
         /* private void txtInputValue_KeyPress(object sender, KeyPressEventArgs e)
     {
         if (!char.IsDigit(e.KeyChar)) e.Handled = true;         //Just Digits
@@ -678,6 +787,31 @@ namespace EricDaniel_Assignment
             ////    e.Handled = true;
             if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
                 e.Handled = true;
+        }
+
+
+        private void tbxVerifyInputIcNumber_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar)) e.Handled = true;         //Just Digits
+            if (e.KeyChar == (char)8) e.Handled = false;            //Allow Backspace
+        }
+
+        private void tbxNewPhoneNumber_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar)) e.Handled = true;         //Just Digits
+            if (e.KeyChar == (char)8) e.Handled = false;            //Allow Backspace
+        }
+
+        private void tbxVerifyInputIcNumber2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar)) e.Handled = true;         //Just Digits
+            if (e.KeyChar == (char)8) e.Handled = false;            //Allow Backspace
+        }
+
+        private void tbxNewCarYear_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar)) e.Handled = true;         //Just Digits
+            if (e.KeyChar == (char)8) e.Handled = false;            //Allow Backspace
         }
     }
 }
