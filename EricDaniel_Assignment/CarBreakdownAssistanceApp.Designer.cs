@@ -423,6 +423,7 @@
             this.dateTimePickerCarYear.Name = "dateTimePickerCarYear";
             this.dateTimePickerCarYear.Size = new System.Drawing.Size(258, 22);
             this.dateTimePickerCarYear.TabIndex = 110;
+            this.dateTimePickerCarYear.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dateTimePickerCarYear_KeyDown);
             // 
             // btnAddMember
             // 
@@ -448,6 +449,7 @@
             this.tbxCarModel.Name = "tbxCarModel";
             this.tbxCarModel.Size = new System.Drawing.Size(258, 22);
             this.tbxCarModel.TabIndex = 103;
+            this.tbxCarModel.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbxCarModel_KeyDown);
             // 
             // tbxCarRegistrationNumber
             // 

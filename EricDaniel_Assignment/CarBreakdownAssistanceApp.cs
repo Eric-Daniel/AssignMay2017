@@ -123,33 +123,7 @@ namespace EricDaniel_Assignment
             string model = tbxCarModel.Text;
             int year = Convert.ToInt32(dateTimePickerCarYear.Text /* txtCarYear.Text*/);
 
-            // try
-            //  {
-            //if (!rbnOneYearMembershipRenewal.Checked && !rbnFiveYearMembershipRenewal.Checked)
-            //{
-            //    throw new InvalidOperationException("a message");
-            //}
-            //  }
-            // catch (NullReferenceException e1)
-            // {
-            //e1.HandleEvent(e1);
-            //MessageBox.Show("Choose member type!");
-            //  }
-            //if (!rbnOneYearMembershipRenewal.Checked && !rbnFiveYearMembershipRenewal.Checked)
-            //{
-            //    MessageBox.Show("Error");
-            //    //throw new InvalidOperationException("a message");
-            //}
-            //string pos = tbxIcNumber.Text;
-            //Member m1 = IcInput(_memberslist, pos);
-            //if (m1 == null)
-            //{
-            //    MessageBox.Show("Ic exist already");
-            //}
-            //string pos = tbxIcNumber.Text;
-            //Member m1 = IcInput(_memberslist, pos);
-            //if (m1 != null)
-            //{
+            
 
                 if (!rbnOneYearMembershipRenewal.Checked && !rbnFiveYearMembershipRenewal.Checked)
                 {
@@ -225,13 +199,7 @@ namespace EricDaniel_Assignment
                     //StoreRegisteredMemberintoFile(m1);
                 }
                 _memberslist.Add(m1);
-                    // Member m1 = new OneYearMembershipRenewal(name, ic, dOB, phoneNum, newDate, registrationNumber, model, year);
-                    // Member m2 = new FiveYearsMembershipRenewal(name, ic, dOB, phoneNum, newDate, registrationNumber, model, year);
-                    //  Member m1 = new Member(name, ic, dOB, phoneNum, newDate, registrationNumber, model, year);
-                    // StoreRegisteredMemberintoFile(m1);
-                    // StoreRegisteredMemberintoFile(m2);
-                    //  StoreRegisteredMemberintoFile(m1);
-                    //StoreRegisteredMemberintoFile(m1);
+                   
                     tbxName.Text = string.Empty;
                     tbxIcNumber.Text = string.Empty;
                     dateTimePickerDateOfBirth.ResetText();
@@ -249,15 +217,7 @@ namespace EricDaniel_Assignment
                     MessageBox.Show("Ic exist already");
                 }
         }
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Ic exist already");
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Ic exist already");
-            //}
+            
            
         }
 
@@ -459,15 +419,7 @@ namespace EricDaniel_Assignment
             //tbxDisplayName.AppendText(m.Name);
             //tbxDisplayIcNumber.AppendText(m.IcNum);
 
-            //tbxDisplayName.Text = m.Name;
-            //tbxDisplayIcNumber.Text = m.IcNum;
-            //tbxDisplayDateOfBirth.Text = m.DateOfBirth;
-            //tbxDisplayPhoneNumber.Text = m.PhoneNum;
-            //tbxDisplayCarRegistrationNumber.Text = m.MCar.RegistrationNumber;
-            //tbxDisplayCarModel.Text = m.MCar.Model;
-            //tbxDisplayMembershipRenewalDate.Text = m.MembershipRenewalDate;
-
-            //  tbxDisplayCarYear.Text = dateTimePickerCarYear.Value.ToString("yyyy"); //DateTime.(m.MCar.Year);
+           
             tbxDisplayName.AppendText(m.Name);
             tbxDisplayIcNumber.AppendText(m.IcNum);
             tbxDisplayDateOfBirth.AppendText(m.DateOfBirth);
@@ -477,31 +429,7 @@ namespace EricDaniel_Assignment
             tbxDisplayMembershipRenewalDate.AppendText(m.MembershipRenewalDate);
             tbxDisplayCarYear.AppendText(m.MCar.Year.ToString());
 
-            //foreach (Member member in membersArraylist)
-            //{
-            //    if(member.IcNum.Equals(m.IcNum))
-            //    {
-            //        MessageBox.Show(m.Name + "\n" + m.DateOfBirth + "\n" + m.PhoneNum + "\n" + m.MembershipRenewalDate
-            //               /*m.MembershipRenewalDate*/ + "\n" + m.MCar.RegistrationNumber + "\n" + m.MCar.Model +
-            //               "\n" +
-            //               m.MCar.Year);
-            //    }
-            //}
-            //m.MCar.Year = year;
-            //DateTime.TryParseExact(tbxDisplayCarYear.Text, Thread.CurrentThread.CurrentCulture,
-            //    System.Globalization.DateTimeStyles.None)
-
-            //string dateString, format;
-            //DateTime y;
-            //CultureInfo provider = CultureInfo.InvariantCulture;
-
-            //// Parse date-only value with invariant culture.
-            //dateString = "06/15/2008";
-            //format = "d";
-
-            //    result = DateTime.ParseExact(dateString, format, provider);
-            // //   Console.WriteLine("{0} converts to {1}.", dateString, result.ToString());
-
+            
 
         }
 
@@ -513,23 +441,7 @@ namespace EricDaniel_Assignment
             tbxNewPhoneNumber.ReadOnly = true;
             tbxNewPhoneNumber.AppendText(m.PhoneNum);
             tbxNewPhoneNumber.BackColor = Color.GreenYellow;
-            // ReadRegisteredMemberFromFile();
-            //string input, NewPhoneNum;
-
-            //Console.Write("Enter member's Identification Card Number(IC): ");
-            //input = Console.ReadLine();
-
-            //for (int i = 0; i < member.Count; i++)
-            //{
-            //    Member m = (Member)member[i];
-            //    if (m.IcNum == input)
-            //    {
-            //        Console.Write("Enter new phone number: ");
-            //        NewPhoneNum = Console.ReadLine();
-            //        m.PhoneNum = NewPhoneNum;
-            //        Console.WriteLine("Updated sucessfully. Your new Phone Number is " + m.PhoneNum);
-            //    }
-            //}
+            
         }
 
         public void UpdateCarDetails(List<Member> member, Car mCar)
@@ -568,22 +480,7 @@ namespace EricDaniel_Assignment
       //    tbxCurrentRenewalDate.Text = dateTimePickerMembershipRenewalDate.Value.ToString("MM/dd/yyyy");
 
            tbxCurrentRenewalDate.AppendText(m.MembershipRenewalDate);
-           /**/
-
-
-            //  string renewMembership1;
-            //    List<Member> renewMembership = null;
-            //Member.RenewMembership();
-            // for (int i = 0; i < list.Count; i++)
-            //  {
-            //     renewMembership1 = list.RenewMembership();
-            //    Member m = (Member)list[i];
-            //     m.RenewMembership();
-            //   DateTimePicker1.Text = RenewMembership;
-            //TestSystem**/
-            //  }
-            /* the first issue is with the  public static void MembershipRenewalDate(ArrayList list),
-             *  I need to remove the for loop that so it will not  renew all members in list AND i not sure how to specify which member to renew..*/
+           
         }
 
         private void tbxName_KeyDown(object sender, KeyEventArgs e)
@@ -592,7 +489,7 @@ namespace EricDaniel_Assignment
             {
                 // tbxName.Focus();
                 this.SelectNextControl((Control)sender, true, true, true, true);
-              //  tbxIcNumber.Focus();
+               //tbxName.Focus();
             }
         }
 
@@ -602,12 +499,11 @@ namespace EricDaniel_Assignment
         {
             if (e.KeyCode == Keys.Enter/* || e.KeyCode == Keys.Up || e.KeyCode == Keys.Down*/)
             {
-                // tbxName.Focus();
-                {
+                
                     this.SelectNextControl((Control)sender, true, true, true, true);
-                    //tbxDisplayDateOfBirth.Focus();
-                   // dateTimePickerDateOfBirth.Focus();
-                }
+                //tbxDisplayDateOfBirth.Focus();
+                // dateTimePickerDateOfBirth.Focus();
+                dateTimePickerDateOfBirth.Focus();
             }
         }
 
@@ -618,23 +514,47 @@ namespace EricDaniel_Assignment
                 // tbxName.Focus();
                 {
                     this.SelectNextControl((Control)sender, true, true, true, true);
-                  //  tbxPhoneNumber.Focus();
+                    tbxPhoneNumber.Focus();
                 }
                
             }
         }
         private void tbxPhoneNumber_KeyDown(object sender, KeyEventArgs e)
         {
+            if (e.KeyCode == Keys.Enter)
             {
-                this.SelectNextControl((Control)sender, true, true, true, true);
-                // tbxPhoneNumber.Focus();
+                tbxCarRegistrationNumber.Focus();
             }
+            //{
+            //    this.SelectNextControl((Control)sender, true, true, true, true);
+            // //  Enter = tbxPhoneNumber.Select();
+            //   // tbxCarRegistrationNumber.Focus();
+            //}
         }
         private void tbxCarRegistrationNumber_KeyDown(object sender, KeyEventArgs e)
         {
+            if (e.KeyCode == Keys.Enter)
             {
-                this.SelectNextControl((Control)sender, true, true, true, true);
-                //tbxPhoneNumber.Focus();
+                tbxCarModel.Focus();
+            }
+            //{
+            //    this.SelectNextControl((Control)sender, true, true, true, true);
+            //   // tbxCarRegistrationNumber.Focus();
+            //}
+        }
+        private void tbxCarModel_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                dateTimePickerCarYear.Focus();
+            }
+        }
+
+        private void dateTimePickerCarYear_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                dateTimePickerMembershipRenewalDate.Focus();
             }
         }
         /* private void txtInputValue_KeyPress(object sender, KeyPressEventArgs e)
@@ -674,7 +594,5 @@ namespace EricDaniel_Assignment
             if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
                 e.Handled = true;
         }
-
-       
     }
 }
