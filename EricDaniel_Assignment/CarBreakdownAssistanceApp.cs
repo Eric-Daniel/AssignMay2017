@@ -219,15 +219,23 @@ namespace EricDaniel_Assignment
                     //StoreRegisteredMemberintoFile(m1);
                 }
                 _memberslist.Add(m1);
-                // Member m1 = new OneYearMembershipRenewal(name, ic, dOB, phoneNum, newDate, registrationNumber, model, year);
-                // Member m2 = new FiveYearsMembershipRenewal(name, ic, dOB, phoneNum, newDate, registrationNumber, model, year);
-                //  Member m1 = new Member(name, ic, dOB, phoneNum, newDate, registrationNumber, model, year);
-                // StoreRegisteredMemberintoFile(m1);
-                // StoreRegisteredMemberintoFile(m2);
-                //  StoreRegisteredMemberintoFile(m1);
-                //StoreRegisteredMemberintoFile(m1);
-                tbxName.Text = string.Empty;
-                rbnOneYearMembershipRenewal.Checked = false;
+                    // Member m1 = new OneYearMembershipRenewal(name, ic, dOB, phoneNum, newDate, registrationNumber, model, year);
+                    // Member m2 = new FiveYearsMembershipRenewal(name, ic, dOB, phoneNum, newDate, registrationNumber, model, year);
+                    //  Member m1 = new Member(name, ic, dOB, phoneNum, newDate, registrationNumber, model, year);
+                    // StoreRegisteredMemberintoFile(m1);
+                    // StoreRegisteredMemberintoFile(m2);
+                    //  StoreRegisteredMemberintoFile(m1);
+                    //StoreRegisteredMemberintoFile(m1);
+                    tbxName.Text = string.Empty;
+                    tbxIcNumber.Text = string.Empty;
+                    dateTimePickerDateOfBirth.ResetText();
+                    tbxPhoneNumber.Text = string.Empty;
+                    tbxCarRegistrationNumber.Text = string.Empty;
+                    tbxCarModel.Text = string.Empty;
+                    dateTimePickerCarYear.ResetText();
+
+                    dateTimePickerMembershipRenewalDate.ResetText();
+                    rbnOneYearMembershipRenewal.Checked = false;
                 rbnFiveYearMembershipRenewal.Checked = false;
                 }
                 else
@@ -249,7 +257,15 @@ namespace EricDaniel_Assignment
 
         private void btnClearEveryInputData_Click(object sender, EventArgs e)
         {
+            //tbxName.Text = string.Empty;
+            //tbxIcNumber.Text = string.Empty;
+            //dateTimePickerDateOfBirth.ResetText();
+            //tbxPhoneNumber.Text = string.Empty;
+            //tbxCarRegistrationNumber.Text = string.Empty;
+            //tbxCarModel.Text = string.Empty;
+            //dateTimePickerCarYear.ResetText();
 
+            //dateTimePickerMembershipRenewalDate.ResetText();
         }
         private void btnSearch_Click(object sender, EventArgs e)
         {
