@@ -53,7 +53,6 @@
             this.tbxVerifyInputIcNumber = new System.Windows.Forms.TextBox();
             this.grpAddMember = new System.Windows.Forms.GroupBox();
             this.dateTimePickerMembershipRenewalDate = new System.Windows.Forms.DateTimePicker();
-            this.btnClearEveryInputData = new System.Windows.Forms.Button();
             this.rbnFiveYearMembershipRenewal = new System.Windows.Forms.RadioButton();
             this.rbnOneYearMembershipRenewal = new System.Windows.Forms.RadioButton();
             this.dateTimePickerCarYear = new System.Windows.Forms.DateTimePicker();
@@ -106,6 +105,7 @@
             this.btnUpdateExistingPhoneNumber = new System.Windows.Forms.Button();
             this.btnUpdateExistingCarDetails = new System.Windows.Forms.Button();
             this.btnRenewCurrentMembershipDate = new System.Windows.Forms.Button();
+            this.btnDoneAddMember = new System.Windows.Forms.Button();
             this.grpMembershipRenewal.SuspendLayout();
             this.grpUpdateCarDetails.SuspendLayout();
             this.grpUpdatePhoneNumber.SuspendLayout();
@@ -334,8 +334,8 @@
             // 
             // grpAddMember
             // 
+            this.grpAddMember.Controls.Add(this.btnDoneAddMember);
             this.grpAddMember.Controls.Add(this.dateTimePickerMembershipRenewalDate);
-            this.grpAddMember.Controls.Add(this.btnClearEveryInputData);
             this.grpAddMember.Controls.Add(this.rbnFiveYearMembershipRenewal);
             this.grpAddMember.Controls.Add(this.rbnOneYearMembershipRenewal);
             this.grpAddMember.Controls.Add(this.dateTimePickerCarYear);
@@ -368,16 +368,6 @@
             this.dateTimePickerMembershipRenewalDate.Name = "dateTimePickerMembershipRenewalDate";
             this.dateTimePickerMembershipRenewalDate.Size = new System.Drawing.Size(258, 22);
             this.dateTimePickerMembershipRenewalDate.TabIndex = 118;
-            // 
-            // btnClearEveryInputData
-            // 
-            this.btnClearEveryInputData.Location = new System.Drawing.Point(280, 513);
-            this.btnClearEveryInputData.Name = "btnClearEveryInputData";
-            this.btnClearEveryInputData.Size = new System.Drawing.Size(75, 23);
-            this.btnClearEveryInputData.TabIndex = 116;
-            this.btnClearEveryInputData.Text = "UNDO";
-            this.btnClearEveryInputData.UseVisualStyleBackColor = true;
-            this.btnClearEveryInputData.Click += new System.EventHandler(this.btnClearEveryInputData_Click);
             // 
             // rbnFiveYearMembershipRenewal
             // 
@@ -805,6 +795,7 @@
             this.btnAddNewMember.TabIndex = 134;
             this.btnAddNewMember.Text = "ADD MEMBER";
             this.btnAddNewMember.UseVisualStyleBackColor = true;
+            this.btnAddNewMember.Click += new System.EventHandler(this.btnAddNewMember_Click);
             // 
             // btnSearchExistingMember
             // 
@@ -814,6 +805,7 @@
             this.btnSearchExistingMember.TabIndex = 135;
             this.btnSearchExistingMember.Text = "SEARCH MEMBER";
             this.btnSearchExistingMember.UseVisualStyleBackColor = true;
+            this.btnSearchExistingMember.Click += new System.EventHandler(this.btnSearchExistingMember_Click);
             // 
             // btnUpdateExistingPhoneNumber
             // 
@@ -841,6 +833,16 @@
             this.btnRenewCurrentMembershipDate.TabIndex = 138;
             this.btnRenewCurrentMembershipDate.Text = "RENEW MEMBER\'S MEMBERSHIP";
             this.btnRenewCurrentMembershipDate.UseVisualStyleBackColor = true;
+            // 
+            // btnDoneAddMember
+            // 
+            this.btnDoneAddMember.Location = new System.Drawing.Point(307, 513);
+            this.btnDoneAddMember.Name = "btnDoneAddMember";
+            this.btnDoneAddMember.Size = new System.Drawing.Size(75, 23);
+            this.btnDoneAddMember.TabIndex = 120;
+            this.btnDoneAddMember.Text = "DONE";
+            this.btnDoneAddMember.UseVisualStyleBackColor = true;
+            this.btnDoneAddMember.Click += new System.EventHandler(this.btnDoneAddMember_Click);
             // 
             // CarBreakdownAssistanceApp
             // 
@@ -903,7 +905,6 @@
         private System.Windows.Forms.TextBox tbxVerifyInputIcNumber;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.GroupBox grpAddMember;
-        private System.Windows.Forms.Button btnClearEveryInputData;
         private System.Windows.Forms.RadioButton rbnFiveYearMembershipRenewal;
         private System.Windows.Forms.RadioButton rbnOneYearMembershipRenewal;
         private System.Windows.Forms.DateTimePicker dateTimePickerCarYear;
@@ -957,6 +958,7 @@
         private System.Windows.Forms.Button btnUpdateExistingPhoneNumber;
         private System.Windows.Forms.Button btnUpdateExistingCarDetails;
         private System.Windows.Forms.Button btnRenewCurrentMembershipDate;
+        private System.Windows.Forms.Button btnDoneAddMember;
     }
 }
 

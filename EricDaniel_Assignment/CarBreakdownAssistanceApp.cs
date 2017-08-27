@@ -34,6 +34,12 @@ namespace EricDaniel_Assignment
             // grpUpdatePhoneNumber.Visible = false;
             // grpUpdateCarDetails.Visible = false;
             // grpIcNumberValidation.Visible = true;
+            grpAddMember.Enabled = false;
+            //grpDisplayMemberDetails.
+            grpIcNumberValidation.Visible = false;
+            grpUpdatePhoneNumber.Enabled = false;
+            grpUpdateCarDetails.Enabled = false;
+            grpMembershipRenewal.Enabled = false;
         }
 
         private void CarBreakdownAssistanceApp_Load(object sender, EventArgs e)
@@ -255,18 +261,7 @@ namespace EricDaniel_Assignment
            
         }
 
-        private void btnClearEveryInputData_Click(object sender, EventArgs e)
-        {
-            //tbxName.Text = string.Empty;
-            //tbxIcNumber.Text = string.Empty;
-            //dateTimePickerDateOfBirth.ResetText();
-            //tbxPhoneNumber.Text = string.Empty;
-            //tbxCarRegistrationNumber.Text = string.Empty;
-            //tbxCarModel.Text = string.Empty;
-            //dateTimePickerCarYear.ResetText();
-
-            //dateTimePickerMembershipRenewalDate.ResetText();
-        }
+        
         private void btnSearch_Click(object sender, EventArgs e)
         {
             string pos = tbxIcNumberSearchMember.Text;
@@ -637,6 +632,29 @@ namespace EricDaniel_Assignment
             ////    e.Handled = true;
             if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
                 e.Handled = true;
+        }
+
+        private void btnAddNewMember_Click(object sender, EventArgs e)
+        {
+            grpAddMember.Enabled = true;
+            btnSearchExistingMember.Enabled = false;
+            btnUpdateExistingPhoneNumber.Enabled = false;
+            btnUpdateExistingCarDetails.Enabled = false;
+            btnRenewCurrentMembershipDate.Enabled = false;
+        }
+
+        private void btnSearchExistingMember_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDoneAddMember_Click(object sender, EventArgs e)
+        {
+            grpAddMember.Enabled = false;
+            btnSearchExistingMember.Enabled = true;
+            btnUpdateExistingPhoneNumber.Enabled = true;
+            btnUpdateExistingCarDetails.Enabled = true;
+            btnRenewCurrentMembershipDate.Enabled = true;
         }
     }
 }
