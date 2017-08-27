@@ -134,26 +134,65 @@ namespace EricDaniel_Assignment
             //    MessageBox.Show("Error");
             //    //throw new InvalidOperationException("a message");
             //}
-            if (!rbnOneYearMembershipRenewal.Checked && !rbnFiveYearMembershipRenewal.Checked)
-            {
-                MessageBox.Show("Choose type!");
-                //throw new InvalidOperationException("a message");
-            }
-            else
-            if (string.IsNullOrWhiteSpace(tbxName.Text) || tbxName.Text.Any(Char.IsDigit))
-            {
-                MessageBox.Show("Please enter member's Name without digits");
-                tbxName.Focus();
-            }
-            else
-            if (string.IsNullOrWhiteSpace(tbxIcNumber.Text) /*|| tbxIcNumber.Text.Any(!Char.IsDigit(e.Handled))*/)
-            {
+            //string pos = tbxIcNumber.Text;
+            //Member m1 = IcInput(_memberslist, pos);
+            //if (m1 == null)
+            //{
+            //    MessageBox.Show("Ic exist already");
+            //}
+            //string pos = tbxIcNumber.Text;
+            //Member m1 = IcInput(_memberslist, pos);
+            //if (m1 != null)
+            //{
+
+                if (!rbnOneYearMembershipRenewal.Checked && !rbnFiveYearMembershipRenewal.Checked)
+                {
+                    MessageBox.Show("Choose type!");
+                    //throw new InvalidOperationException("a message");
+                }
+
+                else if (string.IsNullOrWhiteSpace(tbxName.Text))
+                {
+                    MessageBox.Show("\"Opps, Agent E encountered an error over here!" +
+                                    "\nPlease check whether you have yet to\n" +
+                                    "ENTER MEMBER'S NAME\n" +
+                                    "before CLICKING the ADD button once again.\"", " ",
+                        MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                //MessageBox.Show("\"Opps, Agent E encountered an error over here!" +
+                //                    "\nPlease check whether you have yet to\n" +
+                //                    "ENTER MEMBER'S NAME\n" +
+                //                    "before CLICKING the ADD button once again.\"");
+                    tbxName.Focus();
+                }
+                else if (string.IsNullOrWhiteSpace(tbxIcNumber.Text) /*|| tbxIcNumber.Text.Any(!Char.IsDigit(e.Handled))*/)
+                {
                 //e.Handled = !char.IsLetter(e.KeyChar) && !char.IsDigit(e.KeyChar);
-                //MessageBox.Show("Please enter member's Name without digits");
-                //tbxName.Focus();
-            }
-            else
-            {
+                    MessageBox.Show("Please enter member's Name without digits");
+                    tbxIcNumber.Focus();
+                }
+                else if (string.IsNullOrWhiteSpace(tbxPhoneNumber.Text))
+                {
+                    MessageBox.Show("Please enter member's Name without digits");
+                    tbxPhoneNumber.Focus();
+                }
+                else if (string.IsNullOrWhiteSpace(tbxCarRegistrationNumber.Text))
+                {
+                    MessageBox.Show("Please enter member's Name without digits");
+                    tbxCarRegistrationNumber.Focus();
+                }
+                else if (string.IsNullOrWhiteSpace(tbxCarModel.Text))
+                {
+                    MessageBox.Show("Please enter member's Name without digits");
+                    tbxCarModel.Focus();
+                }
+
+            else //if (m1 != null)
+                {
+                string pos = tbxIcNumber.Text;
+                Member m1 = IcInput(_memberslist, pos);
+                if (m1 == null)
+                { 
+              //  Member m1 = null;
                 //if (!rbnOneYearMembershipRenewal.Checked && !rbnFiveYearMembershipRenewal.Checked)
                 //{
                 //    MessageBox.Show("Error");
@@ -164,17 +203,19 @@ namespace EricDaniel_Assignment
                 //    btnAddMember.Enabled = true;
                 //}
                 //Can include validation here
-                Member m1 = null;
+                //    Member m1 = null;
                 if (rbnOneYearMembershipRenewal.Checked)
                 {
-                    m1 = new OneYearMembershipRenewal(name, ic, dOB, phoneNum, newDate, registrationNumber, model, year);
+                    m1 = new OneYearMembershipRenewal(name, ic, dOB, phoneNum, newDate, registrationNumber, model,
+                        year);
 
                     // StoreRegisteredMemberintoFile(m1);
                 }
 
                 else if (rbnFiveYearMembershipRenewal.Checked)
                 {
-                    m1 = new FiveYearsMembershipRenewal(name, ic, dOB, phoneNum, newDate, registrationNumber, model, year);
+                    m1 = new FiveYearsMembershipRenewal(name, ic, dOB, phoneNum, newDate, registrationNumber, model,
+                        year);
                     //StoreRegisteredMemberintoFile(m1);
                 }
                 _memberslist.Add(m1);
@@ -188,7 +229,21 @@ namespace EricDaniel_Assignment
                 tbxName.Text = string.Empty;
                 rbnOneYearMembershipRenewal.Checked = false;
                 rbnFiveYearMembershipRenewal.Checked = false;
-            }
+                }
+                else
+                {
+                    MessageBox.Show("Ic exist already");
+                }
+        }
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Ic exist already");
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Ic exist already");
+            //}
            
         }
 
@@ -463,7 +518,7 @@ namespace EricDaniel_Assignment
             //tbxCurrentRenewalDate.Text = string.Empty;
             // dateTimePickerMembershipRenewalDate.Value.ToString("MM/dd/yyyy");// = m.MembershipRenewalDate;
              //MessageBox.Show(m.MembershipRenewalDate);
-            MessageBox.Show("MembershipDate Successfully Renewed");
+            MessageBox.Show("Membership Successfully Renewed");
           //  MessageBox.Show(dateTimePickerMembershipRenewalDate.Value.ToString("MM/dd/yyyy"));
       //    tbxCurrentRenewalDate.Text = dateTimePickerMembershipRenewalDate.Value.ToString("MM/dd/yyyy");
 
@@ -541,6 +596,43 @@ namespace EricDaniel_Assignment
                 this.SelectNextControl((Control)sender, true, true, true, true);
                 //tbxPhoneNumber.Focus();
             }
+        }
+        /* private void txtInputValue_KeyPress(object sender, KeyPressEventArgs e)
+    {
+        if (!char.IsDigit(e.KeyChar)) e.Handled = true;         //Just Digits
+        if (e.KeyChar == (char)8) e.Handled = false;            //Allow Backspace
+    }
+
+    private void textBox1_TextChanged(object sender, EventArgs e)
+    {
+        if (System.Text.RegularExpressions.Regex.IsMatch(textBox1.Text, "[^0-9]"))
+        {
+            MessageBox.Show("Please enter only numbers.");
+            textBox1.Text = string.Empty;
+        }
+    }*/
+        private void tbxIcNumber_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar)) e.Handled = true;         //Just Digits
+            if (e.KeyChar == (char)8) e.Handled = false;            //Allow Backspace
+        }
+
+        private void tbxPhoneNumber_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar)) e.Handled = true;         //Just Digits
+            if (e.KeyChar == (char)8) e.Handled = false;            //Allow Backspace
+        }
+
+        private void tbxName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ////if (char.IsDigit(e.KeyChar)) e.Handled = true;         //Just Letters
+            ////if (e.KeyChar == (char)8) e.Handled = false;            //Allow Backspace
+            //e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char) Keys.Back); // && e.KeyChar == ' ');
+            //// tbxName.Text name = (tbxName)sender;
+            ////if ((e.KeyChar == ' ') && (tbxName.Text.Contains(' ')))
+            ////    e.Handled = true;
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
+                e.Handled = true;
         }
     }
 }

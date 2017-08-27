@@ -111,7 +111,7 @@ namespace EricDaniel_Assignment.Classes
             DateTime date = Convert.ToDateTime(membershipRenewalDate);
             date = date.AddYears(1);
 
-            membershipRenewalDate = Convert.ToString(date);
+            membershipRenewalDate = Convert.ToString(date.ToShortDateString());
             //DateTime date = Convert.ToDateTime(membershipRenewalDate);
             //date = date.AddYears(1);
 
@@ -131,10 +131,11 @@ namespace EricDaniel_Assignment.Classes
 
         public override void RenewMembership()
         {
+           // DateTime date1 = DateTime.Now;
             DateTime date = Convert.ToDateTime(membershipRenewalDate);
             date = date.AddYears(5);
 
-            membershipRenewalDate = Convert.ToString(date);
+            membershipRenewalDate = Convert.ToString(date.ToShortDateString());
             // throw new NotImplementedException();
         }
     }

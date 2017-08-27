@@ -509,6 +509,7 @@
             this.tbxPhoneNumber.Size = new System.Drawing.Size(258, 22);
             this.tbxPhoneNumber.TabIndex = 101;
             this.tbxPhoneNumber.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbxPhoneNumber_KeyDown);
+            this.tbxPhoneNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbxPhoneNumber_KeyPress);
             // 
             // tbxIcNumber
             // 
@@ -517,6 +518,7 @@
             this.tbxIcNumber.Size = new System.Drawing.Size(258, 22);
             this.tbxIcNumber.TabIndex = 99;
             this.tbxIcNumber.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbxIcNumber_KeyDown);
+            this.tbxIcNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbxIcNumber_KeyPress);
             // 
             // tbxName
             // 
@@ -525,6 +527,7 @@
             this.tbxName.Size = new System.Drawing.Size(258, 22);
             this.tbxName.TabIndex = 98;
             this.tbxName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbxName_KeyDown);
+            this.tbxName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbxName_KeyPress);
             // 
             // lblMembershipRenewalDetail
             // 
