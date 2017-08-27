@@ -309,7 +309,11 @@ namespace EricDaniel_Assignment
             else
             {
                 tbxIcNumberSearchMember.BackColor = Color.Red;
-                MessageBox.Show("Invalid IC! "); // error warning message
+                //MessageBox.Show("Invalid IC! "); // error warning message
+                MessageBox.Show("\"Oops, Agent E encountered an error over here!\"" +
+                                "\n\n\"INVALID IC NUMBER!\"", " ",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                tbxIcNumberSearchMember.Focus();
                 grpIcNumberValidation.Visible = false;
                 btnAddNewMember.Enabled = true;
                 btnUpdateExistingPhoneNumber.Enabled = true;
@@ -393,7 +397,11 @@ namespace EricDaniel_Assignment
             else
             {
                 tbxVerifyInputIcNumber.BackColor = Color.Red;
-                MessageBox.Show("Invalid IC! ");
+                //MessageBox.Show("Invalid IC! ");
+                MessageBox.Show("\"Oops, Agent E encountered an error over here!\"" +
+                                "\n\n\"INVALID IC NUMBER!\"", " ",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                tbxVerifyInputIcNumber.Focus();
                 grpUpdatePhoneNumber.Visible = false;
             }
            // tbxVerifyInputIcNumber.Text = string.Empty;
@@ -449,7 +457,11 @@ namespace EricDaniel_Assignment
             else
             {
                 tbxVerifyInputIcNumber2.BackColor = Color.Red;
-                MessageBox.Show("Invalid IC! ");
+                //MessageBox.Show("Invalid IC! ");
+                MessageBox.Show("\"Oops, Agent E encountered an error over here!\"" +
+                                "\n\n\"INVALID IC NUMBER!\"", " ",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                tbxVerifyInputIcNumber2.Focus();
             }
             tbxVerifyInputIcNumber2.Text = string.Empty;
             tbxVerifyInputIcNumber2.BackColor = Color.White;
@@ -500,7 +512,11 @@ namespace EricDaniel_Assignment
             else
             {
                 tbxVerifyInputIcNumber3.BackColor = Color.Red;
-                MessageBox.Show("Invalid IC! ");
+                //MessageBox.Show("Invalid IC! ");
+                MessageBox.Show("\"Oops, Agent E encountered an error over here!\"" +
+                                "\n\n\"INVALID IC NUMBER!\"", " ",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                tbxVerifyInputIcNumber3.Focus();
             }
             tbxVerifyInputIcNumber3.Text = string.Empty;
             tbxVerifyInputIcNumber3.BackColor = Color.White;
