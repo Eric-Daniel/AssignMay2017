@@ -455,13 +455,15 @@ namespace EricDaniel_Assignment
 
         public void MembershipRenewalDate(List<Member> list, Member m)
         {
+            //dateTimePickerMembershipRenewalDate.Value.ToString("MM/dd/yyyy");
             // ReadRegisteredMemberFromFile();
             m.RenewMembership();
           //  m.MembershipRenewalDate;
             //tbxCurrentRenewalDate.ReadOnly = true;
             //tbxCurrentRenewalDate.Text = string.Empty;
             // dateTimePickerMembershipRenewalDate.Value.ToString("MM/dd/yyyy");// = m.MembershipRenewalDate;
-             MessageBox.Show(m.MembershipRenewalDate);
+             //MessageBox.Show(m.MembershipRenewalDate);
+            MessageBox.Show("MembershipDate Successfully Renewed");
           //  MessageBox.Show(dateTimePickerMembershipRenewalDate.Value.ToString("MM/dd/yyyy"));
       //    tbxCurrentRenewalDate.Text = dateTimePickerMembershipRenewalDate.Value.ToString("MM/dd/yyyy");
 

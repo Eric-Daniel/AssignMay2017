@@ -63,7 +63,6 @@
             this.rbnOneYearMembershipRenewal = new System.Windows.Forms.RadioButton();
             this.dateTimePickerCarYear = new System.Windows.Forms.DateTimePicker();
             this.btnAddMember = new System.Windows.Forms.Button();
-            this.dateTimePickerMembershipRenewalDate = new System.Windows.Forms.DateTimePicker();
             this.dateTimePickerDateOfBirth = new System.Windows.Forms.DateTimePicker();
             this.tbxCarModel = new System.Windows.Forms.TextBox();
             this.tbxCarRegistrationNumber = new System.Windows.Forms.TextBox();
@@ -112,6 +111,7 @@
             this.label20 = new System.Windows.Forms.Label();
             this.tbxIcNumberSearchMember = new System.Windows.Forms.TextBox();
             this.btnSearch = new System.Windows.Forms.Button();
+            this.dateTimePickerMembershipRenewalDate = new System.Windows.Forms.DateTimePicker();
             this.grpMembershipRenewal.SuspendLayout();
             this.grpIcNumberValidation3.SuspendLayout();
             this.grpUpdateCarDetails.SuspendLayout();
@@ -402,12 +402,12 @@
             // 
             // grpAddMember
             // 
+            this.grpAddMember.Controls.Add(this.dateTimePickerMembershipRenewalDate);
             this.grpAddMember.Controls.Add(this.btnClearEveryInputData);
             this.grpAddMember.Controls.Add(this.rbnFiveYearMembershipRenewal);
             this.grpAddMember.Controls.Add(this.rbnOneYearMembershipRenewal);
             this.grpAddMember.Controls.Add(this.dateTimePickerCarYear);
             this.grpAddMember.Controls.Add(this.btnAddMember);
-            this.grpAddMember.Controls.Add(this.dateTimePickerMembershipRenewalDate);
             this.grpAddMember.Controls.Add(this.dateTimePickerDateOfBirth);
             this.grpAddMember.Controls.Add(this.tbxCarModel);
             this.grpAddMember.Controls.Add(this.tbxCarRegistrationNumber);
@@ -478,15 +478,6 @@
             this.btnAddMember.Text = "ADD";
             this.btnAddMember.UseVisualStyleBackColor = true;
             this.btnAddMember.Click += new System.EventHandler(this.btnAddMember_Click);
-            // 
-            // dateTimePickerMembershipRenewalDate
-            // 
-            this.dateTimePickerMembershipRenewalDate.CustomFormat = "MM/dd/yyyy";
-            this.dateTimePickerMembershipRenewalDate.Location = new System.Drawing.Point(76, 464);
-            this.dateTimePickerMembershipRenewalDate.Name = "dateTimePickerMembershipRenewalDate";
-            this.dateTimePickerMembershipRenewalDate.Size = new System.Drawing.Size(254, 22);
-            this.dateTimePickerMembershipRenewalDate.TabIndex = 107;
-            this.dateTimePickerMembershipRenewalDate.Value = new System.DateTime(2017, 8, 27, 0, 0, 0, 0);
             // 
             // dateTimePickerDateOfBirth
             // 
@@ -914,6 +905,13 @@
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
+            // dateTimePickerMembershipRenewalDate
+            // 
+            this.dateTimePickerMembershipRenewalDate.Location = new System.Drawing.Point(86, 467);
+            this.dateTimePickerMembershipRenewalDate.Name = "dateTimePickerMembershipRenewalDate";
+            this.dateTimePickerMembershipRenewalDate.Size = new System.Drawing.Size(258, 22);
+            this.dateTimePickerMembershipRenewalDate.TabIndex = 118;
+            // 
             // CarBreakdownAssistanceApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -991,7 +989,6 @@
         private System.Windows.Forms.RadioButton rbnOneYearMembershipRenewal;
         private System.Windows.Forms.DateTimePicker dateTimePickerCarYear;
         private System.Windows.Forms.Button btnAddMember;
-        private System.Windows.Forms.DateTimePicker dateTimePickerMembershipRenewalDate;
         private System.Windows.Forms.DateTimePicker dateTimePickerDateOfBirth;
         private System.Windows.Forms.TextBox tbxCarModel;
         private System.Windows.Forms.TextBox tbxCarRegistrationNumber;
@@ -1040,6 +1037,7 @@
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.TextBox tbxIcNumberSearchMember;
         private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.DateTimePicker dateTimePickerMembershipRenewalDate;
     }
 }
 
