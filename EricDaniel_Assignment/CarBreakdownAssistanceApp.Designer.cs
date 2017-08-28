@@ -136,7 +136,7 @@
             this.btnDoneMembershipRenewal.Name = "btnDoneMembershipRenewal";
             this.btnDoneMembershipRenewal.Size = new System.Drawing.Size(115, 30);
             this.btnDoneMembershipRenewal.TabIndex = 110;
-            this.btnDoneMembershipRenewal.Text = "DONE";
+            this.btnDoneMembershipRenewal.Text = "DONE / EXIT";
             this.btnDoneMembershipRenewal.UseVisualStyleBackColor = true;
             this.btnDoneMembershipRenewal.Click += new System.EventHandler(this.btnDoneMembershipRenewal_Click);
             // 
@@ -217,7 +217,7 @@
             this.btnDoneUpdateCarDetails.Name = "btnDoneUpdateCarDetails";
             this.btnDoneUpdateCarDetails.Size = new System.Drawing.Size(115, 30);
             this.btnDoneUpdateCarDetails.TabIndex = 110;
-            this.btnDoneUpdateCarDetails.Text = "DONE";
+            this.btnDoneUpdateCarDetails.Text = "DONE / EXIT";
             this.btnDoneUpdateCarDetails.UseVisualStyleBackColor = true;
             this.btnDoneUpdateCarDetails.Click += new System.EventHandler(this.btnDoneUpdateCarDetails_Click);
             // 
@@ -313,7 +313,7 @@
             this.btnDoneUpdatePhoneNumber.Name = "btnDoneUpdatePhoneNumber";
             this.btnDoneUpdatePhoneNumber.Size = new System.Drawing.Size(115, 30);
             this.btnDoneUpdatePhoneNumber.TabIndex = 109;
-            this.btnDoneUpdatePhoneNumber.Text = "DONE";
+            this.btnDoneUpdatePhoneNumber.Text = "DONE / EXIT";
             this.btnDoneUpdatePhoneNumber.UseVisualStyleBackColor = true;
             this.btnDoneUpdatePhoneNumber.Click += new System.EventHandler(this.btnDoneUpdatePhoneNumber_Click);
             // 

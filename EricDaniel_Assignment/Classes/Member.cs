@@ -64,7 +64,7 @@ namespace EricDaniel_Assignment.Classes
             dateOfBirth = theDOB;
             phoneNum = aPhoneNum;
             membershipRenewalDate = aNewDate;
-            mCar = new Car(registrationNumber, model, year); //Call Car contructor
+            mCar = new Car(registrationNumber, model, year); 
         }
 
         public abstract void RenewMembership();
