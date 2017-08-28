@@ -446,7 +446,6 @@ namespace EricDaniel_Assignment
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
                 tbxVerifyInputIcNumber2.Focus();
             }
-           // tbxVerifyInputIcNumber2.Text = string.Empty;
             tbxVerifyInputIcNumber2.BackColor = Color.White;
         }
         private void btnUpdateExistingCarDetails_Click(object sender, EventArgs e)
