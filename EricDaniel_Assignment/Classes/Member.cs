@@ -10,11 +10,6 @@ namespace EricDaniel_Assignment.Classes
     [Serializable]
     public abstract class Member
     {
-        //public Member()
-        //{
-
-        //}
-
         private string name;
 
         public string Name
@@ -83,19 +78,6 @@ namespace EricDaniel_Assignment.Classes
 
         public abstract void RenewMembership();
     }
-    //[Serializable]
-    //public class NullMember : Member
-    //{
-    //    public NullMember() : base("no name", " no theIc", " no theDOB ", "no aPhoneNum ", "no aNewDate", "no registrationNumber", "no model", 0)
-    //    {
-
-    //    }
-
-    //    public override void RenewMembership()
-    //    {
-    //        MessageBox.Show("Null member cannot renew membership");
-    //    }
-    //}
 
     [Serializable]
     public class OneYearMembershipRenewal : Member
@@ -112,11 +94,7 @@ namespace EricDaniel_Assignment.Classes
             date = date.AddYears(1);
 
             membershipRenewalDate = Convert.ToString(date.ToShortDateString());
-            //DateTime date = Convert.ToDateTime(membershipRenewalDate);
-            //date = date.AddYears(1);
-
-            //membershipRenewalDate = Convert.ToString(date);
-            // throw new NotImplementedException();
+    
         }
     }
 

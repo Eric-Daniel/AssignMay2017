@@ -17,13 +17,13 @@ namespace EricDaniel_Assignment
     public partial class CarBreakdownAssistanceApp : Form
     {
         private List<Member> _memberslist = new List<Member>();
-        string storedPath = @"A:\EricDaniel_Assignment/membersT7.txt"; 
+        string storedPath = @"A:\EricDaniel_Assignment/membersT10.txt"; 
         public CarBreakdownAssistanceApp()
         {
             InitializeComponent();
             dateTimePickerDateOfBirth.Format = DateTimePickerFormat.Custom;
             dateTimePickerDateOfBirth.CustomFormat = "d/MM/yyyy";
-            //  dateTimePicker2.CustomFormat = "yyyy";
+           
             dateTimePickerCarYear.Format = DateTimePickerFormat.Custom;
             dateTimePickerCarYear.CustomFormat = "yyyy";
             dateTimePickerMembershipRenewalDate.Format = DateTimePickerFormat.Custom;
@@ -62,7 +62,7 @@ namespace EricDaniel_Assignment
             if (e.CloseReason == CloseReason.UserClosing)
             {
                 if (MessageBox.Show("Are you sure want to exit?",
-                        " ",
+                        "",
                         MessageBoxButtons.OKCancel,
                         MessageBoxIcon.Information) == DialogResult.OK)
                 {
@@ -214,7 +214,8 @@ namespace EricDaniel_Assignment
                    
                 }
                 _memberslist.Add(m1);
-                   
+                    MessageBox.Show("Sucessfully ADDED MEMBER", "",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
                     tbxName.Text = string.Empty;
                     tbxIcNumber.Text = string.Empty;
                     dateTimePickerDateOfBirth.ResetText();
@@ -383,6 +384,14 @@ namespace EricDaniel_Assignment
             }
             else if (m1 != null)
             {
+                if (string.IsNullOrWhiteSpace(tbxVerifyInputIcNumber.Text))
+                {
+                    MessageBox.Show("\"Oops, Agent E encountered an error over here!" +
+                                    "\n\nMEMBER'S IC NUMBER NOT INSERTED!\"", " ",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                    tbxVerifyInputIcNumber.Focus();
+                }
                 if (string.IsNullOrWhiteSpace(tbxNewPhoneNumber.Text))
                 {
                     MessageBox.Show("\"Oops, Agent E encountered an error over here!" +
@@ -424,6 +433,7 @@ namespace EricDaniel_Assignment
             //btnUpdateExistingPhoneNumber.Enabled = false;
             btnUpdateExistingCarDetails.Enabled = false;
             btnRenewCurrentMembershipDate.Enabled = false;
+            tbxVerifyInputIcNumber.ReadOnly = false;
         }
         private void btnDoneUpdatePhoneNumber_Click(object sender, EventArgs e)
         {
@@ -454,11 +464,32 @@ namespace EricDaniel_Assignment
 
             if (m1 != null)
             {
-                tbxVerifyInputIcNumber2.ReadOnly = true;
-                m1.MCar.RegistrationNumber = tbxNewCarRegistrationNumber.Text;
-                m1.MCar.Model = tbxNewCarModel.Text;
-                m1.MCar.Year = Convert.ToInt32(tbxNewCarYear.Text);
-                UpdateCarDetails(_memberslist, m1.MCar);
+                if (string.IsNullOrWhiteSpace(tbxNewCarRegistrationNumber.Text) || string.IsNullOrWhiteSpace(tbxNewCarModel.Text) || string.IsNullOrWhiteSpace(tbxNewCarYear.Text))
+                {
+                    MessageBox.Show("\"Encountered an error over here!"  +
+                                    "\n\nEITHER\n-MEMBER'S CAR REGISTRATION NUMBER\n-MEMBER'S CAR MODEL\n-MEMBER'S CAR YEAR\n\n NOT INSERTED", " ",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                    //tbxNewCarRegistrationNumber.Focus();
+                }
+               
+                else if (string.IsNullOrWhiteSpace(tbxVerifyInputIcNumber.Text))
+                {
+                    MessageBox.Show("\"Oops, Agent E encountered an error over here!" +
+                                    "\n\nMEMBER'S IC NUMBER NOT INSERTED!\"", " ",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                    tbxVerifyInputIcNumber.Focus();
+                }
+                else
+                {
+                    tbxVerifyInputIcNumber2.ReadOnly = true;
+                    m1.MCar.RegistrationNumber = tbxNewCarRegistrationNumber.Text;
+                    m1.MCar.Model = tbxNewCarModel.Text;
+                    m1.MCar.Year = Convert.ToInt32(tbxNewCarYear.Text);
+                    UpdateCarDetails(_memberslist, m1.MCar);
+                }
+                
                 //StoreRegisteredMemberintoFile(m1);
             }
             else
@@ -513,7 +544,19 @@ namespace EricDaniel_Assignment
 
             if (m1 != null)
             {
-                MembershipRenewalDate(_memberslist, m1);
+                if (string.IsNullOrWhiteSpace(tbxVerifyInputIcNumber3.Text))
+                {
+                    MessageBox.Show("\"Encountered an error over here!" +
+                                    "\n\nMEMBER'S IC NUMBER NOT INSERTED!\"", " ",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                    tbxVerifyInputIcNumber3.Focus();
+                }
+                else
+                {
+                    MembershipRenewalDate(_memberslist, m1);
+                }
+                
                 //  StoreRegisteredMemberintoFile(m1);
             }
             else
