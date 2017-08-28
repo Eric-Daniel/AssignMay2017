@@ -178,14 +178,12 @@ namespace EricDaniel_Assignment
                     {
                         m1 = new OneYearMembershipRenewal(name, ic, dOB, phoneNum, newDate, registrationNumber, model,
                             year);
-
                     }
 
                     else if (rbnFiveYearMembershipRenewal.Checked)
                     {
                         m1 = new FiveYearsMembershipRenewal(name, ic, dOB, phoneNum, newDate, registrationNumber, model,
                             year);
-
                     }
                     _memberslist.Add(m1);
                     MessageBox.Show("Sucessfully ADDED MEMBER", "",
@@ -239,7 +237,6 @@ namespace EricDaniel_Assignment
                 tbxCarRegistrationNumber.Text = string.Empty;
                 tbxCarModel.Text = string.Empty;
                 dateTimePickerCarYear.ResetText();
-
                 dateTimePickerMembershipRenewalDate.ResetText();
                 rbnOneYearMembershipRenewal.Checked = false;
                 rbnFiveYearMembershipRenewal.Checked = false;
@@ -271,7 +268,6 @@ namespace EricDaniel_Assignment
                 tbxDisplayCarModel.ReadOnly = true;
                 tbxDisplayCarYear.ReadOnly = true;
                 tbxDisplayMembershipRenewalDate.ReadOnly = true;
-
 
                 tbxDisplayName.Font = new Font(tbxDisplayName.Font, FontStyle.Bold);
                 tbxDisplayIcNumber.Font = new Font(tbxDisplayIcNumber.Font, FontStyle.Bold);
@@ -335,13 +331,8 @@ namespace EricDaniel_Assignment
         }
         private void btnUpdatePhoneNumber_Click(object sender, EventArgs e)
         {
-
-
-
-
             string pos = tbxVerifyInputIcNumber.Text;
             Member m1 = SearchMemberUsingIc(_memberslist, pos);
-
 
             if (string.IsNullOrWhiteSpace(tbxVerifyInputIcNumber.Text))
             {
@@ -632,7 +623,6 @@ namespace EricDaniel_Assignment
         {
             if (e.KeyCode == Keys.Enter)
             {
-
                 SelectNextControl((Control)sender, true, true, true, true);
                 dateTimePickerDateOfBirth.Focus();
             }
