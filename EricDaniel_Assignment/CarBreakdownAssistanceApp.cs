@@ -468,13 +468,12 @@ namespace EricDaniel_Assignment
         private void btnUpdateExistingCarDetails_Click(object sender, EventArgs e)
         {
             grpUpdateCarDetails.Enabled = true;
-            //grpIcNumberValidation.Visible = true;
             btnAddNewMember.Enabled = false;
             btnSearchExistingMember.Enabled = false;
             btnUpdateExistingPhoneNumber.Enabled = false;
-           // btnUpdateExistingCarDetails.Enabled = false;
             btnRenewCurrentMembershipDate.Enabled = false;
         }
+
         private void btnDoneUpdateCarDetails_Click(object sender, EventArgs e)
         {
             DialogResult dialogResult = MessageBox.Show("Click YES if want to EXIT OUT OF UPDATE MEMBER's CAR DETAILS SECTION", " ", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
@@ -486,22 +485,18 @@ namespace EricDaniel_Assignment
                 tbxNewCarYear.Text = string.Empty;
 
                 grpUpdateCarDetails.Enabled = false;
-                //grpDisplayMemberDetails.Enabled = false;
                 btnAddNewMember.Enabled = true;
                 btnSearchExistingMember.Enabled = true;
                 btnUpdateExistingPhoneNumber.Enabled = true;
-                // btnUpdateExistingCarDetails.Enabled = true;
                 btnRenewCurrentMembershipDate.Enabled = true;
-                // grpIcNumberValidation.Visible = false;
             }
         
         }
 
-
         private void btnRenewMembershipDate_Click(object sender, EventArgs e)
         {
             string pos = tbxVerifyInputIcNumber3.Text;
-            Member m1 = IcInput(_memberslist, pos); //storing object returned by the function
+            Member m1 = IcInput(_memberslist, pos);
 
             if (m1 != null)
             {
@@ -517,13 +512,11 @@ namespace EricDaniel_Assignment
                 {
                     MembershipRenewalDate(_memberslist, m1);
                 }
-                
-                //  StoreRegisteredMemberintoFile(m1);
+               
             }
             else
             {
                 tbxVerifyInputIcNumber3.BackColor = Color.Red;
-                //MessageBox.Show("Invalid IC! ");
                 MessageBox.Show("\"Oops, Agent E encountered an error over here!\"" +
                                 "\n\n\"INVALID IC NUMBER!\"", " ",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -537,12 +530,10 @@ namespace EricDaniel_Assignment
             tbxNewMembershipRenewalDate.ReadOnly = true;
 
             grpMembershipRenewal.Enabled = true;
-            //grpIcNumberValidation.Visible = true;
             btnAddNewMember.Enabled = false;
             btnSearchExistingMember.Enabled = false;
             btnUpdateExistingPhoneNumber.Enabled = false;
             btnUpdateExistingCarDetails.Enabled = false;
-           // btnRenewCurrentMembershipDate.Enabled = false;
         }
         private void btnDoneMembershipRenewal_Click(object sender, EventArgs e)
         {
@@ -553,22 +544,16 @@ namespace EricDaniel_Assignment
                 tbxNewMembershipRenewalDate.Text = string.Empty;
 
                 grpMembershipRenewal.Enabled = false;
-                //grpDisplayMemberDetails.Enabled = false;
                 btnAddNewMember.Enabled = true;
                 btnSearchExistingMember.Enabled = true;
                 btnUpdateExistingPhoneNumber.Enabled = true;
                 btnUpdateExistingCarDetails.Enabled = true;
-                //btnRenewCurrentMembershipDate.Enabled = true;
-                // grpIcNumberValidation.Visible = false;
             }
 
         }
 
-        //This method returns the object or null, after the ic number is passed
         public Member IcInput(List<Member> membersList, string pos)
         {
-
-
             foreach (var m in membersList)
             {
                
@@ -578,7 +563,6 @@ namespace EricDaniel_Assignment
             return null;
         }
 
-        //This Method only displays the member details.
         public void SearchMember(Member m) 
         {
             tbxDisplayName.AppendText(m.Name);
@@ -596,7 +580,6 @@ namespace EricDaniel_Assignment
             DialogResult dialogResult = MessageBox.Show("Are you sure you want to UPDATE MEMBER'S PHONE NUMBER", " ", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
             if (dialogResult == DialogResult.Yes)
             {
-               // MessageBox.Show("Phone Number Sucessfully updated");
                 MessageBox.Show("Phone Number Updated Successfully", "",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
                 tbxNewPhoneNumber.Text = string.Empty;
@@ -607,8 +590,6 @@ namespace EricDaniel_Assignment
                 btnDoneUpdatePhoneNumber.Focus();
             }
             
-            // tbxNewPhoneNumber.BackColor = Color.GreenYellow;
-
         }
 
         public void UpdateCarDetails(List<Member> member, Car mCar)
@@ -617,7 +598,6 @@ namespace EricDaniel_Assignment
             DialogResult dialogResult = MessageBox.Show("Are you sure you want to UPDATE MEMBER'S CAR DETAILS", " ", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
             if (dialogResult == DialogResult.Yes)
             {
-                //MessageBox.Show("Car Details Updated Successfully");
                 MessageBox.Show("Car Details Updated Successfully", "",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
                 tbxNewCarRegistrationNumber.Text = string.Empty;
@@ -630,8 +610,6 @@ namespace EricDaniel_Assignment
 
                 tbxNewCarRegistrationNumber.AppendText(mCar.RegistrationNumber);
                 tbxNewCarModel.AppendText(mCar.Model);
-                // tbxNewCarYear.AppendText((mCar.Year));
-                // tbxNewCarYear.Text = dateTimePickerCarYear.Value.ToString("yyyy");
                 tbxNewCarYear.AppendText(mCar.Year.ToString());
             }
             
@@ -643,7 +621,6 @@ namespace EricDaniel_Assignment
             if (dialogResult == DialogResult.Yes)
             {
                 m.RenewMembership();
-                //MessageBox.Show("Membership Successfully Renewed");
                 MessageBox.Show("Membership Successfully Renewed", "",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
                 tbxNewMembershipRenewalDate.AppendText(m.MembershipRenewalDate);
@@ -653,11 +630,9 @@ namespace EricDaniel_Assignment
 
         private void tbxName_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter /*|| e.KeyCode == Keys.Up || e.KeyCode == Keys.Down*/)
+            if (e.KeyCode == Keys.Enter)
             {
-                // tbxName.Focus();
-                this.SelectNextControl((Control)sender, true, true, true, true);
-               //tbxName.Focus();
+                SelectNextControl((Control)sender, true, true, true, true);
             }
         }
 
@@ -665,23 +640,20 @@ namespace EricDaniel_Assignment
 
         private void tbxIcNumber_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter/* || e.KeyCode == Keys.Up || e.KeyCode == Keys.Down*/)
+            if (e.KeyCode == Keys.Enter)
             {
                 
-                    this.SelectNextControl((Control)sender, true, true, true, true);
-                //tbxDisplayDateOfBirth.Focus();
-                // dateTimePickerDateOfBirth.Focus();
+                SelectNextControl((Control)sender, true, true, true, true);
                 dateTimePickerDateOfBirth.Focus();
             }
         }
 
         private void dateTimePickerDateOfBirth_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter/* || e.KeyCode == Keys.Up || e.KeyCode == Keys.Down*/)
+            if (e.KeyCode == Keys.Enter)
             {
-                // tbxName.Focus();
                 {
-                    this.SelectNextControl((Control)sender, true, true, true, true);
+                    SelectNextControl((Control)sender, true, true, true, true);
                     tbxPhoneNumber.Focus();
                 }
                
@@ -693,11 +665,6 @@ namespace EricDaniel_Assignment
             {
                 tbxCarRegistrationNumber.Focus();
             }
-            //{
-            //    this.SelectNextControl((Control)sender, true, true, true, true);
-            // //  Enter = tbxPhoneNumber.Select();
-            //   // tbxCarRegistrationNumber.Focus();
-            //}
         }
         private void tbxCarRegistrationNumber_KeyDown(object sender, KeyEventArgs e)
         {
@@ -705,10 +672,6 @@ namespace EricDaniel_Assignment
             {
                 tbxCarModel.Focus();
             }
-            //{
-            //    this.SelectNextControl((Control)sender, true, true, true, true);
-            //   // tbxCarRegistrationNumber.Focus();
-            //}
         }
         private void tbxCarModel_KeyDown(object sender, KeyEventArgs e)
         {
@@ -758,40 +721,21 @@ namespace EricDaniel_Assignment
                 tbxNewCarYear.Focus();
             }
         }
-        /* private void txtInputValue_KeyPress(object sender, KeyPressEventArgs e)
-    {
-        if (!char.IsDigit(e.KeyChar)) e.Handled = true;         //Just Digits
-        if (e.KeyChar == (char)8) e.Handled = false;            //Allow Backspace
-    }
 
-    private void textBox1_TextChanged(object sender, EventArgs e)
-    {
-        if (System.Text.RegularExpressions.Regex.IsMatch(textBox1.Text, "[^0-9]"))
-        {
-            MessageBox.Show("Please enter only numbers.");
-            textBox1.Text = string.Empty;
-        }
-    }*/
         private void tbxIcNumber_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsDigit(e.KeyChar)) e.Handled = true;         //Just Digits
-            if (e.KeyChar == (char)8) e.Handled = false;            //Allow Backspace
+            if (!char.IsDigit(e.KeyChar)) e.Handled = true;         
+            if (e.KeyChar == (char)8) e.Handled = false;            
         }
 
         private void tbxPhoneNumber_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsDigit(e.KeyChar)) e.Handled = true;         //Just Digits
-            if (e.KeyChar == (char)8) e.Handled = false;            //Allow Backspace
+            if (!char.IsDigit(e.KeyChar)) e.Handled = true;         
+            if (e.KeyChar == (char)8) e.Handled = false;            
         }
 
         private void tbxName_KeyPress(object sender, KeyPressEventArgs e)
         {
-            ////if (char.IsDigit(e.KeyChar)) e.Handled = true;         //Just Letters
-            ////if (e.KeyChar == (char)8) e.Handled = false;            //Allow Backspace
-            //e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char) Keys.Back); // && e.KeyChar == ' ');
-            //// tbxName.Text name = (tbxName)sender;
-            ////if ((e.KeyChar == ' ') && (tbxName.Text.Contains(' ')))
-            ////    e.Handled = true;
             if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
                 e.Handled = true;
         }
@@ -799,26 +743,26 @@ namespace EricDaniel_Assignment
 
         private void tbxVerifyInputIcNumber_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsDigit(e.KeyChar)) e.Handled = true;         //Just Digits
-            if (e.KeyChar == (char)8) e.Handled = false;            //Allow Backspace
+            if (!char.IsDigit(e.KeyChar)) e.Handled = true;         
+            if (e.KeyChar == (char)8) e.Handled = false;            
         }
 
         private void tbxNewPhoneNumber_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsDigit(e.KeyChar)) e.Handled = true;         //Just Digits
-            if (e.KeyChar == (char)8) e.Handled = false;            //Allow Backspace
+            if (!char.IsDigit(e.KeyChar)) e.Handled = true;         
+            if (e.KeyChar == (char)8) e.Handled = false;            
         }
 
         private void tbxVerifyInputIcNumber2_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsDigit(e.KeyChar)) e.Handled = true;         //Just Digits
-            if (e.KeyChar == (char)8) e.Handled = false;            //Allow Backspace
+            if (!char.IsDigit(e.KeyChar)) e.Handled = true;         
+            if (e.KeyChar == (char)8) e.Handled = false;            
         }
 
         private void tbxNewCarYear_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsDigit(e.KeyChar)) e.Handled = true;         //Just Digits
-            if (e.KeyChar == (char)8) e.Handled = false;            //Allow Backspace
+            if (!char.IsDigit(e.KeyChar)) e.Handled = true;         
+            if (e.KeyChar == (char)8) e.Handled = false;            
         }
     }
 }
