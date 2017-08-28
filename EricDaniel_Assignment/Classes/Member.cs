@@ -64,7 +64,7 @@ namespace EricDaniel_Assignment.Classes
             dateOfBirth = theDOB;
             phoneNum = aPhoneNum;
             membershipRenewalDate = aNewDate;
-            mCar = new Car(registrationNumber, model, year); 
+            mCar = new Car(registrationNumber, model, year);
         }
 
         public abstract void RenewMembership();
@@ -104,8 +104,7 @@ namespace EricDaniel_Assignment.Classes
             date = date.AddYears(5);
 
             membershipRenewalDate = Convert.ToString(date.ToShortDateString());
-            
+
         }
     }
 }
-

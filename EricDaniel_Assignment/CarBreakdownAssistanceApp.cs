@@ -413,7 +413,7 @@ namespace EricDaniel_Assignment
 
             if (m1 != null)
             {
-                 if (string.IsNullOrWhiteSpace(tbxVerifyInputIcNumber2.Text))
+                if (string.IsNullOrWhiteSpace(tbxVerifyInputIcNumber2.Text))
                 {
                     MessageBox.Show("Encountered an error over here!" +
                                     "\n\nMEMBER'S IC NUMBER NOT INSERTED!", "",
@@ -428,7 +428,7 @@ namespace EricDaniel_Assignment
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
-               
+
                 else
                 {
                     tbxVerifyInputIcNumber2.ReadOnly = true;
