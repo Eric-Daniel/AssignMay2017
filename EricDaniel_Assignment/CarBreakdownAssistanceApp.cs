@@ -29,20 +29,9 @@ namespace EricDaniel_Assignment
             dateTimePickerMembershipRenewalDate.Format = DateTimePickerFormat.Custom;
             dateTimePickerMembershipRenewalDate.CustomFormat = "d/MM/yyyy";
 
-            //btnAddNewMember.Focus();
-            //btnSearchExistingMember.Focus();
-            //btnUpdateExistingPhoneNumber.Focus();
-            //btnUpdateExistingCarDetails.Focus();
-            //btnRenewCurrentMembershipDate.Focus();
-
             grpDisplayMemberDetails.Visible = false;
-            btnAddMember.Enabled = true;
-           // tbxDisplayName.ReadOnly = true;
-            // grpUpdatePhoneNumber.Visible = false;
-            // grpUpdateCarDetails.Visible = false;
-            // grpIcNumberValidation.Visible = true;
+            btnAddMember.Enabled = true;          
             grpAddMember.Enabled = false;
-            //grpDisplayMemberDetails.
             grpIcNumberValidation.Visible = false;
             grpUpdatePhoneNumber.Enabled = false;
             grpUpdateCarDetails.Enabled = false;
@@ -76,7 +65,6 @@ namespace EricDaniel_Assignment
         }
         private void SaveMemberData()
         {
-  
             try
             {
                 if (!File.Exists(storedPath))
@@ -100,7 +88,7 @@ namespace EricDaniel_Assignment
             }
             catch (IOException e)
             {
-                MessageBox.Show(e.Message, "IOEXCEPTION");
+                MessageBox.Show(e.Message, "Error Loading File. Please Contact Your Administrator");
             }
            
 
@@ -129,11 +117,9 @@ namespace EricDaniel_Assignment
             }
             catch (IOException e)
             {
-                MessageBox.Show(e.Message, "IOEXCEPTION");
+                MessageBox.Show(e.Message, "Error Loading File. Please Contact Your Administrator");
             }
             
-            
-           
         }
         private void btnAddMember_Click(object sender, EventArgs e)
         {
@@ -145,8 +131,6 @@ namespace EricDaniel_Assignment
             string registrationNumber = tbxCarRegistrationNumber.Text;
             string model = tbxCarModel.Text;
             int year = Convert.ToInt32(dateTimePickerCarYear.Text);
-
-            
 
                 if (!rbnOneYearMembershipRenewal.Checked && !rbnFiveYearMembershipRenewal.Checked)
                 {
@@ -203,8 +187,7 @@ namespace EricDaniel_Assignment
                 {
                     m1 = new OneYearMembershipRenewal(name, ic, dOB, phoneNum, newDate, registrationNumber, model,
                         year);
-
-                   
+                        
                 }
 
                 else if (rbnFiveYearMembershipRenewal.Checked)
@@ -234,8 +217,7 @@ namespace EricDaniel_Assignment
                                     "\n\nIC NUMBER ALREADY EXISTED!\"", " ",
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-        }
-            
+        }  
            
         }
 
@@ -247,6 +229,7 @@ namespace EricDaniel_Assignment
             btnUpdateExistingCarDetails.Enabled = false;
             btnRenewCurrentMembershipDate.Enabled = false;
         }
+
         private void btnDoneAddMember_Click(object sender, EventArgs e)
         {
             DialogResult dialogResult = MessageBox.Show("Click YES if want to EXIT OUT OF ADD MEMBER SECTION", " ", MessageBoxButtons.YesNo,MessageBoxIcon.Exclamation);
@@ -269,11 +252,9 @@ namespace EricDaniel_Assignment
                 dateTimePickerMembershipRenewalDate.ResetText();
                 rbnOneYearMembershipRenewal.Checked = false;
                 rbnFiveYearMembershipRenewal.Checked = false;
-                //do something
             }
             else if (dialogResult == DialogResult.No)
             {
-                
                 
             }
 
@@ -281,13 +262,11 @@ namespace EricDaniel_Assignment
         private void btnSearch_Click(object sender, EventArgs e)
         {
             string pos = tbxIcNumberSearchMember.Text;
-            Member m1 = IcInput(_memberslist, pos); //storing object returned by the function
-
+            Member m1 = IcInput(_memberslist, pos); 
             
-            //Since m1 can have null values, m1 value must be checked first
+    
             if (m1 != null)
             {
-               // tbxIcNumberSearchMember.BackColor = Color.GreenYellow;
                 grpDisplayMemberDetails.Visible = true;
                 SearchMember(m1);
 
@@ -317,7 +296,6 @@ namespace EricDaniel_Assignment
             else
             {
                 tbxIcNumberSearchMember.BackColor = Color.Red;
-                //MessageBox.Show("Invalid IC! "); // error warning message
                 MessageBox.Show("\"Oops, Agent E encountered an error over here!\"" +
                                 "\n\n\"INVALID IC NUMBER!\"", " ",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -328,7 +306,7 @@ namespace EricDaniel_Assignment
                 btnUpdateExistingCarDetails.Enabled = true;
                 btnRenewCurrentMembershipDate.Enabled = true;
             }
-            //txtIcNumber1.RedColor = Color.Black;
+    
             tbxIcNumberSearchMember.Text = string.Empty;
             tbxIcNumberSearchMember.BackColor = Color.White;
         }
@@ -371,7 +349,7 @@ namespace EricDaniel_Assignment
            
 
             string pos = tbxVerifyInputIcNumber.Text;
-            Member m1 = IcInput(_memberslist, pos); //storing object returned by the function
+            Member m1 = IcInput(_memberslist, pos); 
 
            
             if (string.IsNullOrWhiteSpace(tbxVerifyInputIcNumber.Text))
@@ -406,31 +384,24 @@ namespace EricDaniel_Assignment
                     m1.PhoneNum = tbxNewPhoneNumber.Text;
                     UpdatePhoneNumber(_memberslist, m1);
                 }
-
-
-                // StoreRegisteredMemberintoFile(m1);
+                
             }
             else
             {
                 tbxVerifyInputIcNumber.BackColor = Color.Red;
-                //MessageBox.Show("Invalid IC! ");
                 MessageBox.Show("\"Oops, Agent E encountered an error over here!\"" +
                                 "\n\n\"INVALID IC NUMBER!\"", " ",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
                 tbxVerifyInputIcNumber.Focus();
                 grpUpdatePhoneNumber.Visible = false;
             }
-           // tbxVerifyInputIcNumber.Text = string.Empty;
-           // tbxVerifyInputIcNumber.BackColor = Color.White;
 
         }
         private void btnUpdateExistingPhoneNumber_Click(object sender, EventArgs e)
         {
             grpUpdatePhoneNumber.Enabled = true;
-            //grpIcNumberValidation.Visible = true;
             btnAddNewMember.Enabled = false;
             btnSearchExistingMember.Enabled = false;
-            //btnUpdateExistingPhoneNumber.Enabled = false;
             btnUpdateExistingCarDetails.Enabled = false;
             btnRenewCurrentMembershipDate.Enabled = false;
             tbxVerifyInputIcNumber.ReadOnly = false;
@@ -444,23 +415,18 @@ namespace EricDaniel_Assignment
                 tbxNewPhoneNumber.Text = string.Empty;
 
                 grpUpdatePhoneNumber.Enabled = false;
-                //grpDisplayMemberDetails.Enabled = false;
                 btnAddNewMember.Enabled = true;
                 btnSearchExistingMember.Enabled = true;
-                //btnUpdateExistingPhoneNumber.Enabled = true;
                 btnUpdateExistingCarDetails.Enabled = true;
                 btnRenewCurrentMembershipDate.Enabled = true;
-                // grpIcNumberValidation.Visible = false;
             }
 
         }
-
        
-
         private void btnUpdateCarDetails_Click(object sender, EventArgs e)
         {
             string pos = tbxVerifyInputIcNumber2.Text;
-            Member m1 = IcInput(_memberslist, pos); //storing object returned by the function
+            Member m1 = IcInput(_memberslist, pos); 
 
             if (m1 != null)
             {
@@ -469,8 +435,6 @@ namespace EricDaniel_Assignment
                     MessageBox.Show("\"Encountered an error over here!"  +
                                     "\n\nEITHER\n-MEMBER'S CAR REGISTRATION NUMBER\n-MEMBER'S CAR MODEL\n-MEMBER'S CAR YEAR\n\n NOT INSERTED", " ",
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-                    //tbxNewCarRegistrationNumber.Focus();
                 }
                
                 else if (string.IsNullOrWhiteSpace(tbxVerifyInputIcNumber.Text))
@@ -489,13 +453,10 @@ namespace EricDaniel_Assignment
                     m1.MCar.Year = Convert.ToInt32(tbxNewCarYear.Text);
                     UpdateCarDetails(_memberslist, m1.MCar);
                 }
-                
-                //StoreRegisteredMemberintoFile(m1);
             }
             else
             {
                 tbxVerifyInputIcNumber2.BackColor = Color.Red;
-                //MessageBox.Show("Invalid IC! ");
                 MessageBox.Show("\"Oops, Agent E encountered an error over here!\"" +
                                 "\n\n\"INVALID IC NUMBER!\"", " ",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);

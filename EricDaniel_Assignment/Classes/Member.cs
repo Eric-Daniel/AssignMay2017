@@ -67,15 +67,6 @@ namespace EricDaniel_Assignment.Classes
             mCar = new Car(registrationNumber, model, year); //Call Car contructor
         }
 
-        //public void RenewMembership()
-        //{
-        //    DateTime date = Convert.ToDateTime(membershipRenewalDate);
-        //    date = date.AddYears(1);
-
-        //    membershipRenewalDate = Convert.ToString(date);
-
-        //}
-
         public abstract void RenewMembership();
     }
 
@@ -94,7 +85,7 @@ namespace EricDaniel_Assignment.Classes
             date = date.AddYears(1);
 
             membershipRenewalDate = Convert.ToString(date.ToShortDateString());
-    
+
         }
     }
 
@@ -109,12 +100,11 @@ namespace EricDaniel_Assignment.Classes
 
         public override void RenewMembership()
         {
-           // DateTime date1 = DateTime.Now;
             DateTime date = Convert.ToDateTime(membershipRenewalDate);
             date = date.AddYears(5);
 
             membershipRenewalDate = Convert.ToString(date.ToShortDateString());
-            // throw new NotImplementedException();
+            
         }
     }
 }

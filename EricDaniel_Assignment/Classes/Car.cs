@@ -9,11 +9,6 @@ namespace EricDaniel_Assignment.Classes
     [Serializable]
     public class Car
     {
-        //public Car()
-        //{
-
-        //}
-
         private string registrationNumber;
 
         public string RegistrationNumber
