@@ -125,14 +125,15 @@ namespace EricDaniel_Assignment
 
             if (!rbnOneYearMembershipRenewal.Checked && !rbnFiveYearMembershipRenewal.Checked)
             {
-                MessageBox.Show("Choose type!");
-
+                MessageBox.Show("Encountered an error over here!\n" +
+                                "Please choose MEMBERSHIP TYPE", "",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
             else if (string.IsNullOrWhiteSpace(tbxName.Text))
             {
-                MessageBox.Show("\"Oops, Agent E encountered an error over here!" +
-                                "\n\nMEMBER'S NAME NOT INSERTED!\"", " ",
+                MessageBox.Show("Encountered an error over here!" +
+                                "\n\nMEMBER'S NAME NOT INSERTED", "",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 tbxName.Focus();
@@ -140,29 +141,29 @@ namespace EricDaniel_Assignment
             else if (string.IsNullOrWhiteSpace(tbxIcNumber.Text))
             {
 
-                MessageBox.Show("\"Oops, Agent E encountered an error over here!" +
-                                "\n\nMEMBER'S IC NUMBER NOT INSERTED!\"", " ",
+                MessageBox.Show("Encountered an error over here!" +
+                                "\n\nMEMBER'S IC NUMBER NOT INSERTED!", "",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
                 tbxIcNumber.Focus();
             }
             else if (string.IsNullOrWhiteSpace(tbxPhoneNumber.Text))
             {
-                MessageBox.Show("\"Oops, Agent E encountered an error over here!" +
-                                "\n\nMEMBER'S PHONE NUMBER NOT INSERTED!\"", " ",
+                MessageBox.Show("Encountered an error over here!" +
+                                "\n\nMEMBER'S PHONE NUMBER NOT INSERTED", "",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
                 tbxPhoneNumber.Focus();
             }
             else if (string.IsNullOrWhiteSpace(tbxCarRegistrationNumber.Text))
             {
-                MessageBox.Show("\"Oops, Agent E encountered an error over here!" +
-                                "\n\nMEMBER'S CAR REGISTRATION NUMBER NOT INSERTED!\"", " ",
+                MessageBox.Show("Encountered an error over here!" +
+                                "\n\nMEMBER'S CAR REGISTRATION NUMBER NOT INSERTED", "",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
                 tbxCarRegistrationNumber.Focus();
             }
             else if (string.IsNullOrWhiteSpace(tbxCarModel.Text))
             {
-                MessageBox.Show("\"Oops, Agent E encountered an error over here!" +
-                                "\n\nMEMBER'S CAR MODEL NOT INSERTED!\"", " ",
+                MessageBox.Show("Encountered an error over here!" +
+                                "\n\nMEMBER'S CAR MODEL NOT INSERTED!", "",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
                 tbxCarModel.Focus();
             }
@@ -202,8 +203,8 @@ namespace EricDaniel_Assignment
                 }
                 else
                 {
-                    MessageBox.Show("\"Oops, Agent E encountered an error over here!" +
-                                    "\n\nIC NUMBER ALREADY EXISTED!\"", " ",
+                    MessageBox.Show("Encountered an error over here!" +
+                                    "\n\nIC NUMBER ALREADY EXISTED!", "",
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
@@ -221,7 +222,7 @@ namespace EricDaniel_Assignment
 
         private void btnDoneAddMember_Click(object sender, EventArgs e)
         {
-            DialogResult dialogResult = MessageBox.Show("Click YES if want to EXIT OUT OF ADD MEMBER SECTION", " ", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+            DialogResult dialogResult = MessageBox.Show("Click YES if want to EXIT OUT OF ADD MEMBER SECTION", "", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
             if (dialogResult == DialogResult.Yes)
             {
                 grpAddMember.Enabled = false;
@@ -283,8 +284,8 @@ namespace EricDaniel_Assignment
             else
             {
                 tbxIcNumberSearchMember.BackColor = Color.Red;
-                MessageBox.Show("\"Oops, Agent E encountered an error over here!\"" +
-                                "\n\n\"INVALID IC NUMBER!\"", " ",
+                MessageBox.Show("Encountered an error over here!\"" +
+                                "\n\n\"INVALID IC NUMBER!", " ",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
                 tbxIcNumberSearchMember.Focus();
                 grpIcNumberValidation.Visible = false;
@@ -336,8 +337,8 @@ namespace EricDaniel_Assignment
 
             if (string.IsNullOrWhiteSpace(tbxVerifyInputIcNumber.Text))
             {
-                MessageBox.Show("\"Oops, Agent E encountered an error over here!" +
-                                "\n\nMEMBER'S IC NUMBER NOT INSERTED!\"", " ",
+                MessageBox.Show("Encountered an error over here!" +
+                                "\n\nMEMBER'S IC NUMBER NOT INSERTED!", "",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 tbxVerifyInputIcNumber.Focus();
@@ -354,8 +355,8 @@ namespace EricDaniel_Assignment
                 }
                 if (string.IsNullOrWhiteSpace(tbxNewPhoneNumber.Text))
                 {
-                    MessageBox.Show("\"Oops, Agent E encountered an error over here!" +
-                                    "\n\nMEMBER'S PHONE NUMBER NOT INSERTED!\"", " ",
+                    MessageBox.Show("Encountered an error over here!" +
+                                    "\n\nMEMBER'S PHONE NUMBER NOT INSERTED!", " ",
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                     tbxNewPhoneNumber.Focus();
@@ -371,8 +372,8 @@ namespace EricDaniel_Assignment
             else
             {
                 tbxVerifyInputIcNumber.BackColor = Color.Red;
-                MessageBox.Show("\"Oops, Agent E encountered an error over here!\"" +
-                                "\n\n\"INVALID IC NUMBER!\"", " ",
+                MessageBox.Show("Encountered an error over here!\"" +
+                                "\n\n\"INVALID IC NUMBER!", " ",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
                 tbxVerifyInputIcNumber.Focus();
                 grpUpdatePhoneNumber.Visible = false;
@@ -414,15 +415,15 @@ namespace EricDaniel_Assignment
             {
                 if (string.IsNullOrWhiteSpace(tbxNewCarRegistrationNumber.Text) || string.IsNullOrWhiteSpace(tbxNewCarModel.Text) || string.IsNullOrWhiteSpace(tbxNewCarYear.Text))
                 {
-                    MessageBox.Show("\"Encountered an error over here!" +
-                                    "\n\nEITHER\n-MEMBER'S CAR REGISTRATION NUMBER\n-MEMBER'S CAR MODEL\n-MEMBER'S CAR YEAR\n\n NOT INSERTED", " ",
+                    MessageBox.Show("Encountered an error over here!" +
+                                    "\n\nEITHER\n-MEMBER'S CAR REGISTRATION NUMBER\n-MEMBER'S CAR MODEL\n-MEMBER'S CAR YEAR\n\n NOT INSERTED", "",
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
                 else if (string.IsNullOrWhiteSpace(tbxVerifyInputIcNumber.Text))
                 {
-                    MessageBox.Show("\"Oops, Agent E encountered an error over here!" +
-                                    "\n\nMEMBER'S IC NUMBER NOT INSERTED!\"", " ",
+                    MessageBox.Show("Encountered an error over here!" +
+                                    "\n\nMEMBER'S IC NUMBER NOT INSERTED!", "",
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                     tbxVerifyInputIcNumber.Focus();
@@ -439,8 +440,8 @@ namespace EricDaniel_Assignment
             else
             {
                 tbxVerifyInputIcNumber2.BackColor = Color.Red;
-                MessageBox.Show("\"Oops, Agent E encountered an error over here!\"" +
-                                "\n\n\"INVALID IC NUMBER!\"", " ",
+                MessageBox.Show("Encountered an error over here!" +
+                                "\n\nINVALID IC NUMBER!", "",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
                 tbxVerifyInputIcNumber2.Focus();
             }
@@ -458,7 +459,7 @@ namespace EricDaniel_Assignment
 
         private void btnDoneUpdateCarDetails_Click(object sender, EventArgs e)
         {
-            DialogResult dialogResult = MessageBox.Show("Click YES if want to EXIT OUT OF UPDATE MEMBER's CAR DETAILS SECTION", " ", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+            DialogResult dialogResult = MessageBox.Show("Click YES if want to EXIT OUT OF UPDATE MEMBER's CAR DETAILS SECTION", "", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
             if (dialogResult == DialogResult.Yes)
             {
                 tbxVerifyInputIcNumber2.Text = string.Empty;
@@ -484,8 +485,8 @@ namespace EricDaniel_Assignment
             {
                 if (string.IsNullOrWhiteSpace(tbxVerifyInputIcNumber3.Text))
                 {
-                    MessageBox.Show("\"Encountered an error over here!" +
-                                    "\n\nMEMBER'S IC NUMBER NOT INSERTED!\"", " ",
+                    MessageBox.Show("Encountered an error over here!" +
+                                    "\n\nMEMBER'S IC NUMBER NOT INSERTED!", "",
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                     tbxVerifyInputIcNumber3.Focus();
@@ -499,8 +500,8 @@ namespace EricDaniel_Assignment
             else
             {
                 tbxVerifyInputIcNumber3.BackColor = Color.Red;
-                MessageBox.Show("\"Oops, Agent E encountered an error over here!\"" +
-                                "\n\n\"INVALID IC NUMBER!\"", " ",
+                MessageBox.Show("Encountered an error over here!" +
+                                "\n\nINVALID IC NUMBER!", "",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
                 tbxVerifyInputIcNumber3.Focus();
             }
@@ -519,7 +520,7 @@ namespace EricDaniel_Assignment
         }
         private void btnDoneMembershipRenewal_Click(object sender, EventArgs e)
         {
-            DialogResult dialogResult = MessageBox.Show("Click YES if want to EXIT OUT OF RENEW MEMBER'S MEMBERSHIP SECTION", " ", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+            DialogResult dialogResult = MessageBox.Show("Click YES if want to EXIT OUT OF RENEW MEMBER'S MEMBERSHIP SECTION", "", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
             if (dialogResult == DialogResult.Yes)
             {
                 tbxVerifyInputIcNumber3.Text = string.Empty;
@@ -576,7 +577,7 @@ namespace EricDaniel_Assignment
         public void UpdateCarDetails(List<Member> member, Car mCar)
         {
 
-            DialogResult dialogResult = MessageBox.Show("Are you sure you want to UPDATE MEMBER'S CAR DETAILS", " ", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+            DialogResult dialogResult = MessageBox.Show("Are you sure you want to UPDATE MEMBER'S CAR DETAILS", "", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
             if (dialogResult == DialogResult.Yes)
             {
                 MessageBox.Show("Car Details Updated Successfully", "",
@@ -598,7 +599,7 @@ namespace EricDaniel_Assignment
 
         public void MembershipRenewalDate(List<Member> list, Member m)
         {
-            DialogResult dialogResult = MessageBox.Show("Are you sure you want to RENEW MEMBER'S MEMBERSHIP DATE", " ", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+            DialogResult dialogResult = MessageBox.Show("Are you sure you want to RENEW MEMBER'S MEMBERSHIP DATE", "", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
             if (dialogResult == DialogResult.Yes)
             {
                 m.RenewMembership();
