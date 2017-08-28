@@ -116,7 +116,7 @@ namespace EricDaniel_Assignment
         {
             string name = tbxName.Text;
             string ic = tbxIcNumber.Text;
-            string dOB = dateTimePickerDateOfBirth.Text;
+            DateTime dOB = dateTimePickerDateOfBirth.Value;
             string phoneNum = tbxPhoneNumber.Text;
             string newDate = dateTimePickerMembershipRenewalDate.Text;
             string registrationNumber = tbxCarRegistrationNumber.Text;
@@ -505,7 +505,6 @@ namespace EricDaniel_Assignment
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
                 tbxVerifyInputIcNumber3.Focus();
             }
-            tbxVerifyInputIcNumber3.Text = string.Empty;
             tbxVerifyInputIcNumber3.BackColor = Color.White;
         }
         private void btnRenewCurrentMembershipDate_Click(object sender, EventArgs e)
@@ -549,7 +548,7 @@ namespace EricDaniel_Assignment
         {
             tbxDisplayName.AppendText(m.Name);
             tbxDisplayIcNumber.AppendText(m.IcNum);
-            tbxDisplayDateOfBirth.AppendText(m.DateOfBirth);
+            tbxDisplayDateOfBirth.AppendText(m.DateOfBirth.ToShortDateString());
             tbxDisplayPhoneNumber.AppendText(m.PhoneNum);
             tbxDisplayCarRegistrationNumber.AppendText(m.MCar.RegistrationNumber);
             tbxDisplayCarModel.AppendText(m.MCar.Model);

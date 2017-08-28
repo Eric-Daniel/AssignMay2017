@@ -24,9 +24,9 @@ namespace EricDaniel_Assignment.Classes
             get { return icNum; }
         }
 
-        private string dateOfBirth;
+        private DateTime dateOfBirth;
 
-        public string DateOfBirth
+        public DateTime DateOfBirth
         {
             get { return dateOfBirth; }
         }
@@ -55,7 +55,7 @@ namespace EricDaniel_Assignment.Classes
 
         }
 
-        public Member(string aName, string theIc, string theDOB, string aPhoneNum, string aNewDate,
+        public Member(string aName, string theIc, DateTime theDOB, string aPhoneNum, string aNewDate,
             string registrationNumber, string model, int year)
         {
 
@@ -73,7 +73,7 @@ namespace EricDaniel_Assignment.Classes
     [Serializable]
     public class OneYearMembershipRenewal : Member
     {
-        public OneYearMembershipRenewal(string name, string ic, string dOB, string phoneNum,
+        public OneYearMembershipRenewal(string name, string ic, DateTime dOB, string phoneNum,
             string newDate, string registrationNumber, string model, int year) : base(name, ic, dOB, phoneNum, newDate, registrationNumber, model, year)
         {
 
@@ -92,7 +92,7 @@ namespace EricDaniel_Assignment.Classes
     [Serializable]
     public class FiveYearsMembershipRenewal : Member
     {
-        public FiveYearsMembershipRenewal(string name, string ic, string dOB, string phoneNum,
+        public FiveYearsMembershipRenewal(string name, string ic, DateTime dOB, string phoneNum,
             string newDate, string registrationNumber, string model, int year) : base(name, ic, dOB, phoneNum, newDate, registrationNumber, model, year)
         {
 
