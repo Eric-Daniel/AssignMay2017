@@ -106,7 +106,7 @@
             this.btnUpdateExistingPhoneNumber = new System.Windows.Forms.Button();
             this.btnUpdateExistingCarDetails = new System.Windows.Forms.Button();
             this.btnRenewCurrentMembershipDate = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblSystemName = new System.Windows.Forms.Label();
             this.grpMembershipRenewal.SuspendLayout();
             this.grpUpdateCarDetails.SuspendLayout();
             this.grpUpdatePhoneNumber.SuspendLayout();
@@ -873,22 +873,22 @@
             this.btnRenewCurrentMembershipDate.UseVisualStyleBackColor = true;
             this.btnRenewCurrentMembershipDate.Click += new System.EventHandler(this.btnRenewCurrentMembershipDate_Click);
             // 
-            // label2
+            // lblSystemName
             // 
-            this.label2.Font = new System.Drawing.Font("Axure Handwriting", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label2.Location = new System.Drawing.Point(416, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(792, 30);
-            this.label2.TabIndex = 139;
-            this.label2.Text = "WELCOME TO CAR BREAKDOWN ASSISTANCE SYSTEM";
+            this.lblSystemName.Font = new System.Drawing.Font("Baskerville Old Face", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSystemName.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.lblSystemName.Location = new System.Drawing.Point(416, 9);
+            this.lblSystemName.Name = "lblSystemName";
+            this.lblSystemName.Size = new System.Drawing.Size(792, 30);
+            this.lblSystemName.TabIndex = 139;
+            this.lblSystemName.Text = "WELCOME TO CAR BREAKDOWN ASSISTANCE SYSTEM";
             // 
             // CarBreakdownAssistanceApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1441, 755);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblSystemName);
             this.Controls.Add(this.btnRenewCurrentMembershipDate);
             this.Controls.Add(this.btnUpdateExistingCarDetails);
             this.Controls.Add(this.btnUpdateExistingPhoneNumber);
@@ -999,7 +999,7 @@
         private System.Windows.Forms.Button btnUpdateExistingCarDetails;
         private System.Windows.Forms.Button btnRenewCurrentMembershipDate;
         private System.Windows.Forms.Button btnDoneAddMember;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblSystemName;
     }
 }
 
