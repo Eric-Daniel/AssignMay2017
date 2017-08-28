@@ -413,21 +413,22 @@ namespace EricDaniel_Assignment
 
             if (m1 != null)
             {
-                if (string.IsNullOrWhiteSpace(tbxNewCarRegistrationNumber.Text) || string.IsNullOrWhiteSpace(tbxNewCarModel.Text) || string.IsNullOrWhiteSpace(tbxNewCarYear.Text))
+                 if (string.IsNullOrWhiteSpace(tbxVerifyInputIcNumber2.Text))
+                {
+                    MessageBox.Show("Encountered an error over here!" +
+                                    "\n\nMEMBER'S IC NUMBER NOT INSERTED!", "",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                    tbxVerifyInputIcNumber2.Focus();
+                }
+                else if (string.IsNullOrWhiteSpace(tbxNewCarRegistrationNumber.Text) || string.IsNullOrWhiteSpace(tbxNewCarModel.Text) || string.IsNullOrWhiteSpace(tbxNewCarYear.Text))
                 {
                     MessageBox.Show("Encountered an error over here!" +
                                     "\n\nEITHER\n-MEMBER'S CAR REGISTRATION NUMBER\n-MEMBER'S CAR MODEL\n-MEMBER'S CAR YEAR\n\n NOT INSERTED", "",
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
-                else if (string.IsNullOrWhiteSpace(tbxVerifyInputIcNumber.Text))
-                {
-                    MessageBox.Show("Encountered an error over here!" +
-                                    "\n\nMEMBER'S IC NUMBER NOT INSERTED!", "",
-                        MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-                    tbxVerifyInputIcNumber.Focus();
-                }
+               
                 else
                 {
                     tbxVerifyInputIcNumber2.ReadOnly = true;
@@ -445,7 +446,7 @@ namespace EricDaniel_Assignment
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
                 tbxVerifyInputIcNumber2.Focus();
             }
-            tbxVerifyInputIcNumber2.Text = string.Empty;
+           // tbxVerifyInputIcNumber2.Text = string.Empty;
             tbxVerifyInputIcNumber2.BackColor = Color.White;
         }
         private void btnUpdateExistingCarDetails_Click(object sender, EventArgs e)
