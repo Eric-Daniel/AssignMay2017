@@ -130,9 +130,10 @@
             // 
             // btnDoneMembershipRenewal
             // 
-            this.btnDoneMembershipRenewal.Location = new System.Drawing.Point(331, 116);
+            this.btnDoneMembershipRenewal.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDoneMembershipRenewal.Location = new System.Drawing.Point(324, 104);
             this.btnDoneMembershipRenewal.Name = "btnDoneMembershipRenewal";
-            this.btnDoneMembershipRenewal.Size = new System.Drawing.Size(75, 23);
+            this.btnDoneMembershipRenewal.Size = new System.Drawing.Size(115, 30);
             this.btnDoneMembershipRenewal.TabIndex = 110;
             this.btnDoneMembershipRenewal.Text = "DONE";
             this.btnDoneMembershipRenewal.UseVisualStyleBackColor = true;
@@ -156,11 +157,12 @@
             // 
             // btnRenewMembershipDate
             // 
-            this.btnRenewMembershipDate.Location = new System.Drawing.Point(238, 116);
+            this.btnRenewMembershipDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRenewMembershipDate.Location = new System.Drawing.Point(181, 104);
             this.btnRenewMembershipDate.Name = "btnRenewMembershipDate";
-            this.btnRenewMembershipDate.Size = new System.Drawing.Size(75, 23);
+            this.btnRenewMembershipDate.Size = new System.Drawing.Size(115, 30);
             this.btnRenewMembershipDate.TabIndex = 92;
-            this.btnRenewMembershipDate.Text = "Renew";
+            this.btnRenewMembershipDate.Text = "RENEW";
             this.btnRenewMembershipDate.UseVisualStyleBackColor = true;
             this.btnRenewMembershipDate.Click += new System.EventHandler(this.btnRenewMembershipDate_Click);
             // 
@@ -209,9 +211,10 @@
             // 
             // btnDoneUpdateCarDetails
             // 
-            this.btnDoneUpdateCarDetails.Location = new System.Drawing.Point(331, 188);
+            this.btnDoneUpdateCarDetails.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDoneUpdateCarDetails.Location = new System.Drawing.Point(324, 188);
             this.btnDoneUpdateCarDetails.Name = "btnDoneUpdateCarDetails";
-            this.btnDoneUpdateCarDetails.Size = new System.Drawing.Size(75, 23);
+            this.btnDoneUpdateCarDetails.Size = new System.Drawing.Size(115, 30);
             this.btnDoneUpdateCarDetails.TabIndex = 110;
             this.btnDoneUpdateCarDetails.Text = "DONE";
             this.btnDoneUpdateCarDetails.UseVisualStyleBackColor = true;
@@ -220,7 +223,7 @@
             // lblVerifyIcInput2
             // 
             this.lblVerifyIcInput2.AutoSize = true;
-            this.lblVerifyIcInput2.Location = new System.Drawing.Point(11, 18);
+            this.lblVerifyIcInput2.Location = new System.Drawing.Point(7, 19);
             this.lblVerifyIcInput2.Name = "lblVerifyIcInput2";
             this.lblVerifyIcInput2.Size = new System.Drawing.Size(82, 17);
             this.lblVerifyIcInput2.TabIndex = 27;
@@ -252,9 +255,10 @@
             // 
             // btnUpdateCarDetails
             // 
-            this.btnUpdateCarDetails.Location = new System.Drawing.Point(238, 188);
+            this.btnUpdateCarDetails.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdateCarDetails.Location = new System.Drawing.Point(181, 188);
             this.btnUpdateCarDetails.Name = "btnUpdateCarDetails";
-            this.btnUpdateCarDetails.Size = new System.Drawing.Size(75, 23);
+            this.btnUpdateCarDetails.Size = new System.Drawing.Size(115, 30);
             this.btnUpdateCarDetails.TabIndex = 93;
             this.btnUpdateCarDetails.Text = "UPDATE";
             this.btnUpdateCarDetails.UseVisualStyleBackColor = true;
@@ -303,9 +307,10 @@
             // 
             // btnDoneUpdatePhoneNumber
             // 
-            this.btnDoneUpdatePhoneNumber.Location = new System.Drawing.Point(331, 98);
+            this.btnDoneUpdatePhoneNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDoneUpdatePhoneNumber.Location = new System.Drawing.Point(324, 99);
             this.btnDoneUpdatePhoneNumber.Name = "btnDoneUpdatePhoneNumber";
-            this.btnDoneUpdatePhoneNumber.Size = new System.Drawing.Size(75, 23);
+            this.btnDoneUpdatePhoneNumber.Size = new System.Drawing.Size(115, 30);
             this.btnDoneUpdatePhoneNumber.TabIndex = 109;
             this.btnDoneUpdatePhoneNumber.Text = "DONE";
             this.btnDoneUpdatePhoneNumber.UseVisualStyleBackColor = true;
@@ -313,7 +318,7 @@
             // 
             // tbxVerifyInputIcNumber
             // 
-            this.tbxVerifyInputIcNumber.Location = new System.Drawing.Point(166, 16);
+            this.tbxVerifyInputIcNumber.Location = new System.Drawing.Point(181, 19);
             this.tbxVerifyInputIcNumber.Name = "tbxVerifyInputIcNumber";
             this.tbxVerifyInputIcNumber.Size = new System.Drawing.Size(258, 22);
             this.tbxVerifyInputIcNumber.TabIndex = 38;
@@ -331,9 +336,10 @@
             // 
             // btnUpdatePhoneNumber
             // 
-            this.btnUpdatePhoneNumber.Location = new System.Drawing.Point(238, 98);
+            this.btnUpdatePhoneNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdatePhoneNumber.Location = new System.Drawing.Point(181, 99);
             this.btnUpdatePhoneNumber.Name = "btnUpdatePhoneNumber";
-            this.btnUpdatePhoneNumber.Size = new System.Drawing.Size(75, 23);
+            this.btnUpdatePhoneNumber.Size = new System.Drawing.Size(115, 30);
             this.btnUpdatePhoneNumber.TabIndex = 85;
             this.btnUpdatePhoneNumber.Text = "UPDATE";
             this.btnUpdatePhoneNumber.UseVisualStyleBackColor = true;
@@ -341,7 +347,7 @@
             // 
             // tbxNewPhoneNumber
             // 
-            this.tbxNewPhoneNumber.Location = new System.Drawing.Point(166, 66);
+            this.tbxNewPhoneNumber.Location = new System.Drawing.Point(181, 66);
             this.tbxNewPhoneNumber.Name = "tbxNewPhoneNumber";
             this.tbxNewPhoneNumber.Size = new System.Drawing.Size(258, 22);
             this.tbxNewPhoneNumber.TabIndex = 88;
@@ -388,9 +394,10 @@
             // 
             // btnDoneAddMember
             // 
+            this.btnDoneAddMember.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDoneAddMember.Location = new System.Drawing.Point(238, 544);
             this.btnDoneAddMember.Name = "btnDoneAddMember";
-            this.btnDoneAddMember.Size = new System.Drawing.Size(106, 23);
+            this.btnDoneAddMember.Size = new System.Drawing.Size(115, 30);
             this.btnDoneAddMember.TabIndex = 120;
             this.btnDoneAddMember.Text = "DONE / EXIT";
             this.btnDoneAddMember.UseVisualStyleBackColor = true;
@@ -435,9 +442,10 @@
             // 
             // btnAddMember
             // 
+            this.btnAddMember.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddMember.Location = new System.Drawing.Point(99, 544);
             this.btnAddMember.Name = "btnAddMember";
-            this.btnAddMember.Size = new System.Drawing.Size(75, 23);
+            this.btnAddMember.Size = new System.Drawing.Size(115, 30);
             this.btnAddMember.TabIndex = 108;
             this.btnAddMember.Text = "ADD";
             this.btnAddMember.UseVisualStyleBackColor = true;
@@ -614,9 +622,10 @@
             // 
             // btnDoneSearchAMember
             // 
-            this.btnDoneSearchAMember.Location = new System.Drawing.Point(257, 544);
+            this.btnDoneSearchAMember.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDoneSearchAMember.Location = new System.Drawing.Point(241, 544);
             this.btnDoneSearchAMember.Name = "btnDoneSearchAMember";
-            this.btnDoneSearchAMember.Size = new System.Drawing.Size(75, 23);
+            this.btnDoneSearchAMember.Size = new System.Drawing.Size(115, 30);
             this.btnDoneSearchAMember.TabIndex = 110;
             this.btnDoneSearchAMember.Text = "DONE";
             this.btnDoneSearchAMember.UseVisualStyleBackColor = true;
@@ -799,9 +808,10 @@
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(208, 49);
+            this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch.Location = new System.Drawing.Point(241, 46);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(142, 23);
+            this.btnSearch.Size = new System.Drawing.Size(115, 30);
             this.btnSearch.TabIndex = 81;
             this.btnSearch.Text = "SEARCH";
             this.btnSearch.UseVisualStyleBackColor = true;
@@ -809,9 +819,10 @@
             // 
             // btnAddNewMember
             // 
+            this.btnAddNewMember.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddNewMember.Location = new System.Drawing.Point(131, 55);
             this.btnAddNewMember.Name = "btnAddNewMember";
-            this.btnAddNewMember.Size = new System.Drawing.Size(226, 45);
+            this.btnAddNewMember.Size = new System.Drawing.Size(288, 45);
             this.btnAddNewMember.TabIndex = 134;
             this.btnAddNewMember.Text = "ADD MEMBER";
             this.btnAddNewMember.UseVisualStyleBackColor = true;
@@ -819,9 +830,10 @@
             // 
             // btnSearchExistingMember
             // 
-            this.btnSearchExistingMember.Location = new System.Drawing.Point(666, 55);
+            this.btnSearchExistingMember.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearchExistingMember.Location = new System.Drawing.Point(642, 55);
             this.btnSearchExistingMember.Name = "btnSearchExistingMember";
-            this.btnSearchExistingMember.Size = new System.Drawing.Size(226, 45);
+            this.btnSearchExistingMember.Size = new System.Drawing.Size(288, 45);
             this.btnSearchExistingMember.TabIndex = 135;
             this.btnSearchExistingMember.Text = "SEARCH MEMBER";
             this.btnSearchExistingMember.UseVisualStyleBackColor = true;
@@ -829,9 +841,10 @@
             // 
             // btnUpdateExistingPhoneNumber
             // 
-            this.btnUpdateExistingPhoneNumber.Location = new System.Drawing.Point(1117, 55);
+            this.btnUpdateExistingPhoneNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdateExistingPhoneNumber.Location = new System.Drawing.Point(1108, 55);
             this.btnUpdateExistingPhoneNumber.Name = "btnUpdateExistingPhoneNumber";
-            this.btnUpdateExistingPhoneNumber.Size = new System.Drawing.Size(226, 45);
+            this.btnUpdateExistingPhoneNumber.Size = new System.Drawing.Size(288, 45);
             this.btnUpdateExistingPhoneNumber.TabIndex = 136;
             this.btnUpdateExistingPhoneNumber.Text = "UPDATE PHONE NUMBER";
             this.btnUpdateExistingPhoneNumber.UseVisualStyleBackColor = true;
@@ -839,9 +852,10 @@
             // 
             // btnUpdateExistingCarDetails
             // 
-            this.btnUpdateExistingCarDetails.Location = new System.Drawing.Point(1117, 248);
+            this.btnUpdateExistingCarDetails.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdateExistingCarDetails.Location = new System.Drawing.Point(1108, 251);
             this.btnUpdateExistingCarDetails.Name = "btnUpdateExistingCarDetails";
-            this.btnUpdateExistingCarDetails.Size = new System.Drawing.Size(226, 45);
+            this.btnUpdateExistingCarDetails.Size = new System.Drawing.Size(288, 45);
             this.btnUpdateExistingCarDetails.TabIndex = 137;
             this.btnUpdateExistingCarDetails.Text = "UPDATE CAR DETAILS";
             this.btnUpdateExistingCarDetails.UseVisualStyleBackColor = true;
@@ -849,11 +863,12 @@
             // 
             // btnRenewCurrentMembershipDate
             // 
-            this.btnRenewCurrentMembershipDate.Location = new System.Drawing.Point(1117, 530);
+            this.btnRenewCurrentMembershipDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRenewCurrentMembershipDate.Location = new System.Drawing.Point(1108, 530);
             this.btnRenewCurrentMembershipDate.Name = "btnRenewCurrentMembershipDate";
-            this.btnRenewCurrentMembershipDate.Size = new System.Drawing.Size(226, 45);
+            this.btnRenewCurrentMembershipDate.Size = new System.Drawing.Size(288, 45);
             this.btnRenewCurrentMembershipDate.TabIndex = 138;
-            this.btnRenewCurrentMembershipDate.Text = "RENEW MEMBER\'S MEMBERSHIP";
+            this.btnRenewCurrentMembershipDate.Text = "RENEW MEMBERSHIP";
             this.btnRenewCurrentMembershipDate.UseVisualStyleBackColor = true;
             this.btnRenewCurrentMembershipDate.Click += new System.EventHandler(this.btnRenewCurrentMembershipDate_Click);
             // 

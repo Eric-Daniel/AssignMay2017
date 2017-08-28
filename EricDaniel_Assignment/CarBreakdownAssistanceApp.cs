@@ -28,6 +28,13 @@ namespace EricDaniel_Assignment
             dateTimePickerCarYear.CustomFormat = "yyyy";
             dateTimePickerMembershipRenewalDate.Format = DateTimePickerFormat.Custom;
             dateTimePickerMembershipRenewalDate.CustomFormat = "d/MM/yyyy";
+
+            //btnAddNewMember.Focus();
+            //btnSearchExistingMember.Focus();
+            //btnUpdateExistingPhoneNumber.Focus();
+            //btnUpdateExistingCarDetails.Focus();
+            //btnRenewCurrentMembershipDate.Focus();
+
             grpDisplayMemberDetails.Visible = false;
             btnAddMember.Enabled = true;
            // tbxDisplayName.ReadOnly = true;
