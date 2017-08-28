@@ -635,7 +635,9 @@ namespace EricDaniel_Assignment
             DialogResult dialogResult = MessageBox.Show("Are you sure you want to UPDATE MEMBER'S PHONE NUMBER", " ", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
             if (dialogResult == DialogResult.Yes)
             {
-                MessageBox.Show("Phone Number Sucessfully updated");
+               // MessageBox.Show("Phone Number Sucessfully updated");
+                MessageBox.Show("Phone Number Updated Successfully", "",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
                 tbxNewPhoneNumber.Text = string.Empty;
 
                 tbxNewPhoneNumber.AppendText(m.PhoneNum);
@@ -654,8 +656,9 @@ namespace EricDaniel_Assignment
             DialogResult dialogResult = MessageBox.Show("Are you sure you want to UPDATE MEMBER'S CAR DETAILS", " ", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
             if (dialogResult == DialogResult.Yes)
             {
-                MessageBox.Show("Car Details Updated Successfully");
-
+                //MessageBox.Show("Car Details Updated Successfully");
+                MessageBox.Show("Car Details Updated Successfully", "",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
                 tbxNewCarRegistrationNumber.Text = string.Empty;
                 tbxNewCarModel.Text = string.Empty;
                 tbxNewCarYear.Text = string.Empty;
@@ -679,7 +682,9 @@ namespace EricDaniel_Assignment
             if (dialogResult == DialogResult.Yes)
             {
                 m.RenewMembership();
-                MessageBox.Show("Membership Successfully Renewed");
+                //MessageBox.Show("Membership Successfully Renewed");
+                MessageBox.Show("Membership Successfully Renewed", "",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
                 tbxNewMembershipRenewalDate.AppendText(m.MembershipRenewalDate);
             }
       
