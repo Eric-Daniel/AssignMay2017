@@ -1,15 +1,8 @@
 ﻿using EricDaniel_Assignment.Classes;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Globalization;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace EricDaniel_Assignment
@@ -17,13 +10,12 @@ namespace EricDaniel_Assignment
     public partial class CarBreakdownAssistanceApp : Form
     {
         private List<Member> _memberslist = new List<Member>();
-        string storedPath = @"A:\EricDaniel_Assignment/membersT10.txt"; 
+        string storedPath = @"members.txt"; 
         public CarBreakdownAssistanceApp()
         {
             InitializeComponent();
             dateTimePickerDateOfBirth.Format = DateTimePickerFormat.Custom;
             dateTimePickerDateOfBirth.CustomFormat = "d/MM/yyyy";
-           
             dateTimePickerCarYear.Format = DateTimePickerFormat.Custom;
             dateTimePickerCarYear.CustomFormat = "yyyy";
             dateTimePickerMembershipRenewalDate.Format = DateTimePickerFormat.Custom;
@@ -52,10 +44,9 @@ namespace EricDaniel_Assignment
             {
                 if (MessageBox.Show("Are you sure want to exit?",
                         "",
-                        MessageBoxButtons.OKCancel,
-                        MessageBoxIcon.Information) == DialogResult.OK)
+                        MessageBoxButtons.YesNo,
+                        MessageBoxIcon.Information) == DialogResult.Yes)
                 {
-                   
                     SaveMemberData();
                     Application.Exit();
                 }
@@ -179,7 +170,7 @@ namespace EricDaniel_Assignment
             else 
                 {
                 string pos = tbxIcNumber.Text;
-                Member m1 = IcInput(_memberslist, pos);
+                Member m1 = SearchMemberUsingIc(_memberslist, pos);
                 if (m1 == null)
                 { 
              
@@ -262,7 +253,7 @@ namespace EricDaniel_Assignment
         private void btnSearch_Click(object sender, EventArgs e)
         {
             string pos = tbxIcNumberSearchMember.Text;
-            Member m1 = IcInput(_memberslist, pos); 
+            Member m1 = SearchMemberUsingIc(_memberslist, pos); 
             
     
             if (m1 != null)
@@ -349,7 +340,7 @@ namespace EricDaniel_Assignment
            
 
             string pos = tbxVerifyInputIcNumber.Text;
-            Member m1 = IcInput(_memberslist, pos); 
+            Member m1 = SearchMemberUsingIc(_memberslist, pos); 
 
            
             if (string.IsNullOrWhiteSpace(tbxVerifyInputIcNumber.Text))
@@ -426,7 +417,7 @@ namespace EricDaniel_Assignment
         private void btnUpdateCarDetails_Click(object sender, EventArgs e)
         {
             string pos = tbxVerifyInputIcNumber2.Text;
-            Member m1 = IcInput(_memberslist, pos); 
+            Member m1 = SearchMemberUsingIc(_memberslist, pos); 
 
             if (m1 != null)
             {
@@ -496,7 +487,7 @@ namespace EricDaniel_Assignment
         private void btnRenewMembershipDate_Click(object sender, EventArgs e)
         {
             string pos = tbxVerifyInputIcNumber3.Text;
-            Member m1 = IcInput(_memberslist, pos);
+            Member m1 = SearchMemberUsingIc(_memberslist, pos);
 
             if (m1 != null)
             {
@@ -552,12 +543,12 @@ namespace EricDaniel_Assignment
 
         }
 
-        public Member IcInput(List<Member> membersList, string pos)
+        public Member SearchMemberUsingIc(List<Member> membersList, string pos)
         {
             foreach (var m in membersList)
             {
                
-                if (m.IcNum.Equals(pos))
+                if (m.IcNum.Contains(pos))
                     return m;
             }
             return null;
